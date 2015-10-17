@@ -1,4 +1,4 @@
-object-properties [![NPM version][npm-image]][npm-url]
+# object-properties [![NPM version][npm-image]][npm-url]
 ============================
 
 [![Build Status][build-status-image]][build-status-url] [![Coverage][coverage-image]][coverage-url]
@@ -22,6 +22,10 @@ op.defineGetter(object, 'test', () => 'test');
 - [defineGetter(target, property, getter, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineGetter)
 - [defineSetter(target, property, setter, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineSetter)
 - [defineProperties(target, properties, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineProperties)
+
+## License
+
+[MIT](https://github.com/christophehurpeau/object-properties/blob/master/LICENSE)
 
 
 [npm-image]: https://img.shields.io/npm/v/object-properties.svg?style=flat-square

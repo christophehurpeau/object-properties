@@ -1,7 +1,7 @@
 {
   "name": "object-properties",
   "version": "1.0.2",
-  "description": "Shortcuts to manage object properties",
+  "description": "Shortcuts to Object.defineProperty and Object.defineProperties",
   "main": "lib/index.js",
   "scripts": {
     "test": "make tests",
