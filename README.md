@@ -13,9 +13,13 @@ let object = {};
 op.defineGetter(object, 'test', () => 'test');
 ```
 
-## API
+## Available methods
 
-See the generated API [here](http://christophehurpeau.github.io/object-properties/docs/).
+- [defineProperty(target, property, value, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineProperty)
+- [defineConstant(target, property, value, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineConstant)
+- [defineGetter(target, property, getter, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineGetter)
+- [defineSetter(target, property, setter, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineSetter)
+- [defineProperties(target, properties, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineProperties)
 
 
 [npm-image]: https://img.shields.io/npm/v/object-properties.svg?style=flat-square
