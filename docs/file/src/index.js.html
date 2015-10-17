@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/index.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+</head>
+<body class="layout-container">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="git+https://github.com/christophehurpeau/object-properties.git">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineConstant">defineConstant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineGetter">defineGetter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineProperties">defineProperties</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineProperty">defineProperty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineSetter">defineSetter</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * Shortcut for Object.defineProperty
+ *
+ * @param {Object} target
+ * @param {string} property name of the property
+ * @param {*} value value
+ * @param {Object} [options]
+ * @param {boolean} [options.writable=true]
+ * @param {boolean} [options.configurable=true]
+ * @param {boolean} [options.enumerable=false]
+ * @return {Object} target
+ */
+export function defineProperty(target, property, value, options) {
+    Object.defineProperty(target, property, {
+        value: value,
+        writable: (options &amp;&amp; options.writable) !== false,
+        configurable: (options &amp;&amp; options.configurable) !== false,
+        enumerable: !!(options &amp;&amp; options.enumerable),
+    });
+    return target;
+}
+
+/**
+ * Shortcut for Object.defineProperty
+ *
+ * @param {Object} target
+ * @param {string} property name of the property
+ * @param {*} value value
+ * @param {Object} [options]
+ * @param {boolean} [options.enumerable=false]
+ * @return {Object} target
+ */
+export function defineConstant(target, property, value, options) {
+    Object.defineProperty(target, property, {
+        value: value,
+        writable: false,
+        configurable: false,
+        enumerable: !!(options &amp;&amp; options.enumerable),
+    });
+    return target;
+}
+
+/**
+ * Shortcut for Object.defineProperty
+ *
+ * @param {Object} target
+ * @param {string} property name of the property
+ * @param {Function} getter getter function
+ * @param {Object} [options]
+ * @param {boolean} [options.configurable=true]
+ * @param {boolean} [options.enumerable=false]
+ * @return {Object} target
+ */
+export function defineGetter(target, property, getter, options) {
+    Object.defineProperty(target, property, {
+        get: getter,
+        configurable: (options &amp;&amp; options.configurable) !== false,
+        enumerable: !!(options &amp;&amp; options.enumerable),
+    });
+    return target;
+}
+
+/**
+ * Shortcut for Object.defineProperty
+ *
+ * @param {Object} target
+ * @param {string} property name of the property
+ * @param {Function} setter setter function
+ * @param {Object} [options]
+ * @param {boolean} [options.configurable=true]
+ * @param {boolean} [options.enumerable=false]
+ * @return {Object} target
+ */
+export function defineSetter(target, property, setter, options) {
+    Object.defineProperty(target, property, {
+        set: setter,
+        configurable: (options &amp;&amp; options.configurable) !== false,
+        enumerable: !!(options &amp;&amp; options.enumerable),
+    });
+    return target;
+}
+
+/**
+ * Shortcut for Object.defineProperties
+ *
+ * @param {Object} target
+ * @param {Object} properties
+ * @param {Object} [options]
+ * @param {boolean} [options.writable=true]
+ * @param {boolean} [options.configurable=true]
+ * @param {boolean} [options.enumerable=false]
+ * @return {Object} target
+ */
+export function defineProperties(target, properties, options) {
+    if (!properties) {
+        return target;
+    }
+
+    options = {
+        writable: (options &amp;&amp; options.writable) !== false,
+        configurable: (options &amp;&amp; options.configurable) !== false,
+        enumerable: !!(options &amp;&amp; options.enumerable),
+    };
+    Object.keys(properties).forEach((key) =&gt; {
+        Object.defineProperty(target, key, {
+            value: properties[key],
+            writable: options.writable,
+            configurable: options.configurable,
+            enumerable: options.enumerable,
+        });
+    });
+    return target;
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.0)</span></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

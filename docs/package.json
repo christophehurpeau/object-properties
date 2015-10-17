@@ -1,0 +1,36 @@
+{
+  "name": "object-properties",
+  "version": "1.0.0",
+  "description": "Shortcuts to manage object properties",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "make tests",
+    "lint": "make lint",
+    "build": "make build",
+    "postpublish": "make post-publish",
+    "prepublish": "make pre-publish",
+    "preversion": "make pre-version",
+    "version": "make version",
+    "watch": "make watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christophehurpeau/object-properties.git"
+  },
+  "keywords": [
+    "Object.defineProperties",
+    "Object.defineProperty"
+  ],
+  "author": "Christophe Hurpeau <christophe@hurpeau.com> (http://christophe.hurpeau.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christophehurpeau/object-properties/issues"
+  },
+  "homepage": "https://github.com/christophehurpeau/object-properties#readme",
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "proclaim": "^3.3.2",
+    "springbokjs-library": "^11.2.0",
+    "xunit-file": "0.0.8"
+  }
+}
