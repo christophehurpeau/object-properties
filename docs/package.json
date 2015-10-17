@@ -1,6 +1,6 @@
 {
   "name": "object-properties",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shortcuts to manage object properties",
   "main": "lib/index.js",
   "scripts": {
