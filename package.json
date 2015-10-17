@@ -28,7 +28,9 @@
   },
   "homepage": "https://github.com/christophehurpeau/object-properties#readme",
   "devDependencies": {
+    "coveralls": "^2.11.4",
     "proclaim": "^3.3.2",
-    "springbokjs-library": "^11.2.0"
+    "springbokjs-library": "^11.2.0",
+    "xunit-file": "0.0.8"
   }
 }
