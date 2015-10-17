@@ -1,7 +1,7 @@
 {
   "name": "object-properties",
-  "version": "1.0.2",
-  "description": "Shortcuts to manage object properties",
+  "version": "1.0.3",
+  "description": "Shortcuts to Object.defineProperty and Object.defineProperties",
   "main": "lib/index.js",
   "scripts": {
     "test": "make tests",
@@ -13,10 +13,7 @@
     "version": "make version",
     "watch": "make watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/christophehurpeau/object-properties.git"
-  },
+  "repository": "christophehurpeau/object-properties",
   "keywords": [
     "Object.defineProperties",
     "Object.defineProperty"
