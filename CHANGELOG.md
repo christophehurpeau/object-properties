@@ -1,3 +1,9 @@
+### v1.0.3
+
+- [`defa387`](https://github.com/{ type: 'git',
+  url: 'git+https://github.com/christophehurpeau/object-properties.git' }/commit/defa38710540d44519898c1966a687139c7cab66) readme (Christophe Hurpeau)
+
+
 ### v1.0.2
 
 - [`e91007a`](https://github.com/{ type: 'git',
