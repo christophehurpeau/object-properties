@@ -1,7 +1,9 @@
-object-properties [![NPM version][npm-image]][npm-url] [![Build Status][build-status-image]][build-status-url] [![Coverage][coverage-image]][coverage-url]
+object-properties [![NPM version][npm-image]][npm-url]
 ============================
 
-Shortcuts to manage object properties
+[![Build Status][build-status-image]][build-status-url] [![Coverage][coverage-image]][coverage-url]
+
+Shortcuts to Object.defineProperty and Object.defineProperties
 
 ## Examples
 
