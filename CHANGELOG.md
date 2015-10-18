@@ -1,3 +1,7 @@
+### v1.2.0
+
+- [`2b0bd15`](https://github.com/christophehurpeau/object-properties/commit/2b0bd15e331e6267ddeb5c8abdf065808f81f36c) add definePrototype functions (Christophe Hurpeau)
+
 ### v1.1.3
 
 - [`31123fd`](https://github.com/christophehurpeau/object-properties/commit/31123fdafeac5561da572f45e0c21036fb432d41) fix this in lazy property callback and add tests (Christophe Hurpeau)
