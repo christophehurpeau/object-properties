@@ -20,7 +20,10 @@ op.defineGetter(object, 'test', () => 'test');
 - [defineConstant(target, property, value, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineConstant)
 - [defineGetter(target, property, getter, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineGetter)
 - [defineSetter(target, property, setter, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineSetter)
+- [defineLazyProperty(target, property, callback, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineLazyProperty)
+- [defineLazyConstant(target, property, callback, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineLazyConstant)
 - [defineProperties(target, properties, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineProperties)
+- [defineConstants(target, properties, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineConstants)
 
 ## License
 
