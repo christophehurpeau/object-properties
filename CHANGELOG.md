@@ -1,3 +1,7 @@
+### v1.1.3
+
+- [`31123fd`](https://github.com/christophehurpeau/object-properties/commit/31123fdafeac5561da572f45e0c21036fb432d41) fix this in lazy property callback and add tests (Christophe Hurpeau)
+
 ### v1.1.2
 
 - [`52feb44`](https://github.com/christophehurpeau/object-properties/commit/52feb442a5137536efa043e3872a7ddd50a9f975) fix this in lazy property callback (Christophe Hurpeau)
