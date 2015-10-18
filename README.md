@@ -1,9 +1,8 @@
 # object-properties [![NPM version][npm-image]][npm-url]
-============================
-
-[![Build Status][build-status-image]][build-status-url] [![Coverage][coverage-image]][coverage-url]
 
 Shortcuts to Object.defineProperty and Object.defineProperties
+
+[![Build Status][build-status-image]][build-status-url] [![Coverage][coverage-image]][coverage-url]
 
 ## Examples
 
