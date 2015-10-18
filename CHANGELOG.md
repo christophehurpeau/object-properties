@@ -1,3 +1,7 @@
+### v1.1.0
+
+- [`aa28155`](https://github.com/christophehurpeau/object-properties/commit/aa28155679c1f1d4d5a8ad2c5343860878c65559) add defineLazyProperty, defineLazyConstant and defineConstants (Christophe Hurpeau)
+
 ### v1.0.4
 
 - [`5b4d427`](https://github.com/christophehurpeau/object-properties/commit/5b4d42796cd9bf5df60d8e5fff99b447a46af72b) 1.0.3 (Christophe Hurpeau)
