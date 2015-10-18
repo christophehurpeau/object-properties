@@ -27,7 +27,7 @@ op.defineGetter(object, 'test', () => 'test');
 
 ## License
 
-[MIT](https://github.com/christophehurpeau/object-properties/blob/master/LICENSE)
+[ISC](https://github.com/christophehurpeau/object-properties/blob/master/LICENSE)
 
 
 [npm-image]: https://img.shields.io/npm/v/object-properties.svg?style=flat-square
