@@ -1,3 +1,9 @@
+### v1.1.1
+
+- [`50a12f5`](https://github.com/christophehurpeau/object-properties/commit/50a12f5bcfa9d0b8d132c9b534b4457e2df76390) circleci (Christophe Hurpeau)
+- [`8a9108a`](https://github.com/christophehurpeau/object-properties/commit/8a9108ab15349b51e8a37e103c2531dcecaeb584) Update README.md (Christophe Hurpeau)
+- [`dd24944`](https://github.com/christophehurpeau/object-properties/commit/dd249442a5996ab4f8ac1da5ecaf386fa4801a79) Update README.md (Christophe Hurpeau)
+
 ### v1.1.0
 
 - [`aa28155`](https://github.com/christophehurpeau/object-properties/commit/aa28155679c1f1d4d5a8ad2c5343860878c65559) add defineLazyProperty, defineLazyConstant and defineConstants (Christophe Hurpeau)
