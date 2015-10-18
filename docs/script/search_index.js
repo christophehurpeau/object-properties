@@ -42,6 +42,42 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "object-properties/src/index.js~defineprototypeconstant",
+    "function/index.html#static-function-definePrototypeConstant",
+    "<span>definePrototypeConstant</span> <span class=\"search-result-import-path\">object-properties/src/index.js</span>",
+    "function"
+  ],
+  [
+    "object-properties/src/index.js~defineprototypegetter",
+    "function/index.html#static-function-definePrototypeGetter",
+    "<span>definePrototypeGetter</span> <span class=\"search-result-import-path\">object-properties/src/index.js</span>",
+    "function"
+  ],
+  [
+    "object-properties/src/index.js~defineprototypelazyconstant",
+    "function/index.html#static-function-definePrototypeLazyConstant",
+    "<span>definePrototypeLazyConstant</span> <span class=\"search-result-import-path\">object-properties/src/index.js</span>",
+    "function"
+  ],
+  [
+    "object-properties/src/index.js~defineprototypelazyproperty",
+    "function/index.html#static-function-definePrototypeLazyProperty",
+    "<span>definePrototypeLazyProperty</span> <span class=\"search-result-import-path\">object-properties/src/index.js</span>",
+    "function"
+  ],
+  [
+    "object-properties/src/index.js~defineprototypeproperty",
+    "function/index.html#static-function-definePrototypeProperty",
+    "<span>definePrototypeProperty</span> <span class=\"search-result-import-path\">object-properties/src/index.js</span>",
+    "function"
+  ],
+  [
+    "object-properties/src/index.js~defineprototypesetter",
+    "function/index.html#static-function-definePrototypeSetter",
+    "<span>definePrototypeSetter</span> <span class=\"search-result-import-path\">object-properties/src/index.js</span>",
+    "function"
+  ],
+  [
     "object-properties/src/index.js~definesetter",
     "function/index.html#static-function-defineSetter",
     "<span>defineSetter</span> <span class=\"search-result-import-path\">object-properties/src/index.js</span>",

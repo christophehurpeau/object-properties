@@ -1,11 +1,11 @@
 {
   "coverage": "100%",
-  "expectCount": 8,
-  "actualCount": 8,
+  "expectCount": 14,
+  "actualCount": 14,
   "files": {
     "src/index.js": {
-      "expectCount": 8,
-      "actualCount": 8,
+      "expectCount": 14,
+      "actualCount": 14,
       "undocumentLines": []
     }
   }
