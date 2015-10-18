@@ -93,7 +93,7 @@ export function defineSetter(target, property, setter, options) {
  * @return {Object} target
  */
 export function defineLazyProperty(target, property, callback, options) {
-    defineGetter(target, property, () => {
+    defineGetter(target, property, function() {
         const value = callback.call(this);
         defineProperty(target, property, value, options);
         return value;
@@ -115,7 +115,7 @@ export function defineLazyProperty(target, property, callback, options) {
  * @return {Object} target
  */
 export function defineLazyConstant(target, property, callback, options) {
-    defineGetter(target, property, () => {
+    defineGetter(target, property, function() {
         const value = callback.call(this);
         defineConstant(target, property, value, options);
         return value;

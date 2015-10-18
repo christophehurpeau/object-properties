@@ -48,7 +48,8 @@ test('defineSetter should work', function () {
 test('defineLazyProperty should work', function () {
     let o = {};
     let getterCalledTimes = 0;
-    let res = (0, _lib.defineLazyProperty)(o, 'a', function () {
+    let res = (0, _lib.defineLazyProperty)(o, 'a', /** @function */function () {
+        (0, _proclaim.strictEqual)(this, o);
         return ++getterCalledTimes;
     });
     (0, _proclaim.strictEqual)(res, o);
@@ -64,7 +65,8 @@ test('defineLazyProperty should work', function () {
 test('defineLazyConstant should work', function () {
     let o = {};
     let getterCalledTimes = 0;
-    let res = (0, _lib.defineLazyConstant)(o, 'a', function () {
+    let res = (0, _lib.defineLazyConstant)(o, 'a', /** @function */function () {
+        (0, _proclaim.strictEqual)(this, o);
         return ++getterCalledTimes;
     });
     (0, _proclaim.strictEqual)(res, o);
