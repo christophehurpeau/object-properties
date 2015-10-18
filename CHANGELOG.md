@@ -1,3 +1,7 @@
+### v1.1.2
+
+- [`52feb44`](https://github.com/christophehurpeau/object-properties/commit/52feb442a5137536efa043e3872a7ddd50a9f975) fix this in lazy property callback (Christophe Hurpeau)
+
 ### v1.1.1
 
 - [`50a12f5`](https://github.com/christophehurpeau/object-properties/commit/50a12f5bcfa9d0b8d132c9b534b4457e2df76390) circleci (Christophe Hurpeau)
