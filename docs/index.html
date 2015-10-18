@@ -48,11 +48,11 @@
 <p>Shortcuts to Object.defineProperty and Object.defineProperties</p>
 <p><a href="https://circleci.com/gh/christophehurpeau/object-properties"><img src="https://img.shields.io/circleci/project/christophehurpeau/object-properties/master.svg?style=flat-square" alt="Build Status"></a> <a href="http://christophehurpeau.github.io/object-properties/coverage/lcov-report/"><img src="https://img.shields.io/coveralls/christophehurpeau/object-properties/master.svg?style=flat-square" alt="Coverage"></a></p>
 <h2 id="examples">Examples</h2>
-<pre><code class="lang-js"><code class="source-code prettyprint">import op from &apos;object-properties&apos;; // or var op = require(&apos;object-properties&apos;);
+<pre><code class="lang-js"><code class="source-code prettyprint">import { defineGetter } from &apos;object-properties&apos;; // or var defineGetter = require(&apos;object-properties&apos;).defineGetter;
 
 let object = {};
 
-op.defineGetter(object, &apos;test&apos;, () =&gt; &apos;test&apos;);</code>
+defineGetter(object, &apos;test&apos;, () =&gt; &apos;test&apos;);</code>
 </code></pre>
 <h2 id="available-methods">Available methods</h2>
 <ul>
