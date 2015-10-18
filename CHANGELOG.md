@@ -1,3 +1,8 @@
+### v1.0.4
+
+- [`5b4d427`](https://github.com/christophehurpeau/object-properties/commit/5b4d42796cd9bf5df60d8e5fff99b447a46af72b) 1.0.3 (Christophe Hurpeau)
+- [`7851fb1`](https://github.com/christophehurpeau/object-properties/commit/7851fb197551d032d0e5416d68c9cd32fcd667c6) readme (Christophe Hurpeau)
+
 ### v1.0.3
 
 - [`defa387`](https://github.com/christophehurpeau/object-properties/commit/defa38710540d44519898c1966a687139c7cab66) readme (Christophe Hurpeau)
