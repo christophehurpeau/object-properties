@@ -7,11 +7,11 @@ Shortcuts to Object.defineProperty and Object.defineProperties
 ## Examples
 
 ```js
-import op from 'object-properties'; // or var op = require('object-properties');
+import { defineGetter } from 'object-properties'; // or var defineGetter = require('object-properties').defineGetter;
 
 let object = {};
 
-op.defineGetter(object, 'test', () => 'test');
+defineGetter(object, 'test', () => 'test');
 ```
 
 ## Available methods
