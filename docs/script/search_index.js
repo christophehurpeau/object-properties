@@ -6,9 +6,27 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "object-properties/src/index.js~defineconstants",
+    "function/index.html#static-function-defineConstants",
+    "<span>defineConstants</span> <span class=\"search-result-import-path\">object-properties/src/index.js</span>",
+    "function"
+  ],
+  [
     "object-properties/src/index.js~definegetter",
     "function/index.html#static-function-defineGetter",
     "<span>defineGetter</span> <span class=\"search-result-import-path\">object-properties/src/index.js</span>",
+    "function"
+  ],
+  [
+    "object-properties/src/index.js~definelazyconstant",
+    "function/index.html#static-function-defineLazyConstant",
+    "<span>defineLazyConstant</span> <span class=\"search-result-import-path\">object-properties/src/index.js</span>",
+    "function"
+  ],
+  [
+    "object-properties/src/index.js~definelazyproperty",
+    "function/index.html#static-function-defineLazyProperty",
+    "<span>defineLazyProperty</span> <span class=\"search-result-import-path\">object-properties/src/index.js</span>",
     "function"
   ],
   [

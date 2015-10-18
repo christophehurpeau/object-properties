@@ -9,8 +9,9 @@
   <script src="script/prettify/prettify.js"></script>
   
   
+  <script src="script/manual.js"></script>
 </head>
-<body class="layout-container">
+<body class="layout-container" data-ice="rootContainer">
 
 <header>
   <a href="./">Home</a>
@@ -32,7 +33,10 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineConstant">defineConstant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineConstants">defineConstants</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineGetter">defineGetter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineLazyConstant">defineLazyConstant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineLazyProperty">defineLazyProperty</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineProperties">defineProperties</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineProperty">defineProperty</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-defineSetter">defineSetter</a></span></span></li>
@@ -58,7 +62,7 @@ export function defineProperty(target, property, value, options) {
         value: value,
         writable: (options &amp;&amp; options.writable) !== false,
         configurable: (options &amp;&amp; options.configurable) !== false,
-        enumerable: !!(options &amp;&amp; options.enumerable),
+        enumerable: options &amp;&amp; options.enumerable,
     });
     return target;
 }
@@ -78,7 +82,7 @@ export function defineConstant(target, property, value, options) {
         value: value,
         writable: false,
         configurable: false,
-        enumerable: !!(options &amp;&amp; options.enumerable),
+        enumerable: options &amp;&amp; options.enumerable,
     });
     return target;
 }
@@ -98,7 +102,7 @@ export function defineGetter(target, property, getter, options) {
     Object.defineProperty(target, property, {
         get: getter,
         configurable: (options &amp;&amp; options.configurable) !== false,
-        enumerable: !!(options &amp;&amp; options.enumerable),
+        enumerable: options &amp;&amp; options.enumerable,
     });
     return target;
 }
@@ -118,7 +122,53 @@ export function defineSetter(target, property, setter, options) {
     Object.defineProperty(target, property, {
         set: setter,
         configurable: (options &amp;&amp; options.configurable) !== false,
-        enumerable: !!(options &amp;&amp; options.enumerable),
+        enumerable: options &amp;&amp; options.enumerable,
+    });
+    return target;
+}
+
+/**
+ * Create a getter that transforms then to a property
+ *
+ * @param {Object} target
+ * @param {string} property name of the property
+ * @param {Function} callback function called when the property is accessed the first time
+ * @param {Object} [options]
+ * @param {boolean} [options.writable=true]
+ * @param {boolean} [options.configurable=true]
+ * @param {boolean} [options.enumerable=false]
+ * @return {Object} target
+ */
+export function defineLazyProperty(target, property, callback, options) {
+    defineGetter(target, property, () =&gt; {
+        const value = callback();
+        defineProperty(target, property, value, options);
+        return value;
+    }, {
+        configurable: true,
+        enumerable: options &amp;&amp; options.enumerable,
+    });
+    return target;
+}
+
+/**
+ * Create a getter that transforms then to a property
+ *
+ * @param {Object} target
+ * @param {string} property name of the property
+ * @param {Function} callback function called when the property is accessed the first time
+ * @param {Object} [options]
+ * @param {boolean} [options.enumerable=false]
+ * @return {Object} target
+ */
+export function defineLazyConstant(target, property, callback, options) {
+    defineGetter(target, property, () =&gt; {
+        const value = callback();
+        defineConstant(target, property, value, options);
+        return value;
+    }, {
+        configurable: true,
+        enumerable: options &amp;&amp; options.enumerable,
     });
     return target;
 }
@@ -154,12 +204,29 @@ export function defineProperties(target, properties, options) {
     });
     return target;
 }
+
+/**
+ * Shortcut for Object.defineProperties
+ *
+ * @param {Object} target
+ * @param {Object} properties
+ * @param {Object} [options]
+ * @param {boolean} [options.enumerable=false]
+ * @return {Object} target
+ */
+export function defineConstants(target, properties, options) {
+    return defineProperties(target, properties, {
+        writable: false,
+        configurable: false,
+        enumerable: options &amp;&amp; options.enumerable,
+    });
+}
 </code></pre>
 
 </div>
 
 <footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.0)</span></a>
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.1)</span></a>
 </footer>
 
 <script src="script/search_index.js"></script>

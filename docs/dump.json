@@ -10,7 +10,7 @@
     "access": null,
     "description": null,
     "lineNumber": 13,
-    "content": "/**\n * Shortcut for Object.defineProperty\n *\n * @param {Object} target\n * @param {string} property name of the property\n * @param {*} value value\n * @param {Object} [options]\n * @param {boolean} [options.writable=true]\n * @param {boolean} [options.configurable=true]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineProperty(target, property, value, options) {\n    Object.defineProperty(target, property, {\n        value: value,\n        writable: (options && options.writable) !== false,\n        configurable: (options && options.configurable) !== false,\n        enumerable: !!(options && options.enumerable),\n    });\n    return target;\n}\n\n/**\n * Shortcut for Object.defineProperty\n *\n * @param {Object} target\n * @param {string} property name of the property\n * @param {*} value value\n * @param {Object} [options]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineConstant(target, property, value, options) {\n    Object.defineProperty(target, property, {\n        value: value,\n        writable: false,\n        configurable: false,\n        enumerable: !!(options && options.enumerable),\n    });\n    return target;\n}\n\n/**\n * Shortcut for Object.defineProperty\n *\n * @param {Object} target\n * @param {string} property name of the property\n * @param {Function} getter getter function\n * @param {Object} [options]\n * @param {boolean} [options.configurable=true]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineGetter(target, property, getter, options) {\n    Object.defineProperty(target, property, {\n        get: getter,\n        configurable: (options && options.configurable) !== false,\n        enumerable: !!(options && options.enumerable),\n    });\n    return target;\n}\n\n/**\n * Shortcut for Object.defineProperty\n *\n * @param {Object} target\n * @param {string} property name of the property\n * @param {Function} setter setter function\n * @param {Object} [options]\n * @param {boolean} [options.configurable=true]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineSetter(target, property, setter, options) {\n    Object.defineProperty(target, property, {\n        set: setter,\n        configurable: (options && options.configurable) !== false,\n        enumerable: !!(options && options.enumerable),\n    });\n    return target;\n}\n\n/**\n * Shortcut for Object.defineProperties\n *\n * @param {Object} target\n * @param {Object} properties\n * @param {Object} [options]\n * @param {boolean} [options.writable=true]\n * @param {boolean} [options.configurable=true]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineProperties(target, properties, options) {\n    if (!properties) {\n        return target;\n    }\n\n    options = {\n        writable: (options && options.writable) !== false,\n        configurable: (options && options.configurable) !== false,\n        enumerable: !!(options && options.enumerable),\n    };\n    Object.keys(properties).forEach((key) => {\n        Object.defineProperty(target, key, {\n            value: properties[key],\n            writable: options.writable,\n            configurable: options.configurable,\n            enumerable: options.enumerable,\n        });\n    });\n    return target;\n}\n"
+    "content": "/**\n * Shortcut for Object.defineProperty\n *\n * @param {Object} target\n * @param {string} property name of the property\n * @param {*} value value\n * @param {Object} [options]\n * @param {boolean} [options.writable=true]\n * @param {boolean} [options.configurable=true]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineProperty(target, property, value, options) {\n    Object.defineProperty(target, property, {\n        value: value,\n        writable: (options && options.writable) !== false,\n        configurable: (options && options.configurable) !== false,\n        enumerable: options && options.enumerable,\n    });\n    return target;\n}\n\n/**\n * Shortcut for Object.defineProperty\n *\n * @param {Object} target\n * @param {string} property name of the property\n * @param {*} value value\n * @param {Object} [options]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineConstant(target, property, value, options) {\n    Object.defineProperty(target, property, {\n        value: value,\n        writable: false,\n        configurable: false,\n        enumerable: options && options.enumerable,\n    });\n    return target;\n}\n\n/**\n * Shortcut for Object.defineProperty\n *\n * @param {Object} target\n * @param {string} property name of the property\n * @param {Function} getter getter function\n * @param {Object} [options]\n * @param {boolean} [options.configurable=true]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineGetter(target, property, getter, options) {\n    Object.defineProperty(target, property, {\n        get: getter,\n        configurable: (options && options.configurable) !== false,\n        enumerable: options && options.enumerable,\n    });\n    return target;\n}\n\n/**\n * Shortcut for Object.defineProperty\n *\n * @param {Object} target\n * @param {string} property name of the property\n * @param {Function} setter setter function\n * @param {Object} [options]\n * @param {boolean} [options.configurable=true]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineSetter(target, property, setter, options) {\n    Object.defineProperty(target, property, {\n        set: setter,\n        configurable: (options && options.configurable) !== false,\n        enumerable: options && options.enumerable,\n    });\n    return target;\n}\n\n/**\n * Create a getter that transforms then to a property\n *\n * @param {Object} target\n * @param {string} property name of the property\n * @param {Function} callback function called when the property is accessed the first time\n * @param {Object} [options]\n * @param {boolean} [options.writable=true]\n * @param {boolean} [options.configurable=true]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineLazyProperty(target, property, callback, options) {\n    defineGetter(target, property, () => {\n        const value = callback();\n        defineProperty(target, property, value, options);\n        return value;\n    }, {\n        configurable: true,\n        enumerable: options && options.enumerable,\n    });\n    return target;\n}\n\n/**\n * Create a getter that transforms then to a property\n *\n * @param {Object} target\n * @param {string} property name of the property\n * @param {Function} callback function called when the property is accessed the first time\n * @param {Object} [options]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineLazyConstant(target, property, callback, options) {\n    defineGetter(target, property, () => {\n        const value = callback();\n        defineConstant(target, property, value, options);\n        return value;\n    }, {\n        configurable: true,\n        enumerable: options && options.enumerable,\n    });\n    return target;\n}\n\n/**\n * Shortcut for Object.defineProperties\n *\n * @param {Object} target\n * @param {Object} properties\n * @param {Object} [options]\n * @param {boolean} [options.writable=true]\n * @param {boolean} [options.configurable=true]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineProperties(target, properties, options) {\n    if (!properties) {\n        return target;\n    }\n\n    options = {\n        writable: (options && options.writable) !== false,\n        configurable: (options && options.configurable) !== false,\n        enumerable: !!(options && options.enumerable),\n    };\n    Object.keys(properties).forEach((key) => {\n        Object.defineProperty(target, key, {\n            value: properties[key],\n            writable: options.writable,\n            configurable: options.configurable,\n            enumerable: options.enumerable,\n        });\n    });\n    return target;\n}\n\n/**\n * Shortcut for Object.defineProperties\n *\n * @param {Object} target\n * @param {Object} properties\n * @param {Object} [options]\n * @param {boolean} [options.enumerable=false]\n * @return {Object} target\n */\nexport function defineConstants(target, properties, options) {\n    return defineProperties(target, properties, {\n        writable: false,\n        configurable: false,\n        enumerable: options && options.enumerable,\n    });\n}\n"
   },
   {
     "__docId__": 1,
@@ -377,6 +377,186 @@
     "kind": "function",
     "static": true,
     "variation": null,
+    "name": "defineLazyProperty",
+    "memberof": "src/index.js",
+    "longname": "src/index.js~defineLazyProperty",
+    "access": null,
+    "export": true,
+    "importPath": "object-properties/src/index.js",
+    "importStyle": "{defineLazyProperty}",
+    "description": "Create a getter that transforms then to a property",
+    "lineNumber": 95,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "property",
+        "description": "name of the property"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "function called when the property is accessed the first time"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "options.writable",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "options.configurable",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "options.enumerable",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "target"
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 6,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "defineLazyConstant",
+    "memberof": "src/index.js",
+    "longname": "src/index.js~defineLazyConstant",
+    "access": null,
+    "export": true,
+    "importPath": "object-properties/src/index.js",
+    "importStyle": "{defineLazyConstant}",
+    "description": "Create a getter that transforms then to a property",
+    "lineNumber": 117,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "property",
+        "description": "name of the property"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "function called when the property is accessed the first time"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "options.enumerable",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "target"
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 7,
+    "kind": "function",
+    "static": true,
+    "variation": null,
     "name": "defineProperties",
     "memberof": "src/index.js",
     "longname": "src/index.js~defineProperties",
@@ -385,7 +565,7 @@
     "importPath": "object-properties/src/index.js",
     "importStyle": "{defineProperties}",
     "description": "Shortcut for Object.defineProperties",
-    "lineNumber": 94,
+    "lineNumber": 140,
     "params": [
       {
         "nullable": null,
@@ -465,7 +645,75 @@
     "generator": false
   },
   {
-    "__docId__": 7,
+    "__docId__": 8,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "defineConstants",
+    "memberof": "src/index.js",
+    "longname": "src/index.js~defineConstants",
+    "access": null,
+    "export": true,
+    "importPath": "object-properties/src/index.js",
+    "importStyle": "{defineConstants}",
+    "description": "Shortcut for Object.defineProperties",
+    "lineNumber": 170,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "properties",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "options.enumerable",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "target"
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 10,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -478,7 +726,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 8,
+    "__docId__": 11,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -491,7 +739,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 9,
+    "__docId__": 12,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -504,7 +752,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 10,
+    "__docId__": 13,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -517,7 +765,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 11,
+    "__docId__": 14,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -530,7 +778,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 12,
+    "__docId__": 15,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -543,7 +791,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 13,
+    "__docId__": 16,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -556,7 +804,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 14,
+    "__docId__": 17,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -569,7 +817,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 15,
+    "__docId__": 18,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -582,7 +830,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 16,
+    "__docId__": 19,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -595,7 +843,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 17,
+    "__docId__": 20,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -608,7 +856,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 18,
+    "__docId__": 21,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -621,7 +869,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 19,
+    "__docId__": 22,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -634,7 +882,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 20,
+    "__docId__": 23,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -647,7 +895,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 21,
+    "__docId__": 24,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -660,7 +908,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 22,
+    "__docId__": 25,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -673,7 +921,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 23,
+    "__docId__": 26,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -686,7 +934,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 24,
+    "__docId__": 27,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -699,7 +947,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 25,
+    "__docId__": 28,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -712,7 +960,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 26,
+    "__docId__": 29,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -725,7 +973,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 27,
+    "__docId__": 30,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -738,7 +986,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 28,
+    "__docId__": 31,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -751,7 +999,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 29,
+    "__docId__": 32,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -764,7 +1012,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 30,
+    "__docId__": 33,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -777,7 +1025,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 31,
+    "__docId__": 34,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -790,7 +1038,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 32,
+    "__docId__": 35,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -803,7 +1051,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 33,
+    "__docId__": 36,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -816,7 +1064,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 34,
+    "__docId__": 37,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -829,7 +1077,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 35,
+    "__docId__": 38,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -842,7 +1090,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 36,
+    "__docId__": 39,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -855,7 +1103,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 37,
+    "__docId__": 40,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -868,7 +1116,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 38,
+    "__docId__": 41,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -881,7 +1129,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 39,
+    "__docId__": 42,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -894,7 +1142,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 40,
+    "__docId__": 43,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -907,7 +1155,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 41,
+    "__docId__": 44,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -920,7 +1168,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 42,
+    "__docId__": 45,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -933,7 +1181,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 43,
+    "__docId__": 46,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -946,7 +1194,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 44,
+    "__docId__": 47,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -959,7 +1207,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 45,
+    "__docId__": 48,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -972,7 +1220,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 46,
+    "__docId__": 49,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -985,7 +1233,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 47,
+    "__docId__": 50,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -998,7 +1246,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 48,
+    "__docId__": 51,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1011,7 +1259,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 49,
+    "__docId__": 52,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1024,7 +1272,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 50,
+    "__docId__": 53,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1037,7 +1285,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 51,
+    "__docId__": 54,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1050,7 +1298,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 52,
+    "__docId__": 55,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1063,7 +1311,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 53,
+    "__docId__": 56,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1076,7 +1324,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 55,
+    "__docId__": 58,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1089,7 +1337,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 56,
+    "__docId__": 59,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1102,7 +1350,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 57,
+    "__docId__": 60,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1115,7 +1363,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 58,
+    "__docId__": 61,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1128,7 +1376,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 59,
+    "__docId__": 62,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1141,7 +1389,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 60,
+    "__docId__": 63,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1154,7 +1402,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 61,
+    "__docId__": 64,
     "kind": "external",
     "static": true,
     "variation": null,
