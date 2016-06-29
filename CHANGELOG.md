@@ -1,3 +1,7 @@
+### v2.0.0
+
+- [`40c5b17`](https://github.com/christophehurpeau/object-properties/commit/40c5b17e7ac6bafaa950973cd8bc78f952b08e31) springbokjs-library@17 (Christophe Hurpeau)
+
 ### v1.2.0
 
 - [`2b0bd15`](https://github.com/christophehurpeau/object-properties/commit/2b0bd15e331e6267ddeb5c8abdf065808f81f36c) add definePrototype functions (Christophe Hurpeau)

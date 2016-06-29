@@ -1,6 +1,6 @@
 {
   "name": "object-properties",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Shortcuts to Object.defineProperty and Object.defineProperties",
   "main": "lib/index.js",
   "browser": "browser/lib/index.js",
