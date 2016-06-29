@@ -54,7 +54,7 @@ test('defineSetter should work', () => {
 test('defineLazyProperty should work', () => {
     let o = {};
     let getterCalledTimes = 0;
-    let res = defineLazyProperty(o, 'a', function() {
+    let res = defineLazyProperty(o, 'a', function () {
         strictEqual(this, o);
         return ++getterCalledTimes;
     });
@@ -71,7 +71,7 @@ test('defineLazyProperty should work', () => {
 test('defineLazyConstant should work', () => {
     let o = {};
     let getterCalledTimes = 0;
-    let res = defineLazyConstant(o, 'a', function() {
+    let res = defineLazyConstant(o, 'a', function () {
         strictEqual(this, o);
         return ++getterCalledTimes;
     });
@@ -137,9 +137,7 @@ test('definePrototypeSetter should work', () => {
 test('definePrototypeLazyProperty should work', () => {
     class O {}
     let getterCalledTimes = 0;
-    let res = definePrototypeLazyProperty(O, 'a', function() {
-        return ++getterCalledTimes;
-    });
+    let res = definePrototypeLazyProperty(O, 'a', () => ++getterCalledTimes);
     strictEqual(res, O);
     let o = new O();
     strictEqual(o.a, 1);
@@ -164,9 +162,7 @@ test('definePrototypeLazyProperty should work', () => {
 test('definePrototypeLazyConstant should work', () => {
     class O {}
     let getterCalledTimes = 0;
-    let res = definePrototypeLazyConstant(O, 'a', function() {
-        return ++getterCalledTimes;
-    });
+    let res = definePrototypeLazyConstant(O, 'a', () => ++getterCalledTimes);
     strictEqual(res, O);
     let o = new O();
     strictEqual(o.a, 1);

@@ -3,12 +3,12 @@
   "version": "1.2.0",
   "description": "Shortcuts to Object.defineProperty and Object.defineProperties",
   "main": "lib/index.js",
+  "browser": "browser/lib/index.js",
   "scripts": {
-    "test": "make tests",
+    "test": "make test",
     "lint": "make lint",
     "build": "make build",
     "postpublish": "make post-publish",
-    "prepublish": "make pre-publish",
     "preversion": "make pre-version",
     "version": "make version",
     "watch": "make watch"
@@ -25,9 +25,13 @@
   },
   "homepage": "https://github.com/christophehurpeau/object-properties#readme",
   "devDependencies": {
-    "coveralls": "^2.11.4",
-    "proclaim": "^3.3.2",
-    "springbokjs-library": "^11.2.0",
-    "xunit-file": "0.0.8"
+    "coveralls": "^2.11.9",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-config-pob": "^6.1.1",
+    "eslint-plugin-import": "^1.9.2",
+    "proclaim": "^3.4.1",
+    "springbokjs-library": "^17.0.0",
+    "xunit-file": "1.0.0"
   }
 }
