@@ -1,5 +1,7 @@
 # object-properties [![NPM version][npm-image]][npm-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/christophehurpeau/object-properties.svg)](https://greenkeeper.io/)
+
 Shortcuts to Object.defineProperty and Object.defineProperties
 
 [![Build Status][build-status-image]][build-status-url] [![Coverage][coverage-image]][coverage-url]
