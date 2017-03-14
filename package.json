@@ -26,10 +26,10 @@
   "homepage": "https://github.com/christophehurpeau/object-properties#readme",
   "devDependencies": {
     "coveralls": "^2.11.9",
-    "eslint": "^2.13.1",
-    "eslint-config-airbnb-base": "^3.0.1",
-    "eslint-config-pob": "^6.1.1",
-    "eslint-plugin-import": "^1.9.2",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-config-pob": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
     "proclaim": "^3.4.1",
     "springbokjs-library": "^17.0.0",
     "xunit-file": "1.0.0"
