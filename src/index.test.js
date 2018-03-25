@@ -127,7 +127,10 @@ test('definePrototypeGetter should work', () => {
 test('definePrototypeSetter should work', () => {
   class O {}
   let value;
-  const res = definePrototypeSetter(O, 'a', v => (value = v * 2));
+  const res = definePrototypeSetter(O, 'a', (v: number) => {
+    value = v * 2;
+    return value;
+  });
   expect(res).toBe(O);
   const o = new O();
   o.a = 2;

@@ -24,12 +24,12 @@ type ConfigurableEnumerableOptions = {|
  * @param {boolean} [options.configurable=true]
  * @param {boolean} [options.enumerable=false]
  */
-export function defineProperty<T: Object>(
-  target: T,
+export function defineProperty(
+  target: Object,
   property: string,
   value: any,
   options: ?DefinePropertyOptions,
-): T {
+): Object {
   Object.defineProperty(target, property, {
     value,
     writable: (options && options.writable) !== false,
@@ -48,12 +48,12 @@ export function defineProperty<T: Object>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineConstant<T: Object>(
-  target: T,
+export function defineConstant(
+  target: Object,
   property: string,
   value: any,
   options: ?EnumerableOptions,
-): T {
+): Object {
   Object.defineProperty(target, property, {
     value,
     writable: false,
@@ -75,12 +75,12 @@ type Getter = () => any;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineGetter<T: Object>(
-  target: T,
+export function defineGetter(
+  target: Object,
   property: string,
   getter: Getter,
   options: ?ConfigurableEnumerableOptions,
-): T {
+): Object {
   Object.defineProperty(target, property, {
     get: getter,
     configurable: (options && options.configurable) !== false,
@@ -89,7 +89,7 @@ export function defineGetter<T: Object>(
   return target;
 }
 
-type Setter = () => any;
+type Setter = (value: any) => any;
 
 /**
  *
@@ -101,12 +101,12 @@ type Setter = () => any;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineSetter<T: Object>(
-  target: T,
+export function defineSetter(
+  target: Object,
   property: string,
   setter: Setter,
   options: ?ConfigurableEnumerableOptions,
-): T {
+): Object {
   Object.defineProperty(target, property, {
     set: setter,
     configurable: (options && options.configurable) !== false,
@@ -129,12 +129,12 @@ type LazyCallback = () => any;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineLazyProperty<T: Object>(
-  target: T,
+export function defineLazyProperty(
+  target: Object,
   property: string,
   callback: LazyCallback,
   options: ?DefinePropertyOptions,
-): T {
+): Object {
   defineGetter(
     target,
     property,
@@ -161,12 +161,12 @@ export function defineLazyProperty<T: Object>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineLazyConstant<T: Object>(
-  target: T,
+export function defineLazyConstant(
+  target: Object,
   property: string,
   callback: LazyCallback,
   options: ?EnumerableOptions,
-): T {
+): Object {
   defineGetter(
     target,
     property,
@@ -213,12 +213,12 @@ export function definePrototypeProperty(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeConstant<T>(
-  Class: T,
+export function definePrototypeConstant(
+  Class: Function,
   property: string,
   value: any,
   options: ?EnumerableOptions,
-): T {
+): Function {
   defineConstant(Class.prototype, property, value, options);
   return Class;
 }
@@ -233,12 +233,12 @@ export function definePrototypeConstant<T>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeGetter<T>(
-  Class: T,
+export function definePrototypeGetter(
+  Class: Function,
   property: string,
   getter: Getter,
   options: ?ConfigurableEnumerableOptions,
-): T {
+): Function {
   defineGetter(Class.prototype, property, getter, options);
   return Class;
 }
@@ -253,12 +253,12 @@ export function definePrototypeGetter<T>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeSetter<T>(
-  Class: T,
+export function definePrototypeSetter(
+  Class: Function,
   property: string,
   setter: Setter,
   options: ?ConfigurableEnumerableOptions,
-): T {
+): Function {
   defineSetter(Class.prototype, property, setter, options);
   return Class;
 }
@@ -275,12 +275,12 @@ export function definePrototypeSetter<T>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeLazyProperty<T>(
-  Class: T,
+export function definePrototypeLazyProperty(
+  Class: Function,
   property: string,
   callback: LazyCallback,
   options: ?DefinePropertyOptions,
-): T {
+): Function {
   defineLazyProperty(Class.prototype, property, callback, options);
   return Class;
 }
@@ -295,12 +295,12 @@ export function definePrototypeLazyProperty<T>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeLazyConstant<T>(
-  Class: T,
+export function definePrototypeLazyConstant(
+  Class: Function,
   property: string,
   callback: LazyCallback,
   options: ?EnumerableOptions,
-): T {
+): Function {
   defineLazyConstant(Class.prototype, property, callback, options);
   return Class;
 }
@@ -318,11 +318,11 @@ type Properties = { [property: string]: any };
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineProperties<T: Object>(
-  target: T,
+export function defineProperties(
+  target: Object,
   properties: ?Properties,
   options: ?DefinePropertyOptions,
-): T {
+): Object {
   if (!properties) {
     return target;
   }
@@ -353,11 +353,11 @@ export function defineProperties<T: Object>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineConstants<T: Object>(
-  target: T,
+export function defineConstants(
+  target: Object,
   properties: ?Properties,
   options: ?EnumerableOptions,
-): T {
+): Object {
   return defineProperties(target, properties, {
     writable: false,
     configurable: false,

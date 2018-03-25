@@ -23,9 +23,7 @@ const ConfigurableEnumerableOptions = t.type("ConfigurableEnumerableOptions", t.
  */
 
 function defineProperty(target, property, value, options) {
-  const T = t.typeParameter("T", t.object());
-
-  let _targetType = t.flowInto(T);
+  let _targetType = t.object();
 
   let _propertyType = t.string();
 
@@ -33,7 +31,7 @@ function defineProperty(target, property, value, options) {
 
   let _optionsType = t.nullable(DefinePropertyOptions);
 
-  const _returnType = t.return(T);
+  const _returnType = t.return(t.object());
 
   t.param("target", _targetType).assert(target);
   t.param("property", _propertyType).assert(property);
@@ -59,9 +57,7 @@ function defineProperty(target, property, value, options) {
  * @return {Object} target
  */
 function defineConstant(target, property, value, options) {
-  const T = t.typeParameter("T", t.object());
-
-  let _targetType2 = t.flowInto(T);
+  let _targetType2 = t.object();
 
   let _propertyType2 = t.string();
 
@@ -69,7 +65,7 @@ function defineConstant(target, property, value, options) {
 
   let _optionsType2 = t.nullable(EnumerableOptions);
 
-  const _returnType2 = t.return(T);
+  const _returnType2 = t.return(t.object());
 
   t.param("target", _targetType2).assert(target);
   t.param("property", _propertyType2).assert(property);
@@ -99,15 +95,13 @@ const Getter = t.type("Getter", t.function(t.return(t.any())));
  */
 
 function defineGetter(target, property, getter, options) {
-  const T = t.typeParameter("T", t.object());
-
-  let _targetType3 = t.flowInto(T);
+  let _targetType3 = t.object();
 
   let _propertyType3 = t.string();
 
   let _optionsType3 = t.nullable(ConfigurableEnumerableOptions);
 
-  const _returnType3 = t.return(T);
+  const _returnType3 = t.return(t.object());
 
   t.param("target", _targetType3).assert(target);
   t.param("property", _propertyType3).assert(property);
@@ -122,7 +116,7 @@ function defineGetter(target, property, getter, options) {
   return _returnType3.assert(target);
 }
 
-const Setter = t.type("Setter", t.function(t.return(t.any())));
+const Setter = t.type("Setter", t.function(t.param("value", t.any()), t.return(t.any())));
 
 /**
  *
@@ -136,15 +130,13 @@ const Setter = t.type("Setter", t.function(t.return(t.any())));
  */
 
 function defineSetter(target, property, setter, options) {
-  const T = t.typeParameter("T", t.object());
-
-  let _targetType4 = t.flowInto(T);
+  let _targetType4 = t.object();
 
   let _propertyType4 = t.string();
 
   let _optionsType4 = t.nullable(ConfigurableEnumerableOptions);
 
-  const _returnType4 = t.return(T);
+  const _returnType4 = t.return(t.object());
 
   t.param("target", _targetType4).assert(target);
   t.param("property", _propertyType4).assert(property);
@@ -175,15 +167,13 @@ const LazyCallback = t.type("LazyCallback", t.function(t.return(t.any())));
  */
 
 function defineLazyProperty(target, property, callback, options) {
-  const T = t.typeParameter("T", t.object());
-
-  let _targetType5 = t.flowInto(T);
+  let _targetType5 = t.object();
 
   let _propertyType5 = t.string();
 
   let _optionsType5 = t.nullable(DefinePropertyOptions);
 
-  const _returnType5 = t.return(T);
+  const _returnType5 = t.return(t.object());
 
   t.param("target", _targetType5).assert(target);
   t.param("property", _propertyType5).assert(property);
@@ -214,15 +204,13 @@ function defineLazyProperty(target, property, callback, options) {
  * @return {Object} target
  */
 function defineLazyConstant(target, property, callback, options) {
-  const T = t.typeParameter("T", t.object());
-
-  let _targetType6 = t.flowInto(T);
+  let _targetType6 = t.object();
 
   let _propertyType6 = t.string();
 
   let _optionsType6 = t.nullable(EnumerableOptions);
 
-  const _returnType7 = t.return(T);
+  const _returnType7 = t.return(t.object());
 
   t.param("target", _targetType6).assert(target);
   t.param("property", _propertyType6).assert(property);
@@ -283,9 +271,7 @@ function definePrototypeProperty(Class, property, value, options) {
  * @return {Object} Class
  */
 function definePrototypeConstant(Class, property, value, options) {
-  const T = t.typeParameter("T");
-
-  let _ClassType2 = t.flowInto(T);
+  let _ClassType2 = t.function();
 
   let _propertyType8 = t.string();
 
@@ -293,7 +279,7 @@ function definePrototypeConstant(Class, property, value, options) {
 
   let _optionsType8 = t.nullable(EnumerableOptions);
 
-  const _returnType10 = t.return(T);
+  const _returnType10 = t.return(t.function());
 
   t.param("Class", _ClassType2).assert(Class);
   t.param("property", _propertyType8).assert(property);
@@ -315,15 +301,13 @@ function definePrototypeConstant(Class, property, value, options) {
  * @return {Object} Class
  */
 function definePrototypeGetter(Class, property, getter, options) {
-  const T = t.typeParameter("T");
-
-  let _ClassType3 = t.flowInto(T);
+  let _ClassType3 = t.function();
 
   let _propertyType9 = t.string();
 
   let _optionsType9 = t.nullable(ConfigurableEnumerableOptions);
 
-  const _returnType11 = t.return(T);
+  const _returnType11 = t.return(t.function());
 
   t.param("Class", _ClassType3).assert(Class);
   t.param("property", _propertyType9).assert(property);
@@ -345,15 +329,13 @@ function definePrototypeGetter(Class, property, getter, options) {
  * @return {Object} Class
  */
 function definePrototypeSetter(Class, property, setter, options) {
-  const T = t.typeParameter("T");
-
-  let _ClassType4 = t.flowInto(T);
+  let _ClassType4 = t.function();
 
   let _propertyType10 = t.string();
 
   let _optionsType10 = t.nullable(ConfigurableEnumerableOptions);
 
-  const _returnType12 = t.return(T);
+  const _returnType12 = t.return(t.function());
 
   t.param("Class", _ClassType4).assert(Class);
   t.param("property", _propertyType10).assert(property);
@@ -377,15 +359,13 @@ function definePrototypeSetter(Class, property, setter, options) {
  * @return {Object} Class
  */
 function definePrototypeLazyProperty(Class, property, callback, options) {
-  const T = t.typeParameter("T");
-
-  let _ClassType5 = t.flowInto(T);
+  let _ClassType5 = t.function();
 
   let _propertyType11 = t.string();
 
   let _optionsType11 = t.nullable(DefinePropertyOptions);
 
-  const _returnType13 = t.return(T);
+  const _returnType13 = t.return(t.function());
 
   t.param("Class", _ClassType5).assert(Class);
   t.param("property", _propertyType11).assert(property);
@@ -407,15 +387,13 @@ function definePrototypeLazyProperty(Class, property, callback, options) {
  * @return {Object} Class
  */
 function definePrototypeLazyConstant(Class, property, callback, options) {
-  const T = t.typeParameter("T");
-
-  let _ClassType6 = t.flowInto(T);
+  let _ClassType6 = t.function();
 
   let _propertyType12 = t.string();
 
   let _optionsType12 = t.nullable(EnumerableOptions);
 
-  const _returnType14 = t.return(T);
+  const _returnType14 = t.return(t.function());
 
   t.param("Class", _ClassType6).assert(Class);
   t.param("property", _propertyType12).assert(property);
@@ -441,15 +419,13 @@ const Properties = t.type("Properties", t.object(t.indexer("property", t.string(
  */
 
 function defineProperties(target, properties, options) {
-  const T = t.typeParameter("T", t.object());
-
-  let _targetType7 = t.flowInto(T);
+  let _targetType7 = t.object();
 
   let _propertiesType = t.nullable(Properties);
 
   let _optionsType13 = t.nullable(DefinePropertyOptions);
 
-  const _returnType15 = t.return(T);
+  const _returnType15 = t.return(t.object());
 
   t.param("target", _targetType7).assert(target);
   t.param("properties", _propertiesType).assert(properties);
@@ -490,15 +466,13 @@ function defineProperties(target, properties, options) {
  * @return {Object} target
  */
 function defineConstants(target, properties, options) {
-  const T = t.typeParameter("T", t.object());
-
-  let _targetType8 = t.flowInto(T);
+  let _targetType8 = t.object();
 
   let _propertiesType2 = t.nullable(Properties);
 
   let _optionsType14 = t.nullable(EnumerableOptions);
 
-  const _returnType16 = t.return(T);
+  const _returnType16 = t.return(t.object());
 
   t.param("target", _targetType8).assert(target);
   t.param("properties", _propertiesType2).assert(properties);
