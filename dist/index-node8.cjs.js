@@ -1,19 +1,6 @@
-/* eslint-disable max-lines, flowtype/no-weak-types */
+'use strict';
 
-type DefinePropertyOptions = {|
-  configurable?: boolean,
-  enumerable?: boolean,
-  writable?: boolean,
-|};
-
-type EnumerableOptions = {|
-  enumerable?: boolean,
-|};
-
-type ConfigurableEnumerableOptions = {|
-  configurable?: boolean,
-  enumerable?: boolean,
-|};
+Object.defineProperty(exports, '__esModule', { value: true });
 
 /**
  * @param {Object} target
@@ -24,17 +11,12 @@ type ConfigurableEnumerableOptions = {|
  * @param {boolean} [options.configurable=true]
  * @param {boolean} [options.enumerable=false]
  */
-export function defineProperty<T: Object>(
-  target: T,
-  property: string,
-  value: any,
-  options: ?DefinePropertyOptions,
-): T {
+function defineProperty(target, property, value, options) {
   Object.defineProperty(target, property, {
     value,
     writable: (options && options.writable) !== false,
     configurable: (options && options.configurable) !== false,
-    enumerable: options && options.enumerable,
+    enumerable: options && options.enumerable
   });
   return target;
 }
@@ -48,22 +30,17 @@ export function defineProperty<T: Object>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineConstant<T: Object>(
-  target: T,
-  property: string,
-  value: any,
-  options: ?EnumerableOptions,
-): T {
+/* eslint-disable max-lines, flowtype/no-weak-types */
+
+function defineConstant(target, property, value, options) {
   Object.defineProperty(target, property, {
     value,
     writable: false,
     configurable: false,
-    enumerable: options && options.enumerable,
+    enumerable: options && options.enumerable
   });
   return target;
 }
-
-type Getter = () => any;
 
 /**
  *
@@ -75,21 +52,14 @@ type Getter = () => any;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineGetter<T: Object>(
-  target: T,
-  property: string,
-  getter: Getter,
-  options: ?ConfigurableEnumerableOptions,
-): T {
+function defineGetter(target, property, getter, options) {
   Object.defineProperty(target, property, {
     get: getter,
     configurable: (options && options.configurable) !== false,
-    enumerable: options && options.enumerable,
+    enumerable: options && options.enumerable
   });
   return target;
 }
-
-type Setter = () => any;
 
 /**
  *
@@ -101,21 +71,14 @@ type Setter = () => any;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineSetter<T: Object>(
-  target: T,
-  property: string,
-  setter: Setter,
-  options: ?ConfigurableEnumerableOptions,
-): T {
+function defineSetter(target, property, setter, options) {
   Object.defineProperty(target, property, {
     set: setter,
     configurable: (options && options.configurable) !== false,
-    enumerable: options && options.enumerable,
+    enumerable: options && options.enumerable
   });
   return target;
 }
-
-type LazyCallback = () => any;
 
 /**
  * Create a getter that transforms then to a property
@@ -129,25 +92,15 @@ type LazyCallback = () => any;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineLazyProperty<T: Object>(
-  target: T,
-  property: string,
-  callback: LazyCallback,
-  options: ?DefinePropertyOptions,
-): T {
-  defineGetter(
-    target,
-    property,
-    function(): any {
-      const value = callback.call(this);
-      defineProperty(this, property, value, options);
-      return value;
-    },
-    {
-      configurable: true,
-      enumerable: options && options.enumerable,
-    },
-  );
+function defineLazyProperty(target, property, callback, options) {
+  defineGetter(target, property, function () {
+    const value = callback.call(this);
+    defineProperty(this, property, value, options);
+    return value;
+  }, {
+    configurable: true,
+    enumerable: options && options.enumerable
+  });
   return target;
 }
 
@@ -161,25 +114,15 @@ export function defineLazyProperty<T: Object>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineLazyConstant<T: Object>(
-  target: T,
-  property: string,
-  callback: LazyCallback,
-  options: ?EnumerableOptions,
-): T {
-  defineGetter(
-    target,
-    property,
-    function(): any {
-      const value = callback.call(this);
-      defineConstant(this, property, value, options);
-      return value;
-    },
-    {
-      configurable: true,
-      enumerable: options && options.enumerable,
-    },
-  );
+function defineLazyConstant(target, property, callback, options) {
+  defineGetter(target, property, function () {
+    const value = callback.call(this);
+    defineConstant(this, property, value, options);
+    return value;
+  }, {
+    configurable: true,
+    enumerable: options && options.enumerable
+  });
   return target;
 }
 
@@ -194,12 +137,7 @@ export function defineLazyConstant<T: Object>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeProperty(
-  Class: Function,
-  property: string,
-  value: any,
-  options: ?DefinePropertyOptions,
-): Function {
+function definePrototypeProperty(Class, property, value, options) {
   defineProperty(Class.prototype, property, value, options);
   return Class;
 }
@@ -213,12 +151,7 @@ export function definePrototypeProperty(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeConstant<T>(
-  Class: T,
-  property: string,
-  value: any,
-  options: ?EnumerableOptions,
-): T {
+function definePrototypeConstant(Class, property, value, options) {
   defineConstant(Class.prototype, property, value, options);
   return Class;
 }
@@ -233,12 +166,7 @@ export function definePrototypeConstant<T>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeGetter<T>(
-  Class: T,
-  property: string,
-  getter: Getter,
-  options: ?ConfigurableEnumerableOptions,
-): T {
+function definePrototypeGetter(Class, property, getter, options) {
   defineGetter(Class.prototype, property, getter, options);
   return Class;
 }
@@ -253,12 +181,7 @@ export function definePrototypeGetter<T>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeSetter<T>(
-  Class: T,
-  property: string,
-  setter: Setter,
-  options: ?ConfigurableEnumerableOptions,
-): T {
+function definePrototypeSetter(Class, property, setter, options) {
   defineSetter(Class.prototype, property, setter, options);
   return Class;
 }
@@ -275,12 +198,7 @@ export function definePrototypeSetter<T>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeLazyProperty<T>(
-  Class: T,
-  property: string,
-  callback: LazyCallback,
-  options: ?DefinePropertyOptions,
-): T {
+function definePrototypeLazyProperty(Class, property, callback, options) {
   defineLazyProperty(Class.prototype, property, callback, options);
   return Class;
 }
@@ -295,17 +213,10 @@ export function definePrototypeLazyProperty<T>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeLazyConstant<T>(
-  Class: T,
-  property: string,
-  callback: LazyCallback,
-  options: ?EnumerableOptions,
-): T {
+function definePrototypeLazyConstant(Class, property, callback, options) {
   defineLazyConstant(Class.prototype, property, callback, options);
   return Class;
 }
-
-type Properties = { [property: string]: any };
 
 /**
  * Shortcut for Object.defineProperties
@@ -318,27 +229,23 @@ type Properties = { [property: string]: any };
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineProperties<T: Object>(
-  target: T,
-  properties: ?Properties,
-  options: ?DefinePropertyOptions,
-): T {
+function defineProperties(target, properties, options) {
   if (!properties) {
     return target;
   }
 
-  const optionsObject: DefinePropertyOptions = {
+  const optionsObject = {
     writable: (options && options.writable) !== false,
     configurable: (options && options.configurable) !== false,
-    enumerable: !!(options && options.enumerable),
+    enumerable: !!(options && options.enumerable)
   };
 
-  Object.keys(properties).forEach((key: string) => {
+  Object.keys(properties).forEach(key => {
     Object.defineProperty(target, key, {
       value: properties[key],
       writable: optionsObject.writable,
       configurable: optionsObject.configurable,
-      enumerable: optionsObject.enumerable,
+      enumerable: optionsObject.enumerable
     });
   });
   return target;
@@ -353,14 +260,26 @@ export function defineProperties<T: Object>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineConstants<T: Object>(
-  target: T,
-  properties: ?Properties,
-  options: ?EnumerableOptions,
-): T {
+function defineConstants(target, properties, options) {
   return defineProperties(target, properties, {
     writable: false,
     configurable: false,
-    enumerable: options && options.enumerable,
+    enumerable: options && options.enumerable
   });
 }
+
+exports.defineProperty = defineProperty;
+exports.defineConstant = defineConstant;
+exports.defineGetter = defineGetter;
+exports.defineSetter = defineSetter;
+exports.defineLazyProperty = defineLazyProperty;
+exports.defineLazyConstant = defineLazyConstant;
+exports.definePrototypeProperty = definePrototypeProperty;
+exports.definePrototypeConstant = definePrototypeConstant;
+exports.definePrototypeGetter = definePrototypeGetter;
+exports.definePrototypeSetter = definePrototypeSetter;
+exports.definePrototypeLazyProperty = definePrototypeLazyProperty;
+exports.definePrototypeLazyConstant = definePrototypeLazyConstant;
+exports.defineProperties = defineProperties;
+exports.defineConstants = defineConstants;
+//# sourceMappingURL=index-node8.cjs.js.map

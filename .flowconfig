@@ -1,0 +1,16 @@
+[ignore]
+<PROJECT_ROOT>/index.js
+.*/docs/.*
+.*/dist/.*
+.*/__tests__/.*
+.*/test/.*
+.*/.*\.test.*
+
+[include]
+
+[libs]
+
+[options]
+all=true
+module.use_strict=true
+esproposal.export_star_as=enable

@@ -1,8 +1,18 @@
-# object-properties [![NPM version][npm-image]][npm-url]
+<h3 align="center">
+  object-properties
+</h3>
 
-Shortcuts to Object.defineProperty and Object.defineProperties
+<p align="center">
+  Shortcuts to Object.defineProperty and Object.defineProperties
+</p>
 
-[![Build Status][build-status-image]][build-status-url] [![Coverage][coverage-image]][coverage-url]
+<p align="center">
+  <a href="https://npmjs.org/package/object-properties"><img src="https://img.shields.io/npm/v/object-properties.svg?style=flat-square"></a>
+  <a href="https://circleci.com/gh/christophehurpeau/object-properties"><img src="https://img.shields.io/circleci/project/christophehurpeau/object-properties/master.svg?style=flat-square"></a>
+  <a href="https://david-dm.org/christophehurpeau/object-properties"><img src="https://david-dm.org/christophehurpeau/object-properties.svg?style=flat-square"></a>
+  <a href="https://dependencyci.com/github/christophehurpeau/object-properties"><img src="https://dependencyci.com/github/christophehurpeau/object-properties/badge?style=flat-square"></a>
+  <a href="https://codecov.io/gh/christophehurpeau/object-properties"><img src="https://img.shields.io/codecov/c/github/christophehurpeau/object-properties/master.svg?style=flat-square"></a>
+</p>
 
 ## Examples
 
@@ -34,11 +44,3 @@ defineGetter(object, 'test', () => 'test');
 ## License
 
 [ISC](https://github.com/christophehurpeau/object-properties/blob/master/LICENSE)
-
-
-[npm-image]: https://img.shields.io/npm/v/object-properties.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/object-properties
-[build-status-image]: https://img.shields.io/circleci/project/christophehurpeau/object-properties/master.svg?style=flat-square
-[build-status-url]: https://circleci.com/gh/christophehurpeau/object-properties
-[coverage-image]: https://img.shields.io/coveralls/christophehurpeau/object-properties/master.svg?style=flat-square
-[coverage-url]: http://christophehurpeau.github.io/object-properties/coverage/lcov-report/

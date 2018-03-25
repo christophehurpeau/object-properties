@@ -1,1 +1,10 @@
-node_modules/springbokjs-library/config-files/.babelrc
+{
+  "env": {
+    "test": {
+      "only": ["src/"],
+      "presets": [
+        ["pob-babel/preset", { "flow": true }]
+      ]
+    }
+  }
+}
