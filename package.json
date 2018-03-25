@@ -1,6 +1,6 @@
 {
   "name": "object-properties",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Shortcuts to Object.defineProperty and Object.defineProperties",
   "keywords": ["Object.defineProperties", "Object.defineProperty"],
   "author": "Christophe Hurpeau <christophe@hurpeau.com> (http://christophe.hurpeau.com/)",

@@ -1,3 +1,12 @@
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/christophehurpeau/object-properties/compare/v2.0.0...v3.0.0) (2018-03-25)
+
+
+### Bug Fixes
+
+* remove flow generics ([8c3a8d9](https://github.com/christophehurpeau/object-properties/commit/8c3a8d9))
+
+
 ### v2.0.0
 
 - [`40c5b17`](https://github.com/christophehurpeau/object-properties/commit/40c5b17e7ac6bafaa950973cd8bc78f952b08e31) springbokjs-library@17 (Christophe Hurpeau)
