@@ -7,12 +7,8 @@
   "license": "ISC",
   "repository": "git@github.com:christophehurpeau/object-properties.git",
   "homepage": "https://github.com/christophehurpeau/object-properties#readme",
-  "bugs": {
-    "url": "https://github.com/christophehurpeau/object-properties/issues"
-  },
-  "engines": {
-    "node": ">=6.5.0"
-  },
+  "bugs": { "url": "https://github.com/christophehurpeau/object-properties/issues" },
+  "engines": { "node": ">=6.5.0" },
   "main": "lib/index.js",
   "typings": "./dist/index.d.ts",
   "module": "./dist/index-browser.es.js",
@@ -34,7 +30,6 @@
     "lint": "tsc --noEmit && eslint --ext .ts  src/",
     "postcheckout": "yarnhook",
     "postmerge": "yarnhook",
-    "postpublish": "make post-publish",
     "postrewrite": "yarnhook",
     "precommit": "lint-staged",
     "preversion": "yarn run lint && yarn run build && pob-repository-check-clean",
@@ -48,22 +43,14 @@
     "src/**/*.json": ["prettier --write", "git add"],
     "src/**/*.js": ["eslint --fix --quiet", "git add"]
   },
-  "prettier": {
-    "trailingComma": "all",
-    "singleQuote": true,
-    "printWidth": 100
-  },
-  "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
-  },
+  "prettier": { "trailingComma": "all", "singleQuote": true, "printWidth": 100 },
+  "commitlint": { "extends": ["@commitlint/config-conventional"] },
   "jest": {
     "cacheDirectory": "./node_modules/.cache/jest",
     "testMatch": ["<rootDir>/src/**/__tests__/**/*.ts", "<rootDir>/src/**/*.test.ts"],
     "collectCoverageFrom": ["src/**/*.ts"],
     "moduleFileExtensions": ["ts", "js"],
-    "transform": {
-      "^.+\\.ts$": "babel-jest"
-    }
+    "transform": { "^.+\\.ts$": "babel-jest" }
   },
   "dependencies": {},
   "devDependencies": {
