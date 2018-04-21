@@ -1,3 +1,9 @@
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/christophehurpeau/object-properties/compare/v3.0.0...v3.1.0) (2018-04-21)
+
+typescript
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/christophehurpeau/object-properties/compare/v2.0.0...v3.0.0) (2018-03-25)
 
