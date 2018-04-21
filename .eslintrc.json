@@ -1,8 +1,8 @@
 {
-  "extends": ["pob/babel", "pob/flow"],
+  "extends": ["pob/babel", "pob/typescript"],
   "overrides": [
     {
-      "files": ["src/**/*.test.js", "src/__tests__/**/*.js"],
+      "files": ["src/**/*.test.ts", "src/__tests__/**/*.ts"],
       "env": {
         "jest": true
       },
@@ -15,5 +15,7 @@
         ]
       }
     }
-  ]
+  ],
+  "parser": "typescript-eslint-parser",
+  "plugins": ["typescript"]
 }

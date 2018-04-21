@@ -54,7 +54,7 @@ test('defineSetter should work', () => {
 test('defineLazyProperty should work', () => {
   const o = {};
   let getterCalledTimes = 0;
-  const res = defineLazyProperty(o, 'a', function() {
+  const res = defineLazyProperty(o, 'a', function(this: any) {
     expect(this).toBe(o);
     return ++getterCalledTimes;
   });
@@ -71,7 +71,7 @@ test('defineLazyProperty should work', () => {
 test('defineLazyConstant should work', () => {
   const o = {};
   let getterCalledTimes = 0;
-  const res = defineLazyConstant(o, 'a', function() {
+  const res = defineLazyConstant(o, 'a', function(this: any) {
     expect(this).toBe(o);
     return ++getterCalledTimes;
   });
@@ -99,40 +99,40 @@ test('defineProperties should work', () => {
 
 test('definePrototypeProperty should work', () => {
   class O {}
-  const res = definePrototypeProperty(O, 'a', 1);
-  expect(res).toBe(O);
-  const o = new O();
+  const Res = definePrototypeProperty(O, 'a', 1);
+  expect(Res).toBe(O);
+  const o = new Res();
   expect(o.a).toBe(1);
-  O.prototype.a = 2;
+  Res.prototype.a = 2;
   expect(o.a).toBe(2);
 });
 
 test('definePrototypeConstant should work', () => {
   class O {}
-  const res = definePrototypeConstant(O, 'a', 1);
-  expect(res).toBe(O);
-  const o = new O();
+  const Res = definePrototypeConstant(O, 'a', 1);
+  expect(Res).toBe(O);
+  const o = new Res();
   expect(o.a).toBe(1);
   expect(() => definePrototypeConstant(O, 'a', 2)).toThrow('Cannot redefine property: a');
 });
 
 test('definePrototypeGetter should work', () => {
   class O {}
-  const res = definePrototypeGetter(O, 'a', () => 1);
-  expect(res).toBe(O);
-  const o = new O();
+  const Res = definePrototypeGetter(O, 'a', () => 1);
+  expect(Res).toBe(O);
+  const o = new Res();
   expect(o.a).toBe(1);
 });
 
 test('definePrototypeSetter should work', () => {
   class O {}
   let value;
-  const res = definePrototypeSetter(O, 'a', (v: number) => {
+  const Res = definePrototypeSetter(O, 'a', (v: number) => {
     value = v * 2;
     return value;
   });
-  expect(res).toBe(O);
-  const o = new O();
+  expect(Res).toBe(O);
+  const o = new Res();
   o.a = 2;
   expect(value).toBe(4);
 });
@@ -140,9 +140,9 @@ test('definePrototypeSetter should work', () => {
 test('definePrototypeLazyProperty should work', () => {
   class O {}
   let getterCalledTimes = 0;
-  const res = definePrototypeLazyProperty(O, 'a', () => ++getterCalledTimes);
-  expect(res).toBe(O);
-  const o = new O();
+  const Res = definePrototypeLazyProperty(O, 'a', () => ++getterCalledTimes);
+  expect(Res).toBe(O);
+  const o = new Res();
   expect(o.a).toBe(1);
   expect(o.a).toBe(1);
   expect(o.a).toBe(1);
@@ -156,7 +156,7 @@ test('definePrototypeLazyProperty should work', () => {
   expect(o.a).toBe(2);
   expect(getterCalledTimes).toBe(2);
 
-  const o2 = new O();
+  const o2 = new Res();
   expect(o2.a).toBe(3);
   expect(o2.a).toBe(3);
   expect(getterCalledTimes).toBe(3);
@@ -165,9 +165,9 @@ test('definePrototypeLazyProperty should work', () => {
 test('definePrototypeLazyConstant should work', () => {
   class O {}
   let getterCalledTimes = 0;
-  const res = definePrototypeLazyConstant(O, 'a', () => ++getterCalledTimes);
-  expect(res).toBe(O);
-  const o = new O();
+  const Res = definePrototypeLazyConstant(O, 'a', () => ++getterCalledTimes);
+  expect(Res).toBe(O);
+  const o = new Res();
   expect(o.a).toBe(1);
   expect(o.a).toBe(1);
   expect(o.a).toBe(1);
@@ -175,7 +175,7 @@ test('definePrototypeLazyConstant should work', () => {
 
   expect(() => defineConstant(o, 'a', 2)).toThrow('Cannot redefine property: a');
 
-  const o2 = new O();
+  const o2 = new Res();
   expect(o2.a).toBe(2);
   expect(o2.a).toBe(2);
   expect(getterCalledTimes).toBe(2);
