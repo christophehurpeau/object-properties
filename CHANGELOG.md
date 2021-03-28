@@ -1,3 +1,16 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [4.0.0](https://github.com/christophehurpeau/object-properties/compare/v3.1.0...v4.0.0) (2021-03-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* requires node 12
+
+* update dependencies ([2eaaa94](https://github.com/christophehurpeau/object-properties/commit/2eaaa94d6eeaa60105e6f10ba3b629252783b091))
+
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/christophehurpeau/object-properties/compare/v3.0.0...v3.1.0) (2018-04-21)
 
