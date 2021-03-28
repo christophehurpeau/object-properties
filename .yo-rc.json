@@ -8,7 +8,7 @@
       "enable": true
     },
     "lib": {
-      "documentation": false,
+      "documentation": true,
       "testing": {
         "codecov": true,
         "ci": true

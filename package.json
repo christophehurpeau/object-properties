@@ -69,11 +69,13 @@
     "build": "pob-build && yarn run build:definitions",
     "build:definitions": "tsc -p tsconfig.build.json",
     "clean": "rm -Rf dist",
+    "generate:api": "typedoc --tsconfig tsconfig.doc.json",
+    "generate:docs": "rm -Rf docs ; yarn run generate:api ; touch docs/.nojekyll && yarn run generate:test-coverage",
     "generate:test-coverage": "rm -Rf docs/coverage/ ; NODE_ENV=production BABEL_ENV=test jest --coverage --coverageReporters=pob-lcov-reporter --coverageDirectory=docs/coverage/",
     "lint": "yarn run lint:prettier && tsc && yarn run lint:eslint",
     "lint:eslint": "eslint --ext .js,.mjs,.ts --report-unused-disable-directives --quiet *.js src",
     "lint:prettier": "prettier --check .",
-    "preversion": "yarn run lint && yarn run build && repository-check-dirty",
+    "preversion": "yarn run lint && yarn run build && yarn run generate:docs && repository-check-dirty",
     "release": "repository-check-dirty && yarn preversion && standard-version -a -m 'chore(release): %s [skip ci]' && git push --follow-tags origin master && npm publish",
     "test": "jest",
     "test:watch": "jest",
@@ -164,6 +166,7 @@
     "proclaim": "^3.4.1",
     "rollup": "2.43.1",
     "standard-version": "9.1.1",
+    "typedoc": "0.20.34",
     "typescript": "4.2.3",
     "xunit-file": "1.0.0"
   }

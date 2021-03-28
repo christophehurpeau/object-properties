@@ -50,8 +50,8 @@ jobs:
         env:
           CI: true
 
-      - name: Generate Coverage doc
-        run: yarn run generate:test-coverage
+      - name: Documentation
+        run: yarn run generate:docs
         if: startsWith(matrix.node-version, '14.')
         env:
           CI: true
