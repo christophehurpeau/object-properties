@@ -1,5 +1,4 @@
-/* eslint-disable max-lines, flowtype/no-weak-types */
-
+/* eslint-disable max-lines */
 export interface DefinePropertyOptions {
   configurable?: boolean;
   enumerable?: boolean;
@@ -24,17 +23,17 @@ export interface ConfigurableEnumerableOptions {
  * @param {boolean} [options.configurable=true]
  * @param {boolean} [options.enumerable=false]
  */
-export function defineProperty<T extends object, P extends string, V>(
+export function defineProperty<T, P extends string, V>(
   target: T,
   property: P,
   value: V,
   options?: DefinePropertyOptions,
-): T & { [K in P]: V } | any {
+): (T & { [K in P]: V }) | any {
   Object.defineProperty(target, property, {
     value,
-    writable: (options && options.writable) !== false,
-    configurable: (options && options.configurable) !== false,
-    enumerable: options && options.enumerable,
+    writable: options?.writable !== false,
+    configurable: options?.configurable !== false,
+    enumerable: options?.enumerable,
   });
   return target;
 }
@@ -48,17 +47,17 @@ export function defineProperty<T extends object, P extends string, V>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineConstant<T extends object, P extends string, V>(
+export function defineConstant<T, P extends string, V>(
   target: T,
   property: P,
   value: V,
   options?: EnumerableOptions,
-): T & { readonly [K in P]: V } | any {
+): (T & { readonly [K in P]: V }) | any {
   Object.defineProperty(target, property, {
     value,
     writable: false,
     configurable: false,
-    enumerable: options && options.enumerable,
+    enumerable: options?.enumerable,
   });
   return target;
 }
@@ -75,16 +74,16 @@ export type Getter<V> = () => V;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineGetter<T extends object, P extends string, V>(
+export function defineGetter<T, P extends string, V>(
   target: T,
   property: P,
   getter: Getter<V>,
   options?: ConfigurableEnumerableOptions,
-): T & { readonly [K in P]: V } | any {
+): (T & { readonly [K in P]: V }) | any {
   Object.defineProperty(target, property, {
     get: getter,
-    configurable: (options && options.configurable) !== false,
-    enumerable: options && options.enumerable,
+    configurable: options?.configurable !== false,
+    enumerable: options?.enumerable,
   });
   return target;
 }
@@ -101,16 +100,16 @@ export type Setter<T, V> = (value: T) => V;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineSetter<T extends object, P extends string, V>(
+export function defineSetter<T, P extends string, V>(
   target: T,
   property: P,
   setter: Setter<any, V>,
   options?: ConfigurableEnumerableOptions,
-): T & { [K in P]?: V } | any {
+): (T & { [K in P]?: V }) | any {
   Object.defineProperty(target, property, {
     set: setter,
-    configurable: (options && options.configurable) !== false,
-    enumerable: options && options.enumerable,
+    configurable: options?.configurable !== false,
+    enumerable: options?.enumerable,
   });
   return target;
 }
@@ -129,23 +128,23 @@ export type LazyCallback<V> = () => V;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineLazyProperty<T extends object, P extends string, V>(
+export function defineLazyProperty<T, P extends string, V>(
   target: T,
   property: P,
   callback: LazyCallback<V>,
   options?: DefinePropertyOptions,
-): T & { [K in P]: V } | any {
+): (T & { [K in P]: V }) | any {
   defineGetter(
     target,
     property,
-    function(this: any): V {
+    function (this: any): V {
       const value = callback.call(this);
       defineProperty(this, property, value, options);
       return value;
     },
     {
       configurable: true,
-      enumerable: options && options.enumerable,
+      enumerable: options?.enumerable,
     },
   );
   return target;
@@ -161,23 +160,23 @@ export function defineLazyProperty<T extends object, P extends string, V>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineLazyConstant<T extends object, P extends string, V>(
+export function defineLazyConstant<T, P extends string, V>(
   target: T,
   property: P,
   callback: LazyCallback<V>,
   options?: EnumerableOptions,
-): T & { readonly [K in P]: V } | any {
+): (T & { readonly [K in P]: V }) | any {
   defineGetter(
     target,
     property,
-    function(this: any): V {
+    function (this: any): V {
       const value = callback.call(this);
       defineConstant(this, property, value, options);
       return value;
     },
     {
       configurable: true,
-      enumerable: options && options.enumerable,
+      enumerable: options?.enumerable,
     },
   );
   return target;
@@ -194,12 +193,16 @@ export function defineLazyConstant<T extends object, P extends string, V>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeProperty<T extends { prototype: object }, P extends string, V>(
+export function definePrototypeProperty<
+  T extends { prototype: unknown },
+  P extends string,
+  V
+>(
   Class: T,
   property: P,
   value: V,
   options?: DefinePropertyOptions,
-): T & { [K in P]: V } | any {
+): (T & { [K in P]: V }) | any {
   defineProperty(Class.prototype, property, value, options);
   return Class;
 }
@@ -213,12 +216,16 @@ export function definePrototypeProperty<T extends { prototype: object }, P exten
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeConstant<T extends { prototype: object }, P extends string, V>(
+export function definePrototypeConstant<
+  T extends { prototype: unknown },
+  P extends string,
+  V
+>(
   Class: T,
   property: P,
   value: V,
   options?: EnumerableOptions,
-): T & { readonly [K in P]: V } | any {
+): (T & { readonly [K in P]: V }) | any {
   defineConstant(Class.prototype, property, value, options);
   return Class;
 }
@@ -233,12 +240,16 @@ export function definePrototypeConstant<T extends { prototype: object }, P exten
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeGetter<T extends { prototype: object }, P extends string, V>(
+export function definePrototypeGetter<
+  T extends { prototype: unknown },
+  P extends string,
+  V
+>(
   Class: T,
   property: P,
   getter: Getter<V>,
   options?: ConfigurableEnumerableOptions,
-): T & { [K in P]: V } | any {
+): (T & { [K in P]: V }) | any {
   defineGetter(Class.prototype, property, getter, options);
   return Class;
 }
@@ -253,12 +264,16 @@ export function definePrototypeGetter<T extends { prototype: object }, P extends
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeSetter<T extends { prototype: object }, P extends string, V>(
+export function definePrototypeSetter<
+  T extends { prototype: unknown },
+  P extends string,
+  V
+>(
   Class: T,
   property: P,
   setter: Setter<any, V>,
   options?: ConfigurableEnumerableOptions,
-): T & { [K in P]?: V } | any {
+): (T & { [K in P]?: V }) | any {
   defineSetter(Class.prototype, property, setter, options);
   return Class;
 }
@@ -275,12 +290,16 @@ export function definePrototypeSetter<T extends { prototype: object }, P extends
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeLazyProperty<T extends { prototype: object }, P extends string, V>(
+export function definePrototypeLazyProperty<
+  T extends { prototype: unknown },
+  P extends string,
+  V
+>(
   Class: T,
   property: P,
   callback: LazyCallback<V>,
   options?: DefinePropertyOptions,
-): T & { [K in P]: V } | any {
+): (T & { [K in P]: V }) | any {
   defineLazyProperty(Class.prototype, property, callback, options);
   return Class;
 }
@@ -295,12 +314,16 @@ export function definePrototypeLazyProperty<T extends { prototype: object }, P e
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-export function definePrototypeLazyConstant<T extends { prototype: object }, P extends string, V>(
+export function definePrototypeLazyConstant<
+  T extends { prototype: unknown },
+  P extends string,
+  V
+>(
   Class: T,
   property: P,
   callback: LazyCallback<V>,
   options?: EnumerableOptions,
-): T & { readonly [K in P]: V } | any {
+): (T & { readonly [K in P]: V }) | any {
   defineLazyConstant(Class.prototype, property, callback, options);
   return Class;
 }
@@ -320,19 +343,20 @@ export function defineProperties<T, P extends { [prop: string]: any }>(
   target: T,
   properties?: P,
   options?: DefinePropertyOptions,
-): T | T & P | any {
+): T | (T & P) | any {
   if (!properties) {
     return target;
   }
 
   const optionsObject: DefinePropertyOptions = {
-    writable: (options && options.writable) !== false,
-    configurable: (options && options.configurable) !== false,
-    enumerable: !!(options && options.enumerable),
+    writable: options?.writable !== false,
+    configurable: options?.configurable !== false,
+    enumerable: !!options?.enumerable,
   };
 
   Object.keys(properties).forEach((key: string) => {
     Object.defineProperty(target, key, {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       value: properties[key],
       writable: optionsObject.writable,
       configurable: optionsObject.configurable,
@@ -351,14 +375,15 @@ export function defineProperties<T, P extends { [prop: string]: any }>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineConstants<T, P extends object>(
+export function defineConstants<T, P>(
   target: T,
   properties?: P,
   options?: EnumerableOptions,
 ): T & Readonly<P> {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return defineProperties(target, properties, {
     writable: false,
     configurable: false,
-    enumerable: options && options.enumerable,
+    enumerable: options?.enumerable,
   });
 }

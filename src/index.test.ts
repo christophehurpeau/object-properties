@@ -1,4 +1,8 @@
 /* eslint-disable max-lines */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable max-classes-per-file */
 
 import {
   defineProperty,
@@ -15,7 +19,7 @@ import {
   definePrototypeLazyConstant,
   defineProperties,
   defineConstants,
-} from './';
+} from '.';
 
 test('defineProperty should work', () => {
   const o = {};
@@ -30,7 +34,9 @@ test('defineConstant should work', () => {
   expect(res).toBe(o);
   expect(res.a).toBe(1);
 
-  expect(() => defineConstant(o, 'a', 2)).toThrow('Cannot redefine property: a');
+  expect(() => defineConstant(o, 'a', 2)).toThrow(
+    'Cannot redefine property: a',
+  );
 });
 
 test('defineGetter should work', () => {
@@ -43,7 +49,7 @@ test('defineGetter should work', () => {
 test('defineSetter should work', () => {
   const o = {};
   let value;
-  const res = defineSetter(o, 'a', v => {
+  const res = defineSetter(o, 'a', (v) => {
     value = v * 2;
   });
   expect(res).toBe(o);
@@ -54,7 +60,7 @@ test('defineSetter should work', () => {
 test('defineLazyProperty should work', () => {
   const o = {};
   let getterCalledTimes = 0;
-  const res = defineLazyProperty(o, 'a', function(this: any) {
+  const res = defineLazyProperty(o, 'a', function (this: any) {
     expect(this).toBe(o);
     return ++getterCalledTimes;
   });
@@ -71,7 +77,7 @@ test('defineLazyProperty should work', () => {
 test('defineLazyConstant should work', () => {
   const o = {};
   let getterCalledTimes = 0;
-  const res = defineLazyConstant(o, 'a', function(this: any) {
+  const res = defineLazyConstant(o, 'a', function (this: any) {
     expect(this).toBe(o);
     return ++getterCalledTimes;
   });
@@ -80,7 +86,9 @@ test('defineLazyConstant should work', () => {
   expect(res.a).toBe(1);
   expect(res.a).toBe(1);
   expect(getterCalledTimes).toBe(1);
-  expect(() => defineConstant(o, 'a', 2)).toThrow('Cannot redefine property: a');
+  expect(() => defineConstant(o, 'a', 2)).toThrow(
+    'Cannot redefine property: a',
+  );
 });
 
 test('defineProperties should work', () => {
@@ -113,7 +121,9 @@ test('definePrototypeConstant should work', () => {
   expect(Res).toBe(O);
   const o = new Res();
   expect(o.a).toBe(1);
-  expect(() => definePrototypeConstant(O, 'a', 2)).toThrow('Cannot redefine property: a');
+  expect(() => definePrototypeConstant(O, 'a', 2)).toThrow(
+    'Cannot redefine property: a',
+  );
 });
 
 test('definePrototypeGetter should work', () => {
@@ -173,7 +183,9 @@ test('definePrototypeLazyConstant should work', () => {
   expect(o.a).toBe(1);
   expect(getterCalledTimes).toBe(1);
 
-  expect(() => defineConstant(o, 'a', 2)).toThrow('Cannot redefine property: a');
+  expect(() => defineConstant(o, 'a', 2)).toThrow(
+    'Cannot redefine property: a',
+  );
 
   const o2 = new Res();
   expect(o2.a).toBe(2);
@@ -198,5 +210,7 @@ test('defineConstants should work', () => {
   expect(res.a).toBe(1);
   expect(res.b).toBe(2);
 
-  expect(() => defineConstant(o, 'a', 2)).toThrow('Cannot redefine property: a');
+  expect(() => defineConstant(o, 'a', 2)).toThrow(
+    'Cannot redefine property: a',
+  );
 });

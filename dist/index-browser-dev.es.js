@@ -1,4 +1,4 @@
-/* eslint-disable max-lines, flowtype/no-weak-types */
+/* eslint-disable max-lines */
 
 /**
  * @param {Object} target
@@ -12,9 +12,9 @@
 function defineProperty(target, property, value, options) {
   Object.defineProperty(target, property, {
     value: value,
-    writable: (options && options.writable) !== false,
-    configurable: (options && options.configurable) !== false,
-    enumerable: options && options.enumerable
+    writable: (options == null ? void 0 : options.writable) !== false,
+    configurable: (options == null ? void 0 : options.configurable) !== false,
+    enumerable: options == null ? void 0 : options.enumerable
   });
   return target;
 }
@@ -33,7 +33,7 @@ function defineConstant(target, property, value, options) {
     value: value,
     writable: false,
     configurable: false,
-    enumerable: options && options.enumerable
+    enumerable: options == null ? void 0 : options.enumerable
   });
   return target;
 }
@@ -51,8 +51,8 @@ function defineConstant(target, property, value, options) {
 function defineGetter(target, property, getter, options) {
   Object.defineProperty(target, property, {
     get: getter,
-    configurable: (options && options.configurable) !== false,
-    enumerable: options && options.enumerable
+    configurable: (options == null ? void 0 : options.configurable) !== false,
+    enumerable: options == null ? void 0 : options.enumerable
   });
   return target;
 }
@@ -70,8 +70,8 @@ function defineGetter(target, property, getter, options) {
 function defineSetter(target, property, setter, options) {
   Object.defineProperty(target, property, {
     set: setter,
-    configurable: (options && options.configurable) !== false,
-    enumerable: options && options.enumerable
+    configurable: (options == null ? void 0 : options.configurable) !== false,
+    enumerable: options == null ? void 0 : options.enumerable
   });
   return target;
 }
@@ -95,7 +95,7 @@ function defineLazyProperty(target, property, callback, options) {
     return value;
   }, {
     configurable: true,
-    enumerable: options && options.enumerable
+    enumerable: options == null ? void 0 : options.enumerable
   });
   return target;
 }
@@ -117,7 +117,7 @@ function defineLazyConstant(target, property, callback, options) {
     return value;
   }, {
     configurable: true,
-    enumerable: options && options.enumerable
+    enumerable: options == null ? void 0 : options.enumerable
   });
   return target;
 }
@@ -231,12 +231,13 @@ function defineProperties(target, properties, options) {
   }
 
   var optionsObject = {
-    writable: (options && options.writable) !== false,
-    configurable: (options && options.configurable) !== false,
-    enumerable: !!(options && options.enumerable)
+    writable: (options == null ? void 0 : options.writable) !== false,
+    configurable: (options == null ? void 0 : options.configurable) !== false,
+    enumerable: !!(options != null && options.enumerable)
   };
   Object.keys(properties).forEach(function (key) {
     Object.defineProperty(target, key, {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       value: properties[key],
       writable: optionsObject.writable,
       configurable: optionsObject.configurable,
@@ -256,12 +257,13 @@ function defineProperties(target, properties, options) {
  */
 
 function defineConstants(target, properties, options) {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return defineProperties(target, properties, {
     writable: false,
     configurable: false,
-    enumerable: options && options.enumerable
+    enumerable: options == null ? void 0 : options.enumerable
   });
 }
 
-export { defineProperty, defineConstant, defineGetter, defineSetter, defineLazyProperty, defineLazyConstant, definePrototypeProperty, definePrototypeConstant, definePrototypeGetter, definePrototypeSetter, definePrototypeLazyProperty, definePrototypeLazyConstant, defineProperties, defineConstants };
+export { defineConstant, defineConstants, defineGetter, defineLazyConstant, defineLazyProperty, defineProperties, defineProperty, definePrototypeConstant, definePrototypeGetter, definePrototypeLazyConstant, definePrototypeLazyProperty, definePrototypeProperty, definePrototypeSetter, defineSetter };
 //# sourceMappingURL=index-browser-dev.es.js.map

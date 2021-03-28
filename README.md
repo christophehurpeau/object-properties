@@ -8,10 +8,6 @@
 
 <p align="center">
   <a href="https://npmjs.org/package/object-properties"><img src="https://img.shields.io/npm/v/object-properties.svg?style=flat-square"></a>
-  <a href="https://circleci.com/gh/christophehurpeau/object-properties"><img src="https://img.shields.io/circleci/project/christophehurpeau/object-properties/master.svg?style=flat-square"></a>
-  <a href="https://david-dm.org/christophehurpeau/object-properties"><img src="https://david-dm.org/christophehurpeau/object-properties.svg?style=flat-square"></a>
-  <a href="https://dependencyci.com/github/christophehurpeau/object-properties"><img src="https://dependencyci.com/github/christophehurpeau/object-properties/badge?style=flat-square"></a>
-  <a href="https://codecov.io/gh/christophehurpeau/object-properties"><img src="https://img.shields.io/codecov/c/github/christophehurpeau/object-properties/master.svg?style=flat-square"></a>
 </p>
 
 ## Examples

@@ -19,9 +19,9 @@ export interface ConfigurableEnumerableOptions {
  * @param {boolean} [options.configurable=true]
  * @param {boolean} [options.enumerable=false]
  */
-export declare function defineProperty<T extends object, P extends string, V>(target: T, property: P, value: V, options?: DefinePropertyOptions): T & {
+export declare function defineProperty<T, P extends string, V>(target: T, property: P, value: V, options?: DefinePropertyOptions): (T & {
     [K in P]: V;
-} | any;
+}) | any;
 /**
  *
  * @param {Object} target
@@ -31,9 +31,9 @@ export declare function defineProperty<T extends object, P extends string, V>(ta
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineConstant<T extends object, P extends string, V>(target: T, property: P, value: V, options?: EnumerableOptions): T & {
+export declare function defineConstant<T, P extends string, V>(target: T, property: P, value: V, options?: EnumerableOptions): (T & {
     readonly [K in P]: V;
-} | any;
+}) | any;
 export declare type Getter<V> = () => V;
 /**
  *
@@ -45,9 +45,9 @@ export declare type Getter<V> = () => V;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineGetter<T extends object, P extends string, V>(target: T, property: P, getter: Getter<V>, options?: ConfigurableEnumerableOptions): T & {
+export declare function defineGetter<T, P extends string, V>(target: T, property: P, getter: Getter<V>, options?: ConfigurableEnumerableOptions): (T & {
     readonly [K in P]: V;
-} | any;
+}) | any;
 export declare type Setter<T, V> = (value: T) => V;
 /**
  *
@@ -59,9 +59,9 @@ export declare type Setter<T, V> = (value: T) => V;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineSetter<T extends object, P extends string, V>(target: T, property: P, setter: Setter<any, V>, options?: ConfigurableEnumerableOptions): T & {
+export declare function defineSetter<T, P extends string, V>(target: T, property: P, setter: Setter<any, V>, options?: ConfigurableEnumerableOptions): (T & {
     [K in P]?: V;
-} | any;
+}) | any;
 export declare type LazyCallback<V> = () => V;
 /**
  * Create a getter that transforms then to a property
@@ -75,9 +75,9 @@ export declare type LazyCallback<V> = () => V;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineLazyProperty<T extends object, P extends string, V>(target: T, property: P, callback: LazyCallback<V>, options?: DefinePropertyOptions): T & {
+export declare function defineLazyProperty<T, P extends string, V>(target: T, property: P, callback: LazyCallback<V>, options?: DefinePropertyOptions): (T & {
     [K in P]: V;
-} | any;
+}) | any;
 /**
  * Create a getter that transforms then to a property
  *
@@ -88,9 +88,9 @@ export declare function defineLazyProperty<T extends object, P extends string, V
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineLazyConstant<T extends object, P extends string, V>(target: T, property: P, callback: LazyCallback<V>, options?: EnumerableOptions): T & {
+export declare function defineLazyConstant<T, P extends string, V>(target: T, property: P, callback: LazyCallback<V>, options?: EnumerableOptions): (T & {
     readonly [K in P]: V;
-} | any;
+}) | any;
 /**
  *
  * @param {Function} Class
@@ -103,10 +103,10 @@ export declare function defineLazyConstant<T extends object, P extends string, V
  * @return {Object} Class
  */
 export declare function definePrototypeProperty<T extends {
-    prototype: object;
-}, P extends string, V>(Class: T, property: P, value: V, options?: DefinePropertyOptions): T & {
+    prototype: unknown;
+}, P extends string, V>(Class: T, property: P, value: V, options?: DefinePropertyOptions): (T & {
     [K in P]: V;
-} | any;
+}) | any;
 /**
  *
  * @param {Function} Class
@@ -117,10 +117,10 @@ export declare function definePrototypeProperty<T extends {
  * @return {Object} Class
  */
 export declare function definePrototypeConstant<T extends {
-    prototype: object;
-}, P extends string, V>(Class: T, property: P, value: V, options?: EnumerableOptions): T & {
+    prototype: unknown;
+}, P extends string, V>(Class: T, property: P, value: V, options?: EnumerableOptions): (T & {
     readonly [K in P]: V;
-} | any;
+}) | any;
 /**
  *
  * @param {Function} Class
@@ -132,10 +132,10 @@ export declare function definePrototypeConstant<T extends {
  * @return {Object} Class
  */
 export declare function definePrototypeGetter<T extends {
-    prototype: object;
-}, P extends string, V>(Class: T, property: P, getter: Getter<V>, options?: ConfigurableEnumerableOptions): T & {
+    prototype: unknown;
+}, P extends string, V>(Class: T, property: P, getter: Getter<V>, options?: ConfigurableEnumerableOptions): (T & {
     [K in P]: V;
-} | any;
+}) | any;
 /**
  *
  * @param {Function} Class
@@ -147,10 +147,10 @@ export declare function definePrototypeGetter<T extends {
  * @return {Object} Class
  */
 export declare function definePrototypeSetter<T extends {
-    prototype: object;
-}, P extends string, V>(Class: T, property: P, setter: Setter<any, V>, options?: ConfigurableEnumerableOptions): T & {
+    prototype: unknown;
+}, P extends string, V>(Class: T, property: P, setter: Setter<any, V>, options?: ConfigurableEnumerableOptions): (T & {
     [K in P]?: V;
-} | any;
+}) | any;
 /**
  * Create a getter that transforms then to a property
  *
@@ -164,10 +164,10 @@ export declare function definePrototypeSetter<T extends {
  * @return {Object} Class
  */
 export declare function definePrototypeLazyProperty<T extends {
-    prototype: object;
-}, P extends string, V>(Class: T, property: P, callback: LazyCallback<V>, options?: DefinePropertyOptions): T & {
+    prototype: unknown;
+}, P extends string, V>(Class: T, property: P, callback: LazyCallback<V>, options?: DefinePropertyOptions): (T & {
     [K in P]: V;
-} | any;
+}) | any;
 /**
  * Create a getter that transforms then to a property
  *
@@ -179,10 +179,10 @@ export declare function definePrototypeLazyProperty<T extends {
  * @return {Object} Class
  */
 export declare function definePrototypeLazyConstant<T extends {
-    prototype: object;
-}, P extends string, V>(Class: T, property: P, callback: LazyCallback<V>, options?: EnumerableOptions): T & {
+    prototype: unknown;
+}, P extends string, V>(Class: T, property: P, callback: LazyCallback<V>, options?: EnumerableOptions): (T & {
     readonly [K in P]: V;
-} | any;
+}) | any;
 /**
  * Shortcut for Object.defineProperties
  *
@@ -196,7 +196,7 @@ export declare function definePrototypeLazyConstant<T extends {
  */
 export declare function defineProperties<T, P extends {
     [prop: string]: any;
-}>(target: T, properties?: P, options?: DefinePropertyOptions): T | T & P | any;
+}>(target: T, properties?: P, options?: DefinePropertyOptions): T | (T & P) | any;
 /**
  * Shortcut for Object.defineProperties
  *
@@ -206,4 +206,5 @@ export declare function defineProperties<T, P extends {
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineConstants<T, P extends object>(target: T, properties?: P, options?: EnumerableOptions): T & Readonly<P>;
+export declare function defineConstants<T, P>(target: T, properties?: P, options?: EnumerableOptions): T & Readonly<P>;
+//# sourceMappingURL=index.d.ts.map

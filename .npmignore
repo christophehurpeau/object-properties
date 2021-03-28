@@ -1,19 +1,26 @@
-/.circleci
+/.github
 /build
 /docs
 /examples
-/git-hooks
 /samples
 /test
+/*.config.js
 /tsconfig.json
 /tsconfig.build.json
-.babelrc
+/dist/tsbuildinfo
+babel.config.json
 .codeclimate.yml
 .yo-rc.json
+/renovate.json
+/yarn.lock
+/.yarn
+/.yarnrc.yml
+/.pnp.js
 
 /.settings
 /.project
 /.idea
+/.vscode
 *.sublime-project
 *.sublime-workspace
 

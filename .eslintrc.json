@@ -1,21 +1,5 @@
 {
-  "extends": ["pob/babel", "pob/typescript"],
-  "overrides": [
-    {
-      "files": ["src/**/*.test.ts", "src/__tests__/**/*.ts"],
-      "env": {
-        "jest": true
-      },
-      "rules": {
-        "import/no-extraneous-dependencies": [
-          "error",
-          {
-            "devDependencies": true
-          }
-        ]
-      }
-    }
-  ],
-  "parser": "typescript-eslint-parser",
-  "plugins": ["typescript"]
+  "root": true,
+  "extends": ["@pob/eslint-config/root", "@pob/eslint-config-node"],
+  "ignorePatterns": ["/dist"]
 }

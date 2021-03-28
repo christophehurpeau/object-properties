@@ -1,45 +1,18 @@
 {
   "pob": {
-    "pob-config": {
-      "entries": [
-        "index"
-      ],
+    "project": {
+      "type": "lib",
+      "yarn2": true
+    },
+    "renovate": {
+      "enable": true
+    },
+    "lib": {
       "documentation": false,
       "testing": {
-        "circleci": true,
-        "codecov": true
-      },
-      "envs": [
-        {
-          "target": "node",
-          "version": "8",
-          "formats": [
-            "cjs",
-            "es"
-          ]
-        },
-        {
-          "target": "node",
-          "version": "6",
-          "formats": [
-            "cjs"
-          ]
-        },
-        {
-          "target": "browser",
-          "version": "modern",
-          "formats": [
-            "es"
-          ]
-        },
-        {
-          "target": "browser",
-          "formats": [
-            "cjs",
-            "es"
-          ]
-        }
-      ]
+        "codecov": true,
+        "ci": true
+      }
     }
   }
 }
