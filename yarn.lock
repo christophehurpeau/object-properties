@@ -7365,7 +7365,7 @@ __metadata:
     pob-babel: 26.8.0
     pob-lcov-reporter: 4.0.1
     prettier: 2.2.1
-    proclaim: 3.5.1
+    proclaim: 3.6.0
     rollup: 2.45.2
     standard-version: 9.1.1
     typedoc: 0.20.34
@@ -7922,12 +7922,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"proclaim@npm:3.5.1":
-  version: 3.5.1
-  resolution: "proclaim@npm:3.5.1"
+"proclaim@npm:3.6.0":
+  version: 3.6.0
+  resolution: "proclaim@npm:3.6.0"
   dependencies:
     util-inspect: ^0.1.8
-  checksum: 71284f0f072a111556a4b7c500e4f81f9b567f2b24a3bbcfee0f329557a3fb071d9867bdfa1e808bcd1e35416bc4f68c42012b2f8422f1b26076f9f73e3fb75e
+  checksum: a1bfb7af6cb939b6de47ec70fede0c2a222fbf51397974064e89efb7d5500bd7870c2643fb2be41fd84c968b20dc21c57652937b6b09d4521e9eb22af36d3045
   languageName: node
   linkType: hard
 
