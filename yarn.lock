@@ -2481,20 +2481,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"array-map@npm:0.0.0":
-  version: 0.0.0
-  resolution: "array-map@npm:0.0.0"
-  checksum: c4ba78c025dd7cfd47bf6a7e2db6096276b383549161a2232bd43b17dcc856de986432db2f9c9e4d5a3977306a74384559453613c403c7b7262faa5f2424f5a3
-  languageName: node
-  linkType: hard
-
-"array-reduce@npm:0.0.0":
-  version: 0.0.0
-  resolution: "array-reduce@npm:0.0.0"
-  checksum: 61aed79431978a3c993bbea7e84d8ed4143eac9882ee8976e2618b0abc5e4daa5ed4e7f4f2171790eed8be3a38bc01df1fbd1ee9360cc5ae7cb33fd355f2795f
-  languageName: node
-  linkType: hard
-
 "array-union@npm:^2.1.0":
   version: 2.1.0
   resolution: "array-union@npm:2.1.0"
@@ -4746,13 +4732,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"foreach@npm:2.0.4":
-  version: 2.0.4
-  resolution: "foreach@npm:2.0.4"
-  checksum: 460f42081d657bb3d5f99c6837e7b80c5c8163a3129257d13fb7fa0fb29996324aaa3e0db440a4e27ea2f440997c071a70b1ab6b7ba511f45c20cf1e075a0219
-  languageName: node
-  linkType: hard
-
 "forever-agent@npm:~0.6.1":
   version: 0.6.1
   resolution: "forever-agent@npm:0.6.1"
@@ -5369,13 +5348,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"indexof@npm:0.0.1":
-  version: 0.0.1
-  resolution: "indexof@npm:0.0.1"
-  checksum: 23dd379c2dec86d0f2d06d96b085bc2d30776d4222b6bea188dc02a742fcb7cab103da94bd1386fdff4c223b3948e7b165e1f5a6f747becc1c306c1f73468f4e
-  languageName: node
-  linkType: hard
-
 "inflight@npm:^1.0.4":
   version: 1.0.6
   resolution: "inflight@npm:1.0.6"
@@ -5782,13 +5754,6 @@ __metadata:
   dependencies:
     is-docker: ^2.0.0
   checksum: 3dcc4073d4682b9f9a4c59411bb73716cfff88eae58a6bd0af302b8ee016263a5150302bb296bc81a4cb0d3b66c86d82b3ee0146ed15f6558022bc847a2549a2
-  languageName: node
-  linkType: hard
-
-"isarray@npm:0.0.1":
-  version: 0.0.1
-  resolution: "isarray@npm:0.0.1"
-  checksum: daeda3c23646200b0b464b7a9030d10008d7701fc6b7a1b45cafe42b4f4d2dde20835b56f19a49e04bb218245b7f7a2bcc6d0f696cff3711e4eddaa2031c611f
   languageName: node
   linkType: hard
 
@@ -6456,13 +6421,6 @@ __metadata:
   version: 5.0.1
   resolution: "json-stringify-safe@npm:5.0.1"
   checksum: 261dfb8eb3e72c8b0dda11fd7c20c151ffc1d1b03e529245d51708c8dd8d8c6a225880464adf41a570dff6e5c805fd9d1f47fed948cfb526e4fbe5a67ce4e5f4
-  languageName: node
-  linkType: hard
-
-"json3@npm:3.3.0":
-  version: 3.3.0
-  resolution: "json3@npm:3.3.0"
-  checksum: 20d9e294ee84dfe18ad3040a0c48232c0b95ee419b373bbb91657181d7081a11495f5d65d53b9fd5d4b2128a1f13a50f38681216a32ba751513c87d2bbec2420
   languageName: node
   linkType: hard
 
@@ -7324,13 +7282,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-keys@npm:0.5.0":
-  version: 0.5.0
-  resolution: "object-keys@npm:0.5.0"
-  checksum: 62abb927b73e6e64b56589d11148352efb08bd3d748a6acb0a6a469c3f0cc4e769b32c5de6081b85bcbe6a6d4bcd890cadd87b9db17b398fbe4db98c1e43b0f0
-  languageName: node
-  linkType: hard
-
 "object-keys@npm:^1.0.12, object-keys@npm:^1.1.1":
   version: 1.1.1
   resolution: "object-keys@npm:1.1.1"
@@ -7365,7 +7316,6 @@ __metadata:
     pob-babel: 26.8.0
     pob-lcov-reporter: 4.0.1
     prettier: 2.2.1
-    proclaim: 3.5.1
     rollup: 2.45.2
     standard-version: 9.1.1
     typedoc: 0.20.34
@@ -7919,15 +7869,6 @@ __metadata:
   version: 2.0.0
   resolution: "process-nextick-args@npm:2.0.0"
   checksum: 7ac33f82845e5cb81c0dc1049132b0962036283c24ac5db98d4ed9cfa9681c3a0dd8f83094f6aed1a81ae3602252e4d0a92ac4c5bb3323e8a9d4ce29b3949d38
-  languageName: node
-  linkType: hard
-
-"proclaim@npm:3.5.1":
-  version: 3.5.1
-  resolution: "proclaim@npm:3.5.1"
-  dependencies:
-    util-inspect: ^0.1.8
-  checksum: 71284f0f072a111556a4b7c500e4f81f9b567f2b24a3bbcfee0f329557a3fb071d9867bdfa1e808bcd1e35416bc4f68c42012b2f8422f1b26076f9f73e3fb75e
   languageName: node
   linkType: hard
 
@@ -9698,21 +9639,6 @@ typescript@4.2.4:
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
   checksum: 73c2b1cf0210ccac300645384d8443cabbd93194117b2dc1b3bae8d8279ad39aedac857e020c4ea505e96a1045059c7359db3df6a9df0be6b8584166c9d61dc9
-  languageName: node
-  linkType: hard
-
-"util-inspect@npm:^0.1.8":
-  version: 0.1.8
-  resolution: "util-inspect@npm:0.1.8"
-  dependencies:
-    array-map: 0.0.0
-    array-reduce: 0.0.0
-    foreach: 2.0.4
-    indexof: 0.0.1
-    isarray: 0.0.1
-    json3: 3.3.0
-    object-keys: 0.5.0
-  checksum: 2e001f2b962cbac5c0c828f09364feb54757420a5f5957e0faa8bccaab6049beaa6f3f252fc17271dd878414dce512e6eda6c8f4f9adfd665cf38dab86bef78e
   languageName: node
   linkType: hard
 

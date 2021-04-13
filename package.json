@@ -163,7 +163,6 @@
     "pob-babel": "26.8.0",
     "pob-lcov-reporter": "4.0.1",
     "prettier": "2.2.1",
-    "proclaim": "3.5.1",
     "rollup": "2.45.2",
     "standard-version": "9.1.1",
     "typedoc": "0.20.34",
