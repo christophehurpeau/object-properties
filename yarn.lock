@@ -7399,7 +7399,7 @@ __metadata:
     pob-babel: 26.8.0
     pob-lcov-reporter: 4.0.1
     prettier: 2.2.1
-    rollup: 2.50.5
+    rollup: 2.50.6
     standard-version: 9.1.1
     typedoc: 0.20.34
     typescript: 4.2.4
@@ -8482,9 +8482,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:2.50.5, rollup@npm:^2.34.2":
-  version: 2.50.5
-  resolution: "rollup@npm:2.50.5"
+"rollup@npm:2.50.6, rollup@npm:^2.34.2":
+  version: 2.50.6
+  resolution: "rollup@npm:2.50.6"
   dependencies:
     fsevents: ~2.3.1
   dependenciesMeta:
@@ -8492,7 +8492,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 1e56eb05085fdba94eca783cbf399617d3151cf024ed39897ea46f4e2fa8a37b836770926575dcfe7e3a419e5a34c4a7dc8d77c90e94117a7072bfc327c77117
+  checksum: 68e9092c098f85dafd7ea35cd86b996ba5e70b91cb62bd1b02c0ddcec0f9fe74952695e529b002aeeee69443d287b8c9907cd63a24d062ec9e838a34766b481b
   languageName: node
   linkType: hard
 
