@@ -155,7 +155,7 @@
     "babel-preset-modern-browsers": "15.0.2",
     "eslint": "7.29.0",
     "eslint-import-resolver-node": "0.3.4",
-    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-import": "2.23.4",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-unicorn": "25.0.1",
     "husky": "4.3.8",
