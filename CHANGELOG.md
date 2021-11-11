@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://www.github.com/christophehurpeau/object-properties/compare/v4.0.0...v5.0.0) (2021-11-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* requires ^12.20.0 || ^14.13.1 || >=16.0.0, older browser dropped
+
+### Features
+
+* build upgrade ([ecbe40c](https://www.github.com/christophehurpeau/object-properties/commit/ecbe40cb6cd0178ea12f6eb2977135206192c7a6))
+
 ## [4.0.0](https://github.com/christophehurpeau/object-properties/compare/v3.1.0...v4.0.0) (2021-03-28)
 
 
