@@ -196,7 +196,7 @@ export function defineLazyConstant<T, P extends string, V>(
 export function definePrototypeProperty<
   T extends { prototype: unknown },
   P extends string,
-  V
+  V,
 >(
   Class: T,
   property: P,
@@ -219,7 +219,7 @@ export function definePrototypeProperty<
 export function definePrototypeConstant<
   T extends { prototype: unknown },
   P extends string,
-  V
+  V,
 >(
   Class: T,
   property: P,
@@ -243,7 +243,7 @@ export function definePrototypeConstant<
 export function definePrototypeGetter<
   T extends { prototype: unknown },
   P extends string,
-  V
+  V,
 >(
   Class: T,
   property: P,
@@ -267,7 +267,7 @@ export function definePrototypeGetter<
 export function definePrototypeSetter<
   T extends { prototype: unknown },
   P extends string,
-  V
+  V,
 >(
   Class: T,
   property: P,
@@ -293,7 +293,7 @@ export function definePrototypeSetter<
 export function definePrototypeLazyProperty<
   T extends { prototype: unknown },
   P extends string,
-  V
+  V,
 >(
   Class: T,
   property: P,
@@ -317,7 +317,7 @@ export function definePrototypeLazyProperty<
 export function definePrototypeLazyConstant<
   T extends { prototype: unknown },
   P extends string,
-  V
+  V,
 >(
   Class: T,
   property: P,
@@ -339,7 +339,7 @@ export function definePrototypeLazyConstant<
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineProperties<T, P extends { [prop: string]: any }>(
+export function defineProperties<T, P extends Record<string, any>>(
   target: T,
   properties?: P,
   options?: DefinePropertyOptions,
