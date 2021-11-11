@@ -74,8 +74,6 @@
     "lint:eslint": "eslint --report-unused-disable-directives --resolve-plugins-relative-to . --quiet *.{js,cjs,mjs} src",
     "lint:prettier": "prettier --check .",
     "postinstallDev": "pob-root-postinstall",
-    "preversion": "yarn run lint && yarn run build && yarn run generate:docs && repository-check-dirty",
-    "release": "repository-check-dirty && yarn preversion && standard-version -a -m 'chore(release): %s [skip ci]' && git push --follow-tags origin master && npm publish",
     "test": "jest",
     "test:watch": "jest --watch",
     "watch": "pob-watch"
@@ -161,7 +159,6 @@
     "pob-lcov-reporter": "5.3.0",
     "prettier": "2.4.1",
     "rollup": "2.59.0",
-    "standard-version": "9.3.2",
     "typedoc": "0.22.8",
     "typescript": "4.4.4",
     "xunit-file": "1.0.0"
