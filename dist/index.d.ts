@@ -194,9 +194,7 @@ export declare function definePrototypeLazyConstant<T extends {
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineProperties<T, P extends {
-    [prop: string]: any;
-}>(target: T, properties?: P, options?: DefinePropertyOptions): T | (T & P) | any;
+export declare function defineProperties<T, P extends Record<string, any>>(target: T, properties?: P, options?: DefinePropertyOptions): T | (T & P) | any;
 /**
  * Shortcut for Object.defineProperties
  *
