@@ -13,26 +13,23 @@
   "bugs": {
     "url": "https://github.com/christophehurpeau/object-properties/issues"
   },
+  "type": "commonjs",
   "engines": {
-    "node": ">=12.10.0"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "browserslist": [
+    "defaults",
     "> 0.2%",
-    "Firefox ESR",
-    "last 2 Chrome versions",
-    "last 2 iOS versions",
-    "last 2 Edge versions",
-    "last 2 Safari versions",
     "not ie < 12",
-    "not ios_saf < 10",
-    "not dead",
-    "not op_mini all"
+    "not safari < 10",
+    "not ios_saf < 10"
   ],
-  "main": "./index.js",
+  "main": "./dist/index-node12.cjs.js",
   "types": "./dist/index.d.ts",
   "module": "./dist/index-browser.es.js",
   "browser": "./dist/index-browser.es.js",
   "exports": {
+    "./package.json": "./package.json",
     ".": {
       "node": {
         "development": {
@@ -73,12 +70,12 @@
     "generate:docs": "rm -Rf docs ; yarn run generate:api ; touch docs/.nojekyll && yarn run generate:test-coverage",
     "generate:test-coverage": "rm -Rf docs/coverage/ ; NODE_ENV=production BABEL_ENV=test jest --coverage --coverageReporters=pob-lcov-reporter --coverageDirectory=docs/coverage/",
     "lint": "yarn run lint:prettier && tsc && yarn run lint:eslint",
-    "lint:eslint": "eslint --ext .js,.mjs,.ts --report-unused-disable-directives --quiet *.js src",
+    "lint:eslint": "eslint --report-unused-disable-directives --resolve-plugins-relative-to . --quiet *.{js,cjs,mjs} src",
     "lint:prettier": "prettier --check .",
     "preversion": "yarn run lint && yarn run build && yarn run generate:docs && repository-check-dirty",
     "release": "repository-check-dirty && yarn preversion && standard-version -a -m 'chore(release): %s [skip ci]' && git push --follow-tags origin master && npm publish",
     "test": "jest",
-    "test:watch": "jest",
+    "test:watch": "jest --watch",
     "watch": "pob-watch"
   },
   "prettier": {
@@ -140,33 +137,32 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "7.14.8",
-    "@babel/preset-env": "7.14.9",
-    "@pob/commitlint-config": "2.2.0",
-    "@pob/eslint-config": "43.0.0",
-    "@pob/eslint-config-node": "43.2.0",
-    "@pob/eslint-config-typescript": "43.0.0",
-    "@pob/root": "3.3.0",
-    "@types/jest": "26.0.24",
-    "@typescript-eslint/eslint-plugin": "4.29.0",
-    "@typescript-eslint/parser": "4.29.0",
-    "babel-jest": "26.6.3",
+    "@babel/core": "7.16.0",
+    "@babel/preset-env": "7.16.0",
+    "@pob/commitlint-config": "3.1.1",
+    "@pob/eslint-config": "45.1.0",
+    "@pob/eslint-config-typescript": "45.1.0",
+    "@pob/root": "5.5.0",
+    "@types/jest": "27.0.2",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/parser": "4.33.0",
+    "babel-jest": "27.3.1",
     "babel-preset-latest-node": "5.5.1",
     "babel-preset-modern-browsers": "15.0.2",
     "eslint": "7.32.0",
-    "eslint-import-resolver-node": "0.3.4",
-    "eslint-plugin-import": "2.23.4",
+    "eslint-import-resolver-node": "0.3.6",
+    "eslint-plugin-import": "2.25.3",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-unicorn": "25.0.1",
-    "husky": "4.3.8",
-    "jest": "26.6.3",
-    "pob-babel": "26.8.0",
-    "pob-lcov-reporter": "4.0.1",
-    "prettier": "2.2.1",
-    "rollup": "2.55.1",
-    "standard-version": "9.3.1",
-    "typedoc": "0.21.2",
-    "typescript": "4.2.4",
+    "eslint-plugin-unicorn": "35.0.0",
+    "jest": "27.3.1",
+    "pob-babel": "28.4.0",
+    "pob-lcov-reporter": "5.3.0",
+    "prettier": "2.4.1",
+    "rollup": "2.59.0",
+    "standard-version": "9.3.2",
+    "typedoc": "0.22.8",
+    "typescript": "4.4.4",
     "xunit-file": "1.0.0"
-  }
+  },
+  "packageManager": "yarn@3.1.0"
 }

@@ -12,9 +12,9 @@
 function defineProperty(target, property, value, options) {
   Object.defineProperty(target, property, {
     value,
-    writable: options?.writable !== false,
-    configurable: options?.configurable !== false,
-    enumerable: options?.enumerable
+    writable: (options === null || options === void 0 ? void 0 : options.writable) !== false,
+    configurable: (options === null || options === void 0 ? void 0 : options.configurable) !== false,
+    enumerable: options === null || options === void 0 ? void 0 : options.enumerable
   });
   return target;
 }
@@ -33,7 +33,7 @@ function defineConstant(target, property, value, options) {
     value,
     writable: false,
     configurable: false,
-    enumerable: options?.enumerable
+    enumerable: options === null || options === void 0 ? void 0 : options.enumerable
   });
   return target;
 }
@@ -51,8 +51,8 @@ function defineConstant(target, property, value, options) {
 function defineGetter(target, property, getter, options) {
   Object.defineProperty(target, property, {
     get: getter,
-    configurable: options?.configurable !== false,
-    enumerable: options?.enumerable
+    configurable: (options === null || options === void 0 ? void 0 : options.configurable) !== false,
+    enumerable: options === null || options === void 0 ? void 0 : options.enumerable
   });
   return target;
 }
@@ -70,8 +70,8 @@ function defineGetter(target, property, getter, options) {
 function defineSetter(target, property, setter, options) {
   Object.defineProperty(target, property, {
     set: setter,
-    configurable: options?.configurable !== false,
-    enumerable: options?.enumerable
+    configurable: (options === null || options === void 0 ? void 0 : options.configurable) !== false,
+    enumerable: options === null || options === void 0 ? void 0 : options.enumerable
   });
   return target;
 }
@@ -95,7 +95,7 @@ function defineLazyProperty(target, property, callback, options) {
     return value;
   }, {
     configurable: true,
-    enumerable: options?.enumerable
+    enumerable: options === null || options === void 0 ? void 0 : options.enumerable
   });
   return target;
 }
@@ -117,7 +117,7 @@ function defineLazyConstant(target, property, callback, options) {
     return value;
   }, {
     configurable: true,
-    enumerable: options?.enumerable
+    enumerable: options === null || options === void 0 ? void 0 : options.enumerable
   });
   return target;
 }
@@ -231,9 +231,9 @@ function defineProperties(target, properties, options) {
   }
 
   const optionsObject = {
-    writable: options?.writable !== false,
-    configurable: options?.configurable !== false,
-    enumerable: !!options?.enumerable
+    writable: (options === null || options === void 0 ? void 0 : options.writable) !== false,
+    configurable: (options === null || options === void 0 ? void 0 : options.configurable) !== false,
+    enumerable: !!(options !== null && options !== void 0 && options.enumerable)
   };
   Object.keys(properties).forEach(key => {
     Object.defineProperty(target, key, {
@@ -261,7 +261,7 @@ function defineConstants(target, properties, options) {
   return defineProperties(target, properties, {
     writable: false,
     configurable: false,
-    enumerable: options?.enumerable
+    enumerable: options === null || options === void 0 ? void 0 : options.enumerable
   });
 }
 

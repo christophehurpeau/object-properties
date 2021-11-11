@@ -11,7 +11,7 @@
  */
 function defineProperty(target, property, value, options) {
   Object.defineProperty(target, property, {
-    value: value,
+    value,
     writable: (options == null ? void 0 : options.writable) !== false,
     configurable: (options == null ? void 0 : options.configurable) !== false,
     enumerable: options == null ? void 0 : options.enumerable
@@ -30,7 +30,7 @@ function defineProperty(target, property, value, options) {
 
 function defineConstant(target, property, value, options) {
   Object.defineProperty(target, property, {
-    value: value,
+    value,
     writable: false,
     configurable: false,
     enumerable: options == null ? void 0 : options.enumerable

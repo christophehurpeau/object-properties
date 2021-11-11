@@ -1,9 +1,5 @@
 {
   "pob": {
-    "project": {
-      "type": "lib",
-      "yarn2": true
-    },
     "renovate": {
       "enable": true
     },
@@ -13,6 +9,11 @@
         "codecov": true,
         "ci": true
       }
+    },
+    "project": {
+      "type": "lib",
+      "yarnNodeLinker": "node-modules",
+      "packageManager": "yarn"
     }
   }
 }
