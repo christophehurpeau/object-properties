@@ -17,6 +17,7 @@
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
+  "packageManager": "yarn@3.1.0",
   "browserslist": [
     "defaults",
     "> 0.2%",
@@ -72,6 +73,7 @@
     "lint": "yarn run lint:prettier && tsc && yarn run lint:eslint",
     "lint:eslint": "eslint --report-unused-disable-directives --resolve-plugins-relative-to . --quiet *.{js,cjs,mjs} src",
     "lint:prettier": "prettier --check .",
+    "postinstallDev": "pob-root-postinstall",
     "preversion": "yarn run lint && yarn run build && yarn run generate:docs && repository-check-dirty",
     "release": "repository-check-dirty && yarn preversion && standard-version -a -m 'chore(release): %s [skip ci]' && git push --follow-tags origin master && npm publish",
     "test": "jest",
@@ -163,6 +165,5 @@
     "typedoc": "0.22.8",
     "typescript": "4.4.4",
     "xunit-file": "1.0.0"
-  },
-  "packageManager": "yarn@3.1.0"
+  }
 }
