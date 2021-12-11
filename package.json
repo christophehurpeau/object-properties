@@ -140,7 +140,7 @@
     "@babel/core": "7.16.0",
     "@babel/preset-env": "7.16.4",
     "@pob/commitlint-config": "3.3.0",
-    "@pob/eslint-config": "45.1.0",
+    "@pob/eslint-config": "48.0.4",
     "@pob/eslint-config-typescript": "45.1.0",
     "@pob/root": "5.9.0",
     "@types/jest": "27.0.3",
