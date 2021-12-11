@@ -141,7 +141,7 @@
     "@babel/preset-env": "7.16.4",
     "@pob/commitlint-config": "3.3.0",
     "@pob/eslint-config": "45.1.0",
-    "@pob/eslint-config-typescript": "45.1.0",
+    "@pob/eslint-config-typescript": "48.0.4",
     "@pob/root": "5.9.0",
     "@types/jest": "27.0.3",
     "@typescript-eslint/eslint-plugin": "4.33.0",
