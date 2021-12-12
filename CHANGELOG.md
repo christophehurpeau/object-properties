@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://www.github.com/christophehurpeau/object-properties/compare/v5.0.0...v6.0.0) (2021-12-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* requires node 14
+
+### Build System
+
+* update dev deps and drop node 12 ([b95c0f4](https://www.github.com/christophehurpeau/object-properties/commit/b95c0f4339aa269062be82569e91dbf2319c90bc))
+
 ## [5.0.0](https://www.github.com/christophehurpeau/object-properties/compare/v4.0.0...v5.0.0) (2021-11-11)
 
 
