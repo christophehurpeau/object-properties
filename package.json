@@ -15,7 +15,7 @@
   },
   "type": "commonjs",
   "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    "node": "^14.13.1 || >=16.0.0"
   },
   "packageManager": "yarn@3.1.0",
   "browserslist": [
@@ -25,7 +25,7 @@
     "not safari < 10",
     "not ios_saf < 10"
   ],
-  "main": "./dist/index-node12.cjs.js",
+  "main": "./dist/index-node14.cjs.js",
   "types": "./dist/index.d.ts",
   "module": "./dist/index-browser.es.js",
   "browser": "./dist/index-browser.es.js",
@@ -33,35 +33,20 @@
     "./package.json": "./package.json",
     ".": {
       "node": {
-        "development": {
-          "import": "./dist/index-node12-dev.mjs",
-          "require": "./dist/index-node12-dev.cjs.js"
-        },
-        "import": "./dist/index-node12.mjs",
-        "require": "./dist/index-node12.cjs.js"
+        "import": "./dist/index-node14.mjs",
+        "require": "./dist/index-node14.cjs.js"
       },
       "browser": {
         "browser:modern": {
-          "development": {
-            "import": "./dist/index-browsermodern-dev.es.js"
-          },
           "import": "./dist/index-browsermodern.es.js"
-        },
-        "development": {
-          "import": "./dist/index-browser-dev.es.js",
-          "require": "./dist/index-browser-dev.cjs.js"
         },
         "import": "./dist/index-browser.es.js",
         "require": "./dist/index-browser.cjs.js"
       }
     }
   },
-  "module:node": "./dist/index-node12.mjs",
-  "module:node-dev": "./dist/index-node12-dev.mjs",
-  "module:browser": "./dist/index-browser.es.js",
-  "module:browser-dev": "./dist/index-browser-dev.es.js",
+  "module:node": "./dist/index-node14.mjs",
   "module:modern-browsers": "./dist/index-browsermodern.es.js",
-  "module:modern-browsers-dev": "./dist/index-browsermodern-dev.es.js",
   "sideEffects": false,
   "scripts": {
     "build": "pob-build && yarn run build:definitions",
@@ -102,16 +87,13 @@
       "js",
       "json"
     ],
-    "transform": {
-      "^.+\\.ts$": "babel-jest"
-    },
     "testEnvironment": "node"
   },
   "pob": {
     "babelEnvs": [
       {
         "target": "node",
-        "version": "12",
+        "version": "14",
         "formats": [
           "cjs",
           "es"
@@ -139,28 +121,18 @@
   "devDependencies": {
     "@babel/core": "7.16.0",
     "@babel/preset-env": "7.16.4",
-    "@pob/commitlint-config": "3.3.0",
-    "@pob/eslint-config": "45.1.0",
-    "@pob/eslint-config-typescript": "45.1.0",
-    "@pob/root": "5.9.0",
+    "@pob/commitlint-config": "4.0.0",
+    "@pob/eslint-config": "48.0.5",
+    "@pob/eslint-config-typescript": "48.0.6",
+    "@pob/root": "6.1.4",
     "@types/jest": "27.0.3",
-    "@typescript-eslint/eslint-plugin": "4.33.0",
-    "@typescript-eslint/parser": "4.33.0",
-    "babel-jest": "27.4.4",
-    "babel-preset-latest-node": "5.5.1",
     "babel-preset-modern-browsers": "15.0.2",
-    "eslint": "7.32.0",
-    "eslint-import-resolver-node": "0.3.6",
-    "eslint-plugin-import": "2.25.3",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-unicorn": "35.0.0",
+    "eslint": "8.4.1",
     "jest": "27.4.4",
-    "pob-babel": "28.4.0",
-    "pob-lcov-reporter": "5.3.0",
+    "pob-babel": "29.4.2",
+    "pob-lcov-reporter": "6.0.0",
     "prettier": "2.5.1",
-    "rollup": "2.61.1",
     "typedoc": "0.22.10",
-    "typescript": "4.5.3",
-    "xunit-file": "1.0.0"
+    "typescript": "4.5.3"
   }
 }
