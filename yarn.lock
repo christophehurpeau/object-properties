@@ -6274,7 +6274,7 @@ __metadata:
     babel-preset-modern-browsers: 15.0.2
     eslint: 8.5.0
     jest: 27.4.5
-    pob-babel: 29.5.0
+    pob-babel: 29.6.0
     pob-lcov-reporter: 6.0.1
     prettier: 2.5.1
     typedoc: 0.22.10
@@ -6573,9 +6573,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pob-babel@npm:29.5.0":
-  version: 29.5.0
-  resolution: "pob-babel@npm:29.5.0"
+"pob-babel@npm:29.6.0":
+  version: 29.6.0
+  resolution: "pob-babel@npm:29.6.0"
   dependencies:
     "@babel/core": ^7.16.5
     "@babel/plugin-transform-runtime": 7.16.5
@@ -6587,7 +6587,7 @@ __metadata:
     babel-preset-modern-browsers: ^15.0.2
     babel-preset-pob-env: 7.1.4
     minimist-argv: ^1.1.0
-    rollup: 2.61.1
+    rollup: 2.62.0
     rollup-config-external-dependencies: ^2.0.0
     semver: ^7.3.4
   peerDependencies:
@@ -6597,7 +6597,7 @@ __metadata:
     pob-build: bin/pob-build.js
     pob-watch: bin/pob-watch.js
     rollup: bin/rollup.cjs
-  checksum: 43ce7f0e4dc5fcbc6498f6c97c5cf45ce861bd4f6f687f1b2b9a4f1d6df6d576accf9f3fef02e6f02ccd827912f688a321f85dc13ee71ada776b03498a85da1a
+  checksum: dc142b8ea28199cf27c123374524c3d846b36a1d6e640089d7d6272e0225865801e799d9eb6024f406b487d265ed2b6591224951f535f5a85613a24169d3e640
   languageName: node
   linkType: hard
 
@@ -7004,9 +7004,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:2.61.1":
-  version: 2.61.1
-  resolution: "rollup@npm:2.61.1"
+"rollup@npm:2.62.0":
+  version: 2.62.0
+  resolution: "rollup@npm:2.62.0"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -7014,7 +7014,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: a41bd821c1d9f296e71e867828150080fb05d08cbdff9b6b5c0e3642da4d0723f7a847189f197c2a695a8a353d968ad89ebd54a4228dc3e92765c00e6bbadf87
+  checksum: 9dfa089a232346bc548bf5110e79e0cf5a2dac6fb9bf3f737a645e72795b4b4a1165d1bf86938f90805c4391e8dd571557afb901aaf81dcb82690c57737ab128
   languageName: node
   linkType: hard
 
