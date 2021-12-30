@@ -125,7 +125,7 @@
     "@pob/eslint-config": "48.0.5",
     "@pob/eslint-config-typescript": "48.0.6",
     "@pob/root": "6.2.0",
-    "@types/jest": "27.0.3",
+    "@types/jest": "27.4.0",
     "babel-preset-modern-browsers": "15.0.2",
     "eslint": "8.5.0",
     "jest": "27.4.5",
