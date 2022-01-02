@@ -129,7 +129,7 @@
     "babel-preset-modern-browsers": "15.0.2",
     "eslint": "8.6.0",
     "jest": "27.4.5",
-    "pob-babel": "29.6.0",
+    "pob-babel": "29.6.1",
     "pob-lcov-reporter": "6.0.1",
     "prettier": "2.5.1",
     "typedoc": "0.22.10",
