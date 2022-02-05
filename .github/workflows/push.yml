@@ -32,6 +32,9 @@ jobs:
       - name: Check Dependencies
         run: yarn install --immutable --immutable-cache
 
+      - name: Checks
+        run: yarn run checks
+
       - name: Build
         run: yarn run build
         if: startsWith(matrix.node-version, '16.')
