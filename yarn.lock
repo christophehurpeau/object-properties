@@ -1049,9 +1049,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-runtime@npm:7.16.10":
-  version: 7.16.10
-  resolution: "@babel/plugin-transform-runtime@npm:7.16.10"
+"@babel/plugin-transform-runtime@npm:7.17.0":
+  version: 7.17.0
+  resolution: "@babel/plugin-transform-runtime@npm:7.17.0"
   dependencies:
     "@babel/helper-module-imports": ^7.16.7
     "@babel/helper-plugin-utils": ^7.16.7
@@ -1061,7 +1061,7 @@ __metadata:
     semver: ^6.3.0
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 62ef5fad74d68f444ced382d77f9f123d250cb7758a2a89dc97e92faabd2cb7ff665759f09f99fe2e7ae01af10453e6cc20542f980772f64c768772996b9481b
+  checksum: 9a469d4389cb265d50f1e83e6b524ceda7abd24a0bd7cda57e54a1e6103ca7c36efc99eebd485cf0a468f048739e21d940126df40b11db34f4692bdd2d5beacd
   languageName: node
   linkType: hard
 
@@ -2981,9 +2981,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-preset-pob-env@npm:7.1.7":
-  version: 7.1.7
-  resolution: "babel-preset-pob-env@npm:7.1.7"
+"babel-preset-pob-env@npm:7.1.8":
+  version: 7.1.8
+  resolution: "babel-preset-pob-env@npm:7.1.8"
   dependencies:
     "@babel/plugin-proposal-nullish-coalescing-operator": ^7.16.0
     "@babel/plugin-proposal-optional-chaining": ^7.16.0
@@ -2995,7 +2995,7 @@ __metadata:
     babel-preset-optimizations: ^2.0.0
   peerDependencies:
     "@babel/core": ^7.11.6
-  checksum: 28d3a39a2cd3649e074f2d223761afd82bd81c7446de911e92b96fa6a4b9e6b6d1420d8b8d2384f9c5c5a484277993c02fa1f3b10537b79c055bd55c57b38fce
+  checksum: 79c6d583fb5f0a29d7ed285f4aad7c4b3aabb7ac556e0928a42a745e0ba3466bd9d5638cd47971031a049a8e158f6271920216a81f914dfc60ee9162f61655bb
   languageName: node
   linkType: hard
 
@@ -6042,16 +6042,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist-argv@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "minimist-argv@npm:1.1.0"
-  dependencies:
-    "@types/minimist": ^1.2.0
-    minimist: ^1.2.0
-  checksum: 588b5a2eeb64894b1e42b7491bd446746a55500334adece53e34a19a5876df93dc9cc3ecdd66de98a0007c3ea5cc26a4c553b83da8e66530dbb8897f72e00c93
-  languageName: node
-  linkType: hard
-
 "minimist-options@npm:4.1.0":
   version: 4.1.0
   resolution: "minimist-options@npm:4.1.0"
@@ -6317,7 +6307,7 @@ __metadata:
     check-package-dependencies: 3.2.0
     eslint: 8.8.0
     jest: 27.5.0
-    pob-babel: 30.0.1
+    pob-babel: 31.0.0
     prettier: 2.5.1
     typedoc: 0.22.11
     typescript: 4.5.5
@@ -6588,31 +6578,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pob-babel@npm:30.0.1":
-  version: 30.0.1
-  resolution: "pob-babel@npm:30.0.1"
+"pob-babel@npm:31.0.0":
+  version: 31.0.0
+  resolution: "pob-babel@npm:31.0.0"
   dependencies:
     "@babel/core": ^7.16.5
-    "@babel/plugin-transform-runtime": 7.16.10
+    "@babel/plugin-transform-runtime": 7.17.0
     "@rollup/plugin-babel": 5.3.0
     "@rollup/plugin-json": 4.1.0
     "@rollup/plugin-node-resolve": 13.1.3
     "@rollup/plugin-replace": 3.0.1
     "@rollup/plugin-run": 2.1.0
     babel-preset-modern-browsers: ^15.0.2
-    babel-preset-pob-env: 7.1.7
-    minimist-argv: ^1.1.0
-    rollup: 2.66.1
+    babel-preset-pob-env: 7.1.8
+    rollup: 2.67.0
     rollup-config-external-dependencies: ^2.0.0
     semver: ^7.3.4
   peerDependencies:
     "@babel/core": ^7.16.5
+    rollup: 2.67.0
     typescript: ^4.0.3
+  peerDependenciesMeta:
+    rollup:
+      optional: true
   bin:
-    pob-build: bin/pob-build.js
-    pob-watch: bin/pob-watch.js
     rollup: bin/rollup.cjs
-  checksum: 3b628b6a5c5fd598dcdaabb1c27c3a9f32daee2891298af5032f09ef20eca81058712de4f98a3f99b2a786bab0e8fdc6089a405b9ecb5a938b4c2207b144ee11
+  checksum: d964c9f7ae2f9eb37c9a7db7d0a9bad46bff0cd738931456c2d5296368a5571f73f2b63fabbd0c61efe5a25146e7c26e17fe4e8f4422dc6140941103dcf568f6
   languageName: node
   linkType: hard
 
@@ -6980,9 +6971,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:2.66.1":
-  version: 2.66.1
-  resolution: "rollup@npm:2.66.1"
+"rollup@npm:2.67.0":
+  version: 2.67.0
+  resolution: "rollup@npm:2.67.0"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -6990,7 +6981,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: ecd7917deeaa3005ac7cdd64186daf024594bd9ba940e32fc8966602a83349074d0ec999256009dc4475e7c3786ac52cdd824ee9df514b8c356b960fda6bfb34
+  checksum: 300ddb6c63f1bcaadaac98f705e3804d8d22ddbc595e34c0582850dc1f464bde3edc3312a7cdc5f1544e35df80300d7bc7bf81f56575b24c4124924d140ec947
   languageName: node
   linkType: hard
 
