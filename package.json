@@ -127,7 +127,7 @@
     "@babel/preset-env": "7.16.11",
     "@pob/commitlint-config": "4.1.0",
     "@pob/eslint-config": "49.1.0",
-    "@pob/eslint-config-typescript": "49.2.1",
+    "@pob/eslint-config-typescript": "49.3.0",
     "@pob/root": "6.16.0",
     "@types/jest": "27.4.1",
     "babel-preset-modern-browsers": "15.0.2",
