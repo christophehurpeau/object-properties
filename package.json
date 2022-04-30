@@ -135,7 +135,7 @@
     "check-package-dependencies": "3.6.0",
     "eslint": "8.14.0",
     "jest": "28.0.3",
-    "pob-babel": "33.2.0",
+    "pob-babel": "33.2.1",
     "typedoc": "0.22.15",
     "typescript": "4.6.4"
   }

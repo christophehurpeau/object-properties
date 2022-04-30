@@ -6140,7 +6140,7 @@ __metadata:
     check-package-dependencies: 3.6.0
     eslint: 8.14.0
     jest: 28.0.3
-    pob-babel: 33.2.0
+    pob-babel: 33.2.1
     typedoc: 0.22.15
     typescript: 4.6.4
   languageName: unknown
@@ -6416,9 +6416,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pob-babel@npm:33.2.0":
-  version: 33.2.0
-  resolution: "pob-babel@npm:33.2.0"
+"pob-babel@npm:33.2.1":
+  version: 33.2.1
+  resolution: "pob-babel@npm:33.2.1"
   dependencies:
     "@babel/core": ^7.17.10
     "@babel/plugin-transform-runtime": 7.17.10
@@ -6441,7 +6441,7 @@ __metadata:
       optional: true
   bin:
     rollup: bin/rollup.cjs
-  checksum: 1494c9d15fa78c4c098f928f5a0ee554e5a4c2f2eae1d6c6823b5439eb3fa2bb828726e709d3b99e6fd590f24cbc807aa1a93bb927d852ccec8359f94f8156d7
+  checksum: 21589d6253b4df360902e71b002107ed830c9efb7796f82c5f1e0b600c29350afabf027f3c8ca4633b287d56dfd7cdc74e5390079f2ec2c435f30fb75520f5d6
   languageName: node
   linkType: hard
 
