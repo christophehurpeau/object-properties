@@ -133,7 +133,7 @@
     "@types/jest": "27.5.1",
     "babel-preset-modern-browsers": "15.0.2",
     "check-package-dependencies": "3.6.0",
-    "eslint": "8.15.0",
+    "eslint": "8.16.0",
     "jest": "28.1.0",
     "pob-babel": "33.2.1",
     "typedoc": "0.22.15",
