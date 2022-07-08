@@ -1,6 +1,5 @@
 /* eslint-disable max-lines */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable max-classes-per-file */
 
