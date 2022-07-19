@@ -130,7 +130,7 @@
     "@pob/eslint-config": "49.3.2",
     "@pob/eslint-config-typescript": "49.3.3",
     "@pob/root": "6.18.1",
-    "@types/jest": "27.5.2",
+    "@types/jest": "28.1.6",
     "babel-preset-modern-browsers": "15.0.2",
     "check-package-dependencies": "3.7.0",
     "eslint": "8.20.0",
