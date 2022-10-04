@@ -204,5 +204,5 @@ export declare function defineProperties<T, P extends Record<string, any>>(targe
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineConstants<T, P>(target: T, properties?: P, options?: EnumerableOptions): T & Readonly<P>;
+export declare function defineConstants<T, P extends Record<string, any>>(target: T, properties?: P, options?: EnumerableOptions): T & Readonly<P>;
 //# sourceMappingURL=index.d.ts.map

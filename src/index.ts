@@ -375,7 +375,7 @@ export function defineProperties<T, P extends Record<string, any>>(
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export function defineConstants<T, P>(
+export function defineConstants<T, P extends Record<string, any>>(
   target: T,
   properties?: P,
   options?: EnumerableOptions,
