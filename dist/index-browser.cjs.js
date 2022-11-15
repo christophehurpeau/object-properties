@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 /* eslint-disable max-lines */
 
 /**
@@ -22,6 +20,7 @@ function defineProperty(target, property, value, options) {
   });
   return target;
 }
+
 /**
  *
  * @param {Object} target
@@ -31,7 +30,6 @@ function defineProperty(target, property, value, options) {
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-
 function defineConstant(target, property, value, options) {
   Object.defineProperty(target, property, {
     value: value,
@@ -41,7 +39,6 @@ function defineConstant(target, property, value, options) {
   });
   return target;
 }
-
 /**
  *
  * @param {Object} target
@@ -60,7 +57,6 @@ function defineGetter(target, property, getter, options) {
   });
   return target;
 }
-
 /**
  *
  * @param {Object} target
@@ -79,7 +75,6 @@ function defineSetter(target, property, setter, options) {
   });
   return target;
 }
-
 /**
  * Create a getter that transforms then to a property
  *
@@ -103,6 +98,7 @@ function defineLazyProperty(target, property, callback, options) {
   });
   return target;
 }
+
 /**
  * Create a getter that transforms then to a property
  *
@@ -113,7 +109,6 @@ function defineLazyProperty(target, property, callback, options) {
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-
 function defineLazyConstant(target, property, callback, options) {
   defineGetter(target, property, function () {
     var value = callback.call(this);
@@ -125,6 +120,7 @@ function defineLazyConstant(target, property, callback, options) {
   });
   return target;
 }
+
 /**
  *
  * @param {Function} Class
@@ -136,11 +132,11 @@ function defineLazyConstant(target, property, callback, options) {
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-
 function definePrototypeProperty(Class, property, value, options) {
   defineProperty(Class.prototype, property, value, options);
   return Class;
 }
+
 /**
  *
  * @param {Function} Class
@@ -150,11 +146,11 @@ function definePrototypeProperty(Class, property, value, options) {
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-
 function definePrototypeConstant(Class, property, value, options) {
   defineConstant(Class.prototype, property, value, options);
   return Class;
 }
+
 /**
  *
  * @param {Function} Class
@@ -165,11 +161,11 @@ function definePrototypeConstant(Class, property, value, options) {
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-
 function definePrototypeGetter(Class, property, getter, options) {
   defineGetter(Class.prototype, property, getter, options);
   return Class;
 }
+
 /**
  *
  * @param {Function} Class
@@ -180,11 +176,11 @@ function definePrototypeGetter(Class, property, getter, options) {
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-
 function definePrototypeSetter(Class, property, setter, options) {
   defineSetter(Class.prototype, property, setter, options);
   return Class;
 }
+
 /**
  * Create a getter that transforms then to a property
  *
@@ -197,11 +193,11 @@ function definePrototypeSetter(Class, property, setter, options) {
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-
 function definePrototypeLazyProperty(Class, property, callback, options) {
   defineLazyProperty(Class.prototype, property, callback, options);
   return Class;
 }
+
 /**
  * Create a getter that transforms then to a property
  *
@@ -212,11 +208,11 @@ function definePrototypeLazyProperty(Class, property, callback, options) {
  * @param {boolean} [options.enumerable=false]
  * @return {Object} Class
  */
-
 function definePrototypeLazyConstant(Class, property, callback, options) {
   defineLazyConstant(Class.prototype, property, callback, options);
   return Class;
 }
+
 /**
  * Shortcut for Object.defineProperties
  *
@@ -228,12 +224,10 @@ function definePrototypeLazyConstant(Class, property, callback, options) {
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-
 function defineProperties(target, properties, options) {
   if (!properties) {
     return target;
   }
-
   var optionsObject = {
     writable: (options == null ? void 0 : options.writable) !== false,
     configurable: (options == null ? void 0 : options.configurable) !== false,
@@ -250,6 +244,7 @@ function defineProperties(target, properties, options) {
   });
   return target;
 }
+
 /**
  * Shortcut for Object.defineProperties
  *
@@ -259,7 +254,6 @@ function defineProperties(target, properties, options) {
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-
 function defineConstants(target, properties, options) {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return defineProperties(target, properties, {
