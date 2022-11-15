@@ -34,7 +34,7 @@ export declare function defineProperty<T, P extends string, V>(target: T, proper
 export declare function defineConstant<T, P extends string, V>(target: T, property: P, value: V, options?: EnumerableOptions): (T & {
     readonly [K in P]: V;
 }) | any;
-export declare type Getter<V> = () => V;
+export type Getter<V> = () => V;
 /**
  *
  * @param {Object} target
@@ -48,7 +48,7 @@ export declare type Getter<V> = () => V;
 export declare function defineGetter<T, P extends string, V>(target: T, property: P, getter: Getter<V>, options?: ConfigurableEnumerableOptions): (T & {
     readonly [K in P]: V;
 }) | any;
-export declare type Setter<T, V> = (value: T) => V;
+export type Setter<T, V> = (value: T) => V;
 /**
  *
  * @param {Object} target
@@ -62,7 +62,7 @@ export declare type Setter<T, V> = (value: T) => V;
 export declare function defineSetter<T, P extends string, V>(target: T, property: P, setter: Setter<any, V>, options?: ConfigurableEnumerableOptions): (T & {
     [K in P]?: V;
 }) | any;
-export declare type LazyCallback<V> = () => V;
+export type LazyCallback<V> = () => V;
 /**
  * Create a getter that transforms then to a property
  *
