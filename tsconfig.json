@@ -4,7 +4,6 @@
     "rootDir": "src",
     "newLine": "lf",
     "outDir": "dist/definitions",
-    "tsBuildInfoFile": "dist/definitions/tsbuildinfo",
     "noEmitOnError": true,
     "declaration": true,
     "declarationMap": true,

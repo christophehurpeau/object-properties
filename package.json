@@ -33,22 +33,20 @@
     "./package.json": "./package.json",
     ".": {
       "node": {
-        "import": "./dist/index-node16.mjs",
-        "require": "./dist/index-node16.cjs"
+        "import": "./dist/index-node16.mjs"
       },
       "browser": {
         "browser:modern": {
           "import": "./dist/index-browsermodern.es.js"
         },
-        "import": "./dist/index-browser.es.js",
-        "require": "./dist/index-browser.cjs.js"
+        "import": "./dist/index-browser.es.js"
       }
     }
   },
   "sideEffects": false,
   "scripts": {
     "build": "yarn clean:build && rollup --config rollup.config.mjs && yarn run build:definitions",
-    "build:definitions": "tsc -p",
+    "build:definitions": "tsc -p tsconfig.json",
     "checks": "node scripts/check-package.js",
     "clean": "yarn clean:build",
     "clean:build": "pob-babel-clean-out dist",
