@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.0.0](https://github.com/christophehurpeau/object-properties/compare/v6.1.0...v7.0.0) (2022-11-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop cjs and node 14
+
+### Bug Fixes
+
+* build definitions ([0e78b8d](https://github.com/christophehurpeau/object-properties/commit/0e78b8d50dc7f29406b583932dd42e73b9142ff1))
+
+
+### Miscellaneous Chores
+
+* drop cjs ([f7a9443](https://github.com/christophehurpeau/object-properties/commit/f7a9443dfd524922be680ab3d7cb662780236226))
+
 ## [6.1.0](https://github.com/christophehurpeau/object-properties/compare/v6.0.0...v6.1.0) (2022-02-05)
 
 
