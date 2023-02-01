@@ -17,7 +17,7 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "packageManager": "yarn@3.3.1",
+  "packageManager": "yarn@3.4.0",
   "browserslist": [
     "defaults",
     "> 0.2%",
