@@ -28,7 +28,7 @@ export function defineProperty<T, P extends string, V>(
   property: P,
   value: V,
   options?: DefinePropertyOptions,
-): (T & { [K in P]: V }) | any {
+): any | (T & { [K in P]: V }) {
   Object.defineProperty(target, property, {
     value,
     writable: options?.writable !== false,
@@ -52,7 +52,7 @@ export function defineConstant<T, P extends string, V>(
   property: P,
   value: V,
   options?: EnumerableOptions,
-): (T & { readonly [K in P]: V }) | any {
+): any | (T & { readonly [K in P]: V }) {
   Object.defineProperty(target, property, {
     value,
     writable: false,
@@ -79,7 +79,7 @@ export function defineGetter<T, P extends string, V>(
   property: P,
   getter: Getter<V>,
   options?: ConfigurableEnumerableOptions,
-): (T & { readonly [K in P]: V }) | any {
+): any | (T & { readonly [K in P]: V }) {
   Object.defineProperty(target, property, {
     get: getter,
     configurable: options?.configurable !== false,
@@ -105,7 +105,7 @@ export function defineSetter<T, P extends string, V>(
   property: P,
   setter: Setter<any, V>,
   options?: ConfigurableEnumerableOptions,
-): (T & { [K in P]?: V }) | any {
+): any | (T & { [K in P]?: V }) {
   Object.defineProperty(target, property, {
     set: setter,
     configurable: options?.configurable !== false,
@@ -133,7 +133,7 @@ export function defineLazyProperty<T, P extends string, V>(
   property: P,
   callback: LazyCallback<V>,
   options?: DefinePropertyOptions,
-): (T & { [K in P]: V }) | any {
+): any | (T & { [K in P]: V }) {
   defineGetter(
     target,
     property,
@@ -165,7 +165,7 @@ export function defineLazyConstant<T, P extends string, V>(
   property: P,
   callback: LazyCallback<V>,
   options?: EnumerableOptions,
-): (T & { readonly [K in P]: V }) | any {
+): any | (T & { readonly [K in P]: V }) {
   defineGetter(
     target,
     property,
@@ -202,7 +202,7 @@ export function definePrototypeProperty<
   property: P,
   value: V,
   options?: DefinePropertyOptions,
-): (T & { [K in P]: V }) | any {
+): any | (T & { [K in P]: V }) {
   defineProperty(Class.prototype, property, value, options);
   return Class;
 }
@@ -225,7 +225,7 @@ export function definePrototypeConstant<
   property: P,
   value: V,
   options?: EnumerableOptions,
-): (T & { readonly [K in P]: V }) | any {
+): any | (T & { readonly [K in P]: V }) {
   defineConstant(Class.prototype, property, value, options);
   return Class;
 }
@@ -249,7 +249,7 @@ export function definePrototypeGetter<
   property: P,
   getter: Getter<V>,
   options?: ConfigurableEnumerableOptions,
-): (T & { [K in P]: V }) | any {
+): any | (T & { [K in P]: V }) {
   defineGetter(Class.prototype, property, getter, options);
   return Class;
 }
@@ -273,7 +273,7 @@ export function definePrototypeSetter<
   property: P,
   setter: Setter<any, V>,
   options?: ConfigurableEnumerableOptions,
-): (T & { [K in P]?: V }) | any {
+): any | (T & { [K in P]?: V }) {
   defineSetter(Class.prototype, property, setter, options);
   return Class;
 }
@@ -299,7 +299,7 @@ export function definePrototypeLazyProperty<
   property: P,
   callback: LazyCallback<V>,
   options?: DefinePropertyOptions,
-): (T & { [K in P]: V }) | any {
+): any | (T & { [K in P]: V }) {
   defineLazyProperty(Class.prototype, property, callback, options);
   return Class;
 }
@@ -323,7 +323,7 @@ export function definePrototypeLazyConstant<
   property: P,
   callback: LazyCallback<V>,
   options?: EnumerableOptions,
-): (T & { readonly [K in P]: V }) | any {
+): any | (T & { readonly [K in P]: V }) {
   defineLazyConstant(Class.prototype, property, callback, options);
   return Class;
 }
@@ -343,7 +343,7 @@ export function defineProperties<T, P extends Record<string, any>>(
   target: T,
   properties?: P,
   options?: DefinePropertyOptions,
-): T | (T & P) | any {
+): T | any | (P & T) {
   if (!properties) {
     return target;
   }
@@ -379,7 +379,7 @@ export function defineConstants<T, P extends Record<string, any>>(
   target: T,
   properties?: P,
   options?: EnumerableOptions,
-): T & Readonly<P> {
+): Readonly<P> & T {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return defineProperties(target, properties, {
     writable: false,
