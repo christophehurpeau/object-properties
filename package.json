@@ -112,7 +112,7 @@
     "@pob/commitlint-config": "5.1.1",
     "@pob/eslint-config": "50.0.4",
     "@pob/eslint-config-typescript": "50.0.4",
-    "@pob/root": "7.6.1",
+    "@pob/root": "7.7.0",
     "@types/jest": "29.5.0",
     "check-package-dependencies": "6.3.1",
     "eslint": "8.36.0",
