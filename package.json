@@ -119,6 +119,6 @@
     "jest": "29.5.0",
     "pob-babel": "35.7.0",
     "typedoc": "0.23.28",
-    "typescript": "5.0.3"
+    "typescript": "5.0.4"
   }
 }
