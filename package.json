@@ -60,6 +60,7 @@
     "lint:prettier:fix": "pob-root-prettier --write .",
     "postinstallDev": "pob-root-postinstall",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest  --coverage --coverageReporters=json --coverageReporters=text",
     "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch",
     "watch": "yarn clean:build && rollup --config rollup.config.mjs --watch"
   },
@@ -83,10 +84,10 @@
       "js",
       "json"
     ],
-    "testEnvironment": "node",
     "extensionsToTreatAsEsm": [
       ".ts"
-    ]
+    ],
+    "testEnvironment": "node"
   },
   "pob": {
     "babelEnvs": [
@@ -117,7 +118,7 @@
     "check-package-dependencies": "6.3.2",
     "eslint": "8.38.0",
     "jest": "29.5.0",
-    "pob-babel": "35.7.0",
+    "pob-babel": "35.8.0",
     "typedoc": "0.24.4",
     "typescript": "5.0.4"
   }
