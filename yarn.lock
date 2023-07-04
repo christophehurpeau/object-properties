@@ -2023,12 +2023,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/commitlint-config@npm:5.1.1":
-  version: 5.1.1
-  resolution: "@pob/commitlint-config@npm:5.1.1"
+"@pob/commitlint-config@npm:6.0.1":
+  version: 6.0.1
+  resolution: "@pob/commitlint-config@npm:6.0.1"
   dependencies:
     "@commitlint/config-conventional": ^17.2.0
-  checksum: b6f2474dd14c7048e8facc45d2c068a1ad38d96ca263c208311464db2f38457063a9254310aa4714d3434b13492e3b7cf4290b074eff2e5c7807430656ef4db3
+  checksum: 86855e528a338b61eaa2e7ff153432d5e7d1da2d26f20be516c4254d6e2a9c20899189a2179002362fc17709b9c0fa6228b45e64a62537bcffae246200df04e6
   languageName: node
   linkType: hard
 
@@ -6520,7 +6520,7 @@ __metadata:
   dependencies:
     "@babel/core": 7.21.4
     "@babel/preset-env": 7.21.4
-    "@pob/commitlint-config": 5.1.1
+    "@pob/commitlint-config": 6.0.1
     "@pob/eslint-config": 50.0.5
     "@pob/eslint-config-typescript": 50.0.5
     "@pob/root": 7.8.0
