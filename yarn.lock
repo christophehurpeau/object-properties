@@ -2090,11 +2090,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/eslint-config-typescript@npm:51.1.0":
-  version: 51.1.0
-  resolution: "@pob/eslint-config-typescript@npm:51.1.0"
+"@pob/eslint-config-typescript@npm:51.1.1":
+  version: 51.1.1
+  resolution: "@pob/eslint-config-typescript@npm:51.1.1"
   dependencies:
-    "@pob/eslint-config": 51.1.0
+    "@pob/eslint-config": 51.1.1
     "@typescript-eslint/eslint-plugin": ^6.7.4
     "@typescript-eslint/parser": ^6.7.4
     eslint-config-airbnb-base: ^15.0.0
@@ -2115,13 +2115,13 @@ __metadata:
       optional: true
     eslint-plugin-node:
       optional: true
-  checksum: 0246effa15e203ba648daba04f710987b276afac53b0da20fbd3f4874422f52e7c1be10ec59b8e96cb3486b06649d759cf5dca0e2c49763bea6714cda284bbcb
+  checksum: 6b6598791eefb999a1e8238537f4b9c7ceb36f6a34281740433ac939f1895a789e2e7e2423d01aa9a997a70f0b1d2d79a9946786e427676c0493c1b9d466ccb8
   languageName: node
   linkType: hard
 
-"@pob/eslint-config@npm:51.1.0":
-  version: 51.1.0
-  resolution: "@pob/eslint-config@npm:51.1.0"
+"@pob/eslint-config@npm:51.1.1":
+  version: 51.1.1
+  resolution: "@pob/eslint-config@npm:51.1.1"
   dependencies:
     eslint-config-airbnb-base: ^15.0.0
     eslint-config-prettier: ^9.0.0
@@ -2140,7 +2140,7 @@ __metadata:
       optional: true
     eslint-plugin-unicorn:
       optional: true
-  checksum: 50f57ffc7d0ea17847be1bb4d579b2f010c56a26d785ed5034daa68268eb35d1c3eb526ffd4d6297ef627e0b584b9e344f0577667feae8bbf57e6c4718e09e8b
+  checksum: 5bb4bc6cf90eaabbd547ebd58cd0e503aebab2ac471032bcc37e440f611d4655cd6da02fde51b2ac56612b505ab23b2bc9754ab962d8d4f4f0041306a00a4ef6
   languageName: node
   linkType: hard
 
@@ -6622,8 +6622,8 @@ __metadata:
     "@babel/core": 7.23.2
     "@babel/preset-env": 7.23.2
     "@pob/commitlint-config": 6.0.1
-    "@pob/eslint-config": 51.1.0
-    "@pob/eslint-config-typescript": 51.1.0
+    "@pob/eslint-config": 51.1.1
+    "@pob/eslint-config-typescript": 51.1.1
     "@pob/root": 8.2.2
     "@types/jest": 29.5.6
     check-package-dependencies: 6.8.0
