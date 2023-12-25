@@ -11,7 +11,7 @@
  */
 function defineProperty(target, property, value, options) {
   Object.defineProperty(target, property, {
-    value: value,
+    value,
     writable: (options == null ? void 0 : options.writable) !== false,
     configurable: (options == null ? void 0 : options.configurable) !== false,
     enumerable: options == null ? void 0 : options.enumerable
@@ -30,7 +30,7 @@ function defineProperty(target, property, value, options) {
  */
 function defineConstant(target, property, value, options) {
   Object.defineProperty(target, property, {
-    value: value,
+    value,
     writable: false,
     configurable: false,
     enumerable: options == null ? void 0 : options.enumerable
@@ -87,7 +87,7 @@ function defineSetter(target, property, setter, options) {
  */
 function defineLazyProperty(target, property, callback, options) {
   defineGetter(target, property, function () {
-    var value = callback.call(this);
+    const value = callback.call(this);
     defineProperty(this, property, value, options);
     return value;
   }, {
@@ -109,7 +109,7 @@ function defineLazyProperty(target, property, callback, options) {
  */
 function defineLazyConstant(target, property, callback, options) {
   defineGetter(target, property, function () {
-    var value = callback.call(this);
+    const value = callback.call(this);
     defineConstant(this, property, value, options);
     return value;
   }, {
@@ -226,12 +226,12 @@ function defineProperties(target, properties, options) {
   if (!properties) {
     return target;
   }
-  var optionsObject = {
+  const optionsObject = {
     writable: (options == null ? void 0 : options.writable) !== false,
     configurable: (options == null ? void 0 : options.configurable) !== false,
     enumerable: !!(options != null && options.enumerable)
   };
-  Object.keys(properties).forEach(function (key) {
+  Object.keys(properties).forEach(key => {
     Object.defineProperty(target, key, {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       value: properties[key],
