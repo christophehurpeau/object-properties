@@ -1,6 +1,6 @@
 {
   "name": "object-properties",
-  "version": "8.0.0",
+  "version": "8.1.0",
   "description": "Shortcuts to Object.defineProperty and Object.defineProperties",
   "keywords": [
     "Object.defineProperties",

@@ -1,6 +1,15 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [8.1.0](https://github.com/christophehurpeau/object-properties/compare/v8.0.0...v8.1.0) (2023-12-25)
+
+
+### Features
+
+* update babel and drop browser modern version ([3b919fd](https://github.com/christophehurpeau/object-properties/commit/3b919fdefe758c1d69d24696bdf3cbe5dc81e8ef))
+
 
 ## [8.0.0](https://github.com/christophehurpeau/object-properties/compare/v7.0.0...v8.0.0) (2023-07-27)
 
