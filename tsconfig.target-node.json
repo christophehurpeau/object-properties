@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "./tsconfig.json",
+    "@pob/root/tsconfigs/targets/rollup-node-18.json"
+  ]
+}

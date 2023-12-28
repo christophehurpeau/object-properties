@@ -1,3 +1,3 @@
 import { createCheckPackage } from 'check-package-dependencies';
 
-await createCheckPackage().checkRecommended({}).run();
+await createCheckPackage({ isLibrary: true }).checkRecommended({}).run();

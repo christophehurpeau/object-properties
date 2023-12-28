@@ -6,6 +6,7 @@
     "lib": {
       "documentation": true,
       "testing": {
+        "runner": "node",
         "codecov": true,
         "ci": true
       }
