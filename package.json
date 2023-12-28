@@ -53,7 +53,7 @@
     "lint:prettier:fix": "pob-root-prettier --write .",
     "postinstallDev": "pob-root-postinstall",
     "test": "TS_NODE_PROJECT=tsconfig.test.json node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
-    "test:coverage": "TS_NODE_PROJECT=tsconfig.test.json node --loader=ts-node/esm --experimental-specifier-resolution=node  --experimental-test-coverage--test src/**/*.test.ts",
+    "test:coverage": "TS_NODE_PROJECT=tsconfig.test.json node --loader=ts-node/esm --experimental-specifier-resolution=node --experimental-test-coverage --test src/**/*.test.ts",
     "test:watch": "TS_NODE_PROJECT=tsconfig.test.json node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
     "watch": "yarn clean:build && rollup --config rollup.config.mjs --watch"
   },
