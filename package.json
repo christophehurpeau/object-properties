@@ -90,7 +90,7 @@
     "@pob/eslint-config-typescript": "53.1.0",
     "@pob/rollup-typescript": "2.2.2",
     "@pob/root": "9.1.0",
-    "@types/node": "20.11.19",
+    "@types/node": "20.11.20",
     "check-package-dependencies": "7.0.0",
     "eslint": "8.56.0",
     "ts-node": "11.0.0-beta.1",
