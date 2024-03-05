@@ -14,7 +14,7 @@
     "url": "https://github.com/christophehurpeau/object-properties/issues"
   },
   "type": "module",
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "yarn@4.1.1",
   "engines": {
     "node": ">=18.12.0"
   },
