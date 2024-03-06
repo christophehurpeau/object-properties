@@ -86,14 +86,14 @@
   },
   "devDependencies": {
     "@pob/commitlint-config": "6.3.1",
-    "@pob/eslint-config": "53.0.0",
-    "@pob/eslint-config-typescript": "53.1.0",
+    "@pob/eslint-config": "54.0.1",
+    "@pob/eslint-config-typescript": "54.0.1",
     "@pob/rollup-typescript": "2.2.2",
-    "@pob/root": "9.1.0",
+    "@pob/root": "9.2.0",
     "@types/node": "20.11.25",
     "check-package-dependencies": "7.0.0",
     "eslint": "8.57.0",
-    "ts-node": "11.0.0-beta.1",
+    "ts-node": "npm:ts-node-lite@11.0.0-beta.1",
     "typedoc": "0.25.11",
     "typescript": "5.3.3"
   }
