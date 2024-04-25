@@ -1,4 +1,3 @@
-/* eslint-disable max-lines */
 export interface DefinePropertyOptions {
   configurable?: boolean;
   enumerable?: boolean;

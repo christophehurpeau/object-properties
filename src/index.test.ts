@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-floating-promises */
-/* eslint-disable max-classes-per-file */
 
 import assert from 'node:assert';
 import { test } from 'node:test';
