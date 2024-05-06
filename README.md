@@ -18,11 +18,11 @@
 ## Examples
 
 ```js
-import { defineGetter } from 'object-properties'; // or var defineGetter = require('object-properties').defineGetter;
+import { defineGetter } from "object-properties"; // or var defineGetter = require('object-properties').defineGetter;
 
 let object = {};
 
-defineGetter(object, 'test', () => 'test');
+defineGetter(object, "test", () => "test");
 ```
 
 ## Available methods
