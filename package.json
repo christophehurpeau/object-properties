@@ -95,6 +95,6 @@
     "eslint": "8.57.0",
     "ts-node": "npm:ts-node-lite@11.0.0-beta.1",
     "typedoc": "0.26.5",
-    "typescript": "5.5.3"
+    "typescript": "5.5.4"
   }
 }
