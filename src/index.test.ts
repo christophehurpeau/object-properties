@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-floating-promises */
 
-import assert from 'node:assert';
-import { test } from 'node:test';
+import assert from "node:assert";
+import { test } from "node:test";
 import {
   defineProperty,
   defineConstant,
@@ -18,39 +19,39 @@ import {
   definePrototypeLazyConstant,
   defineProperties,
   defineConstants,
-} from './index';
+} from "./index";
 
-test('defineProperty should work', () => {
+test("defineProperty should work", () => {
   const o: any = {};
-  const res = defineProperty(o, 'a', 1);
+  const res = defineProperty(o, "a", 1);
   assert.strictEqual(res, o);
   assert.strictEqual(res.a, 1);
 });
 
-test('defineConstant should work', () => {
+test("defineConstant should work", () => {
   const o: any = {};
-  const res = defineConstant(o, 'a', 1);
+  const res = defineConstant(o, "a", 1);
   assert.strictEqual(res, o);
   assert.strictEqual(res.a, 1);
 
   assert.throws(
-    () => defineConstant(o, 'a', 2),
+    () => defineConstant(o, "a", 2),
     Error,
-    'Cannot redefine property: a',
+    "Cannot redefine property: a",
   );
 });
 
-test('defineGetter should work', () => {
+test("defineGetter should work", () => {
   const o: any = {};
-  const res = defineGetter(o, 'a', () => 1);
+  const res = defineGetter(o, "a", () => 1);
   assert.strictEqual(res, o);
   assert.strictEqual(res.a, 1);
 });
 
-test('defineSetter should work', () => {
+test("defineSetter should work", () => {
   const o: any = {};
   let value;
-  const res = defineSetter(o, 'a', (v) => {
+  const res = defineSetter(o, "a", (v) => {
     value = v * 2;
     return value;
   });
@@ -59,10 +60,10 @@ test('defineSetter should work', () => {
   assert.strictEqual(value, 4);
 });
 
-test('defineLazyProperty should work', () => {
+test("defineLazyProperty should work", () => {
   const o: any = {};
   let getterCalledTimes = 0;
-  const res = defineLazyProperty(o, 'a', function (this: any) {
+  const res = defineLazyProperty(o, "a", function (this: any) {
     assert.strictEqual(this, o);
     return ++getterCalledTimes;
   });
@@ -76,10 +77,10 @@ test('defineLazyProperty should work', () => {
   assert.strictEqual(getterCalledTimes, 1);
 });
 
-test('defineLazyConstant should work', () => {
+test("defineLazyConstant should work", () => {
   const o: any = {};
   let getterCalledTimes = 0;
-  const res = defineLazyConstant(o, 'a', function (this: any) {
+  const res = defineLazyConstant(o, "a", function (this: any) {
     assert.strictEqual(this, o);
     return ++getterCalledTimes;
   });
@@ -89,13 +90,13 @@ test('defineLazyConstant should work', () => {
   assert.strictEqual(res.a, 1);
   assert.strictEqual(getterCalledTimes, 1);
   assert.throws(
-    () => defineConstant(o, 'a', 2),
+    () => defineConstant(o, "a", 2),
     Error,
-    'Cannot redefine property: a',
+    "Cannot redefine property: a",
   );
 });
 
-test('defineProperties should work', () => {
+test("defineProperties should work", () => {
   const o: any = {};
   const res = defineProperties(o, {
     a: 1,
@@ -109,9 +110,9 @@ test('defineProperties should work', () => {
   assert.strictEqual(res.a, 0);
 });
 
-test('definePrototypeProperty should work', () => {
+test("definePrototypeProperty should work", () => {
   class O {}
-  const Res = definePrototypeProperty(O, 'a', 1);
+  const Res = definePrototypeProperty(O, "a", 1);
   assert.strictEqual(Res, O);
   const o: any = new Res();
   assert.strictEqual(o.a, 1);
@@ -119,31 +120,31 @@ test('definePrototypeProperty should work', () => {
   assert.strictEqual(o.a, 2);
 });
 
-test('definePrototypeConstant should work', () => {
+test("definePrototypeConstant should work", () => {
   class O {}
-  const Res = definePrototypeConstant(O, 'a', 1);
+  const Res = definePrototypeConstant(O, "a", 1);
   assert.strictEqual(Res, O);
   const o: any = new Res();
   assert.strictEqual(o.a, 1);
   assert.throws(
-    () => definePrototypeConstant(O, 'a', 2),
+    () => definePrototypeConstant(O, "a", 2),
     Error,
-    'Cannot redefine property: a',
+    "Cannot redefine property: a",
   );
 });
 
-test('definePrototypeGetter should work', () => {
+test("definePrototypeGetter should work", () => {
   class O {}
-  const Res = definePrototypeGetter(O, 'a', () => 1);
+  const Res = definePrototypeGetter(O, "a", () => 1);
   assert.strictEqual(Res, O);
   const o: any = new Res();
   assert.strictEqual(o.a, 1);
 });
 
-test('definePrototypeSetter should work', () => {
+test("definePrototypeSetter should work", () => {
   class O {}
   let value;
-  const Res = definePrototypeSetter(O, 'a', (v: number) => {
+  const Res = definePrototypeSetter(O, "a", (v: number) => {
     value = v * 2;
     return value;
   });
@@ -153,10 +154,10 @@ test('definePrototypeSetter should work', () => {
   assert.strictEqual(value, 4);
 });
 
-test('definePrototypeLazyProperty should work', () => {
+test("definePrototypeLazyProperty should work", () => {
   class O {}
   let getterCalledTimes = 0;
-  const Res = definePrototypeLazyProperty(O, 'a', () => ++getterCalledTimes);
+  const Res = definePrototypeLazyProperty(O, "a", () => ++getterCalledTimes);
   assert.strictEqual(Res, O);
   const o: any = new Res();
   assert.strictEqual(o.a, 1);
@@ -178,10 +179,10 @@ test('definePrototypeLazyProperty should work', () => {
   assert.strictEqual(getterCalledTimes, 3);
 });
 
-test('definePrototypeLazyConstant should work', () => {
+test("definePrototypeLazyConstant should work", () => {
   class O {}
   let getterCalledTimes = 0;
-  const Res = definePrototypeLazyConstant(O, 'a', () => ++getterCalledTimes);
+  const Res = definePrototypeLazyConstant(O, "a", () => ++getterCalledTimes);
   assert.strictEqual(Res, O);
   const o: any = new Res();
   assert.strictEqual(o.a, 1);
@@ -190,9 +191,9 @@ test('definePrototypeLazyConstant should work', () => {
   assert.strictEqual(getterCalledTimes, 1);
 
   assert.throws(
-    () => defineConstant(o, 'a', 2),
+    () => defineConstant(o, "a", 2),
     Error,
-    'Cannot redefine property: a',
+    "Cannot redefine property: a",
   );
 
   const o2: any = new Res();
@@ -201,13 +202,13 @@ test('definePrototypeLazyConstant should work', () => {
   assert.strictEqual(getterCalledTimes, 2);
 });
 
-test('defineProperties should work when properties are empty', () => {
+test("defineProperties should work when properties are empty", () => {
   const o = {};
   const res = defineProperties(o);
   assert.strictEqual(res, o);
 });
 
-test('defineConstants should work', () => {
+test("defineConstants should work", () => {
   const o = {};
   const res = defineConstants(o, {
     a: 1,
@@ -219,8 +220,8 @@ test('defineConstants should work', () => {
   assert.strictEqual(res.b, 2);
 
   assert.throws(
-    () => defineConstant(o, 'a', 2),
+    () => defineConstant(o, "a", 2),
     Error,
-    'Cannot redefine property: a',
+    "Cannot redefine property: a",
   );
 });
