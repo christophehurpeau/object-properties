@@ -53,8 +53,8 @@
     "lint:prettier:fix": "pob-root-prettier --write .",
     "postinstallDev": "pob-root-postinstall",
     "test": "TS_NODE_PROJECT=tsconfig.test.json node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
-    "test:coverage": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --src ./src node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
-    "test:coverage:json": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --reporter=json --src ./src node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
+    "test:coverage": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --all --src ./src node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
+    "test:coverage:json": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --reporter=json --all --src ./src node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
     "test:coverage:lcov": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --reporter=lcov --src ./src node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
     "test:watch": "TS_NODE_PROJECT=tsconfig.test.json node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
     "watch": "yarn clean:build && rollup --config rollup.config.mjs --watch"
@@ -86,13 +86,13 @@
   },
   "devDependencies": {
     "@pob/commitlint-config": "7.0.0",
-    "@pob/eslint-config": "57.3.0",
-    "@pob/eslint-config-typescript": "57.3.1",
+    "@pob/eslint-config": "58.0.1",
+    "@pob/eslint-config-typescript": "58.0.1",
     "@pob/rollup-typescript": "5.0.0",
-    "@pob/root": "13.0.0",
+    "@pob/root": "13.2.0",
     "@types/node": "20.16.1",
     "check-package-dependencies": "7.2.0",
-    "eslint": "8.57.0",
+    "eslint": "9.9.1",
     "ts-node": "npm:ts-node-lite@11.0.0-beta.1",
     "typedoc": "0.26.6",
     "typescript": "5.5.4"
