@@ -85,7 +85,7 @@
     "tslib": "^2.7.0"
   },
   "devDependencies": {
-    "@pob/commitlint-config": "7.0.0",
+    "@pob/commitlint-config": "8.0.0",
     "@pob/eslint-config": "58.1.0",
     "@pob/eslint-config-typescript": "58.1.0",
     "@pob/rollup-typescript": "5.1.0",
