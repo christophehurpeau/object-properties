@@ -843,12 +843,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/commitlint-config@npm:8.0.0":
-  version: 8.0.0
-  resolution: "@pob/commitlint-config@npm:8.0.0"
+"@pob/commitlint-config@npm:8.0.1":
+  version: 8.0.1
+  resolution: "@pob/commitlint-config@npm:8.0.1"
   dependencies:
     "@commitlint/config-conventional": "npm:^19.2.2"
-  checksum: 10c0/63384ca2123c1bafa90cc73f6cee7b9f10d8939b89f81bbef85c04a34653d2e65da0db2aac4f2c7000388737416c5db643657a02d9a8f0cbc57380d9f8f184e8
+  checksum: 10c0/99d9ac14e3817832cab29497557ddd3bfadbb6583231a6edd06d71b17f2950abf155e0920be760cc963903918010feb9d53a47aef8d7abb58196d728d32603a8
   languageName: node
   linkType: hard
 
@@ -4775,7 +4775,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "object-properties@workspace:."
   dependencies:
-    "@pob/commitlint-config": "npm:8.0.0"
+    "@pob/commitlint-config": "npm:8.0.1"
     "@pob/eslint-config": "npm:58.1.0"
     "@pob/eslint-config-typescript": "npm:58.1.0"
     "@pob/rollup-esbuild": "npm:5.0.0"
