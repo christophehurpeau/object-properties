@@ -86,7 +86,7 @@
     "@pob/eslint-config": "58.1.0",
     "@pob/eslint-config-typescript": "58.1.0",
     "@pob/rollup-esbuild": "5.0.0",
-    "@pob/root": "14.0.1",
+    "@pob/root": "14.4.0",
     "@types/node": "22.10.2",
     "check-package-dependencies": "7.2.0",
     "eslint": "9.14.0",
