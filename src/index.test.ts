@@ -1,23 +1,22 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-floating-promises */
 
 import assert from "node:assert";
 import { test } from "node:test";
 import {
-  defineProperty,
   defineConstant,
+  defineConstants,
   defineGetter,
-  defineSetter,
-  defineLazyProperty,
   defineLazyConstant,
-  definePrototypeProperty,
+  defineLazyProperty,
+  defineProperties,
+  defineProperty,
   definePrototypeConstant,
   definePrototypeGetter,
-  definePrototypeSetter,
-  definePrototypeLazyProperty,
   definePrototypeLazyConstant,
-  defineProperties,
-  defineConstants,
+  definePrototypeLazyProperty,
+  definePrototypeProperty,
+  definePrototypeSetter,
+  defineSetter,
 } from "./index";
 
 test("defineProperty should work", () => {

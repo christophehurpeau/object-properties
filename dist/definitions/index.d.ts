@@ -19,9 +19,7 @@ export interface ConfigurableEnumerableOptions {
  * @param {boolean} [options.configurable=true]
  * @param {boolean} [options.enumerable=false]
  */
-export declare function defineProperty<T, P extends string, V>(target: T, property: P, value: V, options?: DefinePropertyOptions): any | (T & {
-    [K in P]: V;
-});
+export declare function defineProperty<T, P extends string, V>(target: T, property: P, value: V, options?: DefinePropertyOptions): any | (Record<P, V> & T);
 /**
  *
  * @param {Object} target
@@ -31,9 +29,7 @@ export declare function defineProperty<T, P extends string, V>(target: T, proper
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineConstant<T, P extends string, V>(target: T, property: P, value: V, options?: EnumerableOptions): any | (T & {
-    readonly [K in P]: V;
-});
+export declare function defineConstant<T, P extends string, V>(target: T, property: P, value: V, options?: EnumerableOptions): any | (Readonly<Record<P, V>> & T);
 export type Getter<V> = () => V;
 /**
  *
@@ -45,9 +41,7 @@ export type Getter<V> = () => V;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineGetter<T, P extends string, V>(target: T, property: P, getter: Getter<V>, options?: ConfigurableEnumerableOptions): any | (T & {
-    readonly [K in P]: V;
-});
+export declare function defineGetter<T, P extends string, V>(target: T, property: P, getter: Getter<V>, options?: ConfigurableEnumerableOptions): any | (Readonly<Record<P, V>> & T);
 export type Setter<T, V> = (value: T) => V;
 /**
  *
@@ -59,9 +53,7 @@ export type Setter<T, V> = (value: T) => V;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineSetter<T, P extends string, V>(target: T, property: P, setter: Setter<any, V>, options?: ConfigurableEnumerableOptions): any | (T & {
-    [K in P]?: V;
-});
+export declare function defineSetter<T, P extends string, V>(target: T, property: P, setter: Setter<any, V>, options?: ConfigurableEnumerableOptions): any | (Partial<Record<P, V>> & T);
 export type LazyCallback<V> = () => V;
 /**
  * Create a getter that transforms then to a property
@@ -75,9 +67,7 @@ export type LazyCallback<V> = () => V;
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineLazyProperty<T, P extends string, V>(target: T, property: P, callback: LazyCallback<V>, options?: DefinePropertyOptions): any | (T & {
-    [K in P]: V;
-});
+export declare function defineLazyProperty<T, P extends string, V>(target: T, property: P, callback: LazyCallback<V>, options?: DefinePropertyOptions): any | (Record<P, V> & T);
 /**
  * Create a getter that transforms then to a property
  *
@@ -88,9 +78,7 @@ export declare function defineLazyProperty<T, P extends string, V>(target: T, pr
  * @param {boolean} [options.enumerable=false]
  * @return {Object} target
  */
-export declare function defineLazyConstant<T, P extends string, V>(target: T, property: P, callback: LazyCallback<V>, options?: EnumerableOptions): any | (T & {
-    readonly [K in P]: V;
-});
+export declare function defineLazyConstant<T, P extends string, V>(target: T, property: P, callback: LazyCallback<V>, options?: EnumerableOptions): any | (Readonly<Record<P, V>> & T);
 /**
  *
  * @param {Function} Class
@@ -104,9 +92,7 @@ export declare function defineLazyConstant<T, P extends string, V>(target: T, pr
  */
 export declare function definePrototypeProperty<T extends {
     prototype: unknown;
-}, P extends string, V>(Class: T, property: P, value: V, options?: DefinePropertyOptions): any | (T & {
-    [K in P]: V;
-});
+}, P extends string, V>(Class: T, property: P, value: V, options?: DefinePropertyOptions): any | (Record<P, V> & T);
 /**
  *
  * @param {Function} Class
@@ -118,9 +104,7 @@ export declare function definePrototypeProperty<T extends {
  */
 export declare function definePrototypeConstant<T extends {
     prototype: unknown;
-}, P extends string, V>(Class: T, property: P, value: V, options?: EnumerableOptions): any | (T & {
-    readonly [K in P]: V;
-});
+}, P extends string, V>(Class: T, property: P, value: V, options?: EnumerableOptions): any | (Readonly<Record<P, V>> & T);
 /**
  *
  * @param {Function} Class
@@ -133,9 +117,7 @@ export declare function definePrototypeConstant<T extends {
  */
 export declare function definePrototypeGetter<T extends {
     prototype: unknown;
-}, P extends string, V>(Class: T, property: P, getter: Getter<V>, options?: ConfigurableEnumerableOptions): any | (T & {
-    [K in P]: V;
-});
+}, P extends string, V>(Class: T, property: P, getter: Getter<V>, options?: ConfigurableEnumerableOptions): any | (Record<P, V> & T);
 /**
  *
  * @param {Function} Class
@@ -148,9 +130,7 @@ export declare function definePrototypeGetter<T extends {
  */
 export declare function definePrototypeSetter<T extends {
     prototype: unknown;
-}, P extends string, V>(Class: T, property: P, setter: Setter<any, V>, options?: ConfigurableEnumerableOptions): any | (T & {
-    [K in P]?: V;
-});
+}, P extends string, V>(Class: T, property: P, setter: Setter<any, V>, options?: ConfigurableEnumerableOptions): any | (Partial<Record<P, V>> & T);
 /**
  * Create a getter that transforms then to a property
  *
@@ -165,9 +145,7 @@ export declare function definePrototypeSetter<T extends {
  */
 export declare function definePrototypeLazyProperty<T extends {
     prototype: unknown;
-}, P extends string, V>(Class: T, property: P, callback: LazyCallback<V>, options?: DefinePropertyOptions): any | (T & {
-    [K in P]: V;
-});
+}, P extends string, V>(Class: T, property: P, callback: LazyCallback<V>, options?: DefinePropertyOptions): any | (Record<P, V> & T);
 /**
  * Create a getter that transforms then to a property
  *
@@ -180,9 +158,7 @@ export declare function definePrototypeLazyProperty<T extends {
  */
 export declare function definePrototypeLazyConstant<T extends {
     prototype: unknown;
-}, P extends string, V>(Class: T, property: P, callback: LazyCallback<V>, options?: EnumerableOptions): any | (T & {
-    readonly [K in P]: V;
-});
+}, P extends string, V>(Class: T, property: P, callback: LazyCallback<V>, options?: EnumerableOptions): any | (Readonly<Record<P, V>> & T);
 /**
  * Shortcut for Object.defineProperties
  *

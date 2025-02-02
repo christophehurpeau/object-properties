@@ -99,7 +99,6 @@ function defineProperties(target, properties, options) {
   };
   Object.keys(properties).forEach((key) => {
     Object.defineProperty(target, key, {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       value: properties[key],
       writable: optionsObject.writable,
       configurable: optionsObject.configurable,

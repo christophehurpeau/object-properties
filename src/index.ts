@@ -27,7 +27,7 @@ export function defineProperty<T, P extends string, V>(
   property: P,
   value: V,
   options?: DefinePropertyOptions,
-): any | (T & { [K in P]: V }) {
+): any | (Record<P, V> & T) {
   Object.defineProperty(target, property, {
     value,
     writable: options?.writable !== false,
@@ -51,7 +51,7 @@ export function defineConstant<T, P extends string, V>(
   property: P,
   value: V,
   options?: EnumerableOptions,
-): any | (T & { readonly [K in P]: V }) {
+): any | (Readonly<Record<P, V>> & T) {
   Object.defineProperty(target, property, {
     value,
     writable: false,
@@ -78,7 +78,7 @@ export function defineGetter<T, P extends string, V>(
   property: P,
   getter: Getter<V>,
   options?: ConfigurableEnumerableOptions,
-): any | (T & { readonly [K in P]: V }) {
+): any | (Readonly<Record<P, V>> & T) {
   Object.defineProperty(target, property, {
     get: getter,
     configurable: options?.configurable !== false,
@@ -104,7 +104,7 @@ export function defineSetter<T, P extends string, V>(
   property: P,
   setter: Setter<any, V>,
   options?: ConfigurableEnumerableOptions,
-): any | (T & { [K in P]?: V }) {
+): any | (Partial<Record<P, V>> & T) {
   Object.defineProperty(target, property, {
     set: setter,
     configurable: options?.configurable !== false,
@@ -132,7 +132,7 @@ export function defineLazyProperty<T, P extends string, V>(
   property: P,
   callback: LazyCallback<V>,
   options?: DefinePropertyOptions,
-): any | (T & { [K in P]: V }) {
+): any | (Record<P, V> & T) {
   defineGetter(
     target,
     property,
@@ -164,7 +164,7 @@ export function defineLazyConstant<T, P extends string, V>(
   property: P,
   callback: LazyCallback<V>,
   options?: EnumerableOptions,
-): any | (T & { readonly [K in P]: V }) {
+): any | (Readonly<Record<P, V>> & T) {
   defineGetter(
     target,
     property,
@@ -201,7 +201,7 @@ export function definePrototypeProperty<
   property: P,
   value: V,
   options?: DefinePropertyOptions,
-): any | (T & { [K in P]: V }) {
+): any | (Record<P, V> & T) {
   defineProperty(Class.prototype, property, value, options);
   return Class;
 }
@@ -224,7 +224,7 @@ export function definePrototypeConstant<
   property: P,
   value: V,
   options?: EnumerableOptions,
-): any | (T & { readonly [K in P]: V }) {
+): any | (Readonly<Record<P, V>> & T) {
   defineConstant(Class.prototype, property, value, options);
   return Class;
 }
@@ -248,7 +248,7 @@ export function definePrototypeGetter<
   property: P,
   getter: Getter<V>,
   options?: ConfigurableEnumerableOptions,
-): any | (T & { [K in P]: V }) {
+): any | (Record<P, V> & T) {
   defineGetter(Class.prototype, property, getter, options);
   return Class;
 }
@@ -272,7 +272,7 @@ export function definePrototypeSetter<
   property: P,
   setter: Setter<any, V>,
   options?: ConfigurableEnumerableOptions,
-): any | (T & { [K in P]?: V }) {
+): any | (Partial<Record<P, V>> & T) {
   defineSetter(Class.prototype, property, setter, options);
   return Class;
 }
@@ -298,7 +298,7 @@ export function definePrototypeLazyProperty<
   property: P,
   callback: LazyCallback<V>,
   options?: DefinePropertyOptions,
-): any | (T & { [K in P]: V }) {
+): any | (Record<P, V> & T) {
   defineLazyProperty(Class.prototype, property, callback, options);
   return Class;
 }
@@ -322,7 +322,7 @@ export function definePrototypeLazyConstant<
   property: P,
   callback: LazyCallback<V>,
   options?: EnumerableOptions,
-): any | (T & { readonly [K in P]: V }) {
+): any | (Readonly<Record<P, V>> & T) {
   defineLazyConstant(Class.prototype, property, callback, options);
   return Class;
 }
@@ -355,7 +355,6 @@ export function defineProperties<T, P extends Record<string, any>>(
 
   Object.keys(properties).forEach((key: string) => {
     Object.defineProperty(target, key, {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       value: properties[key],
       writable: optionsObject.writable,
       configurable: optionsObject.configurable,
