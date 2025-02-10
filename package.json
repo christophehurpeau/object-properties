@@ -88,7 +88,7 @@
     "@pob/rollup-esbuild": "6.2.0",
     "@pob/root": "16.4.0",
     "@types/node": "22.13.1",
-    "check-package-dependencies": "9.1.0",
+    "check-package-dependencies": "9.2.0",
     "eslint": "9.20.0",
     "ts-node": "npm:ts-node-lite@11.0.0-beta.1",
     "typedoc": "0.27.7",
