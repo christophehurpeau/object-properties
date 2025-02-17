@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.0](https://github.com/christophehurpeau/object-properties/compare/v8.1.0...v9.0.0) (2025-02-17)
+
+### ⚠ BREAKING CHANGES
+
+* drop node 18
+
+### Features
+
+* requires node 20 ([d1140a0](https://github.com/christophehurpeau/object-properties/commit/d1140a06eab40a63a1da7c25118751277188bd79))
+
+### Bug Fixes
+
+* fix doc generation ([a1e8153](https://github.com/christophehurpeau/object-properties/commit/a1e8153a48597ac0b5c43a1ed71bc17f5d7dafd8))
+
 ## [8.1.0](https://github.com/christophehurpeau/object-properties/compare/v8.0.0...v8.1.0) (2023-12-25)
 
 
