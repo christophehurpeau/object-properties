@@ -1,16 +1,16 @@
-<h3 align="center">
+<h1 align="center">
   object-properties
-</h3>
+</h1>
 
 <p align="center">
   Shortcuts to Object.defineProperty and Object.defineProperties
 </p>
 
 <p align="center">
-  <a href="https://npmjs.org/package/object-properties"><img src="https://img.shields.io/npm/v/object-properties.svg?style=flat-square"></a>
-  <a href="https://npmjs.org/package/object-properties"><img src="https://img.shields.io/npm/dw/object-properties.svg?style=flat-square"></a>
-  <a href="https://npmjs.org/package/object-properties"><img src="https://img.shields.io/node/v/object-properties.svg?style=flat-square"></a>
-  <a href="https://npmjs.org/package/object-properties"><img src="https://img.shields.io/npm/types/object-properties.svg?style=flat-square"></a>
+  <a href="https://npmjs.org/package/object-properties"><img src="https://img.shields.io/npm/v/object-properties.svg?style=flat-square" alt="npm version"></a>
+  <a href="https://npmjs.org/package/object-properties"><img src="https://img.shields.io/npm/dw/object-properties.svg?style=flat-square" alt="npm downloads"></a>
+  <a href="https://npmjs.org/package/object-properties"><img src="https://img.shields.io/node/v/object-properties.svg?style=flat-square" alt="node version"></a>
+  <a href="https://npmjs.org/package/object-properties"><img src="https://img.shields.io/npm/types/object-properties.svg?style=flat-square" alt="types"></a>
   <a href="https://codecov.io/gh/christophehurpeau/object-properties"><img src="https://img.shields.io/codecov/c/github/christophehurpeau/object-properties/master.svg?style=flat-square"></a>
   <a href="https://christophehurpeau.github.io/object-properties/"><img src="https://img.shields.io/website.svg?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Fchristophehurpeau.github.io%2Fobject-properties%2F?style=flat-square"></a>
 </p>
