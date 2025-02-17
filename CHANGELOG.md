@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.1](https://github.com/christophehurpeau/object-properties/compare/v9.0.0...v9.0.1) (2025-02-17)
+
+Note: no notable changes
+
+
 ## [9.0.0](https://github.com/christophehurpeau/object-properties/compare/v8.1.0...v9.0.0) (2025-02-17)
 
 ### ⚠ BREAKING CHANGES
