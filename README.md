@@ -27,20 +27,20 @@ defineGetter(object, "test", () => "test");
 
 ## Available methods
 
-- [defineProperty(target, property, value, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineProperty)
-- [defineConstant(target, property, value, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineConstant)
-- [defineGetter(target, property, getter, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineGetter)
-- [defineSetter(target, property, setter, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineSetter)
-- [defineLazyProperty(target, property, callback, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineLazyProperty)
-- [defineLazyConstant(target, property, callback, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineLazyConstant)
-- [definePrototypeProperty(Class, property, value, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-definePrototypeProperty)
-- [definePrototypeConstant(Class, property, value, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-definePrototypeConstant)
-- [definePrototypeGetter(Class, property, value, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-definePrototypeGetter)
-- [definePrototypeSetter(Class, property, value, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-definePrototypeSetter)
-- [definePrototypeLazyProperty(Class, property, value, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-definePrototypeLazyProperty)
-- [definePrototypeLazyConstant(Class, property, value, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-definePrototypeLazyConstant)
-- [defineProperties(target, properties, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineProperties)
-- [defineConstants(target, properties, options)](http://christophehurpeau.github.io/object-properties/docs/function/index.html#static-function-defineConstants)
+- [defineProperty(target, property, value, options)](https://christophehurpeau.github.io/object-properties/functions/defineProperty.html)
+- [defineConstant(target, property, value, options)](https://christophehurpeau.github.io/object-properties/functions/defineConstant.html)
+- [defineGetter(target, property, getter, options)](https://christophehurpeau.github.io/object-properties/functions/defineGetter.html)
+- [defineSetter(target, property, setter, options)](https://christophehurpeau.github.io/object-properties/functions/defineSetter.html)
+- [defineLazyProperty(target, property, callback, options)](https://christophehurpeau.github.io/object-properties/functions/defineLazyProperty.html)
+- [defineLazyConstant(target, property, callback, options)](https://christophehurpeau.github.io/object-properties/functions/defineLazyConstant.html)
+- [definePrototypeProperty(Class, property, value, options)](https://christophehurpeau.github.io/object-properties/functions/definePrototypeProperty.html)
+- [definePrototypeConstant(Class, property, value, options)](https://christophehurpeau.github.io/object-properties/functions/definePrototypeConstant.html)
+- [definePrototypeGetter(Class, property, value, options)](https://christophehurpeau.github.io/object-properties/functions/definePrototypeGetter.html)
+- [definePrototypeSetter(Class, property, value, options)](https://christophehurpeau.github.io/object-properties/functions/definePrototypeSetter.html)
+- [definePrototypeLazyProperty(Class, property, value, options)](https://christophehurpeau.github.io/object-properties/functions/definePrototypeLazyProperty.html)
+- [definePrototypeLazyConstant(Class, property, value, options)](https://christophehurpeau.github.io/object-properties/functions/definePrototypeLazyConstant.html)
+- [defineProperties(target, properties, options)](https://christophehurpeau.github.io/object-properties/functions/defineProperties.html)
+- [defineConstants(target, properties, options)](https://christophehurpeau.github.io/object-properties/functions/defineConstant.html)
 
 ## License
 
