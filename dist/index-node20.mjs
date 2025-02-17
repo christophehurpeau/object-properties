@@ -41,10 +41,7 @@ function defineLazyProperty(target, property, callback, options) {
       defineProperty(this, property, value, options);
       return value;
     },
-    {
-      configurable: true,
-      enumerable: options?.enumerable
-    }
+    { configurable: true, enumerable: options?.enumerable }
   );
   return target;
 }
@@ -57,10 +54,7 @@ function defineLazyConstant(target, property, callback, options) {
       defineConstant(this, property, value, options);
       return value;
     },
-    {
-      configurable: true,
-      enumerable: options?.enumerable
-    }
+    { configurable: true, enumerable: options?.enumerable }
   );
   return target;
 }
