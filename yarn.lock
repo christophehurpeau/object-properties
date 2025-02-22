@@ -959,9 +959,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/rollup-esbuild@npm:6.2.0":
-  version: 6.2.0
-  resolution: "@pob/rollup-esbuild@npm:6.2.0"
+"@pob/rollup-esbuild@npm:6.3.0":
+  version: 6.3.0
+  resolution: "@pob/rollup-esbuild@npm:6.3.0"
   dependencies:
     "@pob/rollup": "npm:6.1.0"
     "@rollup/plugin-node-resolve": "npm:16.0.0"
@@ -970,7 +970,7 @@ __metadata:
     esbuild: "npm:0.24.2"
     rollup: "npm:4.33.0"
     rollup-config-external-dependencies: "npm:^3.0.1"
-    rollup-plugin-esbuild: "npm:6.1.1"
+    rollup-plugin-esbuild: "npm:6.2.0"
   peerDependencies:
     rollup: 4.33.0
     typescript: ^4.0.3 || ^5.0.0
@@ -980,7 +980,7 @@ __metadata:
   bin:
     pob-esbuild-clean-out: ./bin/pob-esbuild-clean-out.js
     rollup: ./bin/rollup.cjs
-  checksum: 10c0/3bc77d372cd35762041a93958111a0ee1d2ca2f287a1c134e1c760669b06ccaea042c3786e3f2fcc85d30293625bb881916d05e36f1b3a3d4f81a69aefe9df98
+  checksum: 10c0/4f5ed05c174cc65f8235b895b1c28407523ffb948068390afc662a2213cf654e5fc9a7808bf925477807327a8e8708fbe0d7c4932cea3a5e46dc36b94e65790f
   languageName: node
   linkType: hard
 
@@ -1100,7 +1100,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/pluginutils@npm:^5.0.1, @rollup/pluginutils@npm:^5.0.5":
+"@rollup/pluginutils@npm:^5.0.1":
   version: 5.1.3
   resolution: "@rollup/pluginutils@npm:5.1.3"
   dependencies:
@@ -2493,10 +2493,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-module-lexer@npm:^1.3.1":
-  version: 1.5.4
-  resolution: "es-module-lexer@npm:1.5.4"
-  checksum: 10c0/300a469488c2f22081df1e4c8398c78db92358496e639b0df7f89ac6455462aaf5d8893939087c1a1cbcbf20eed4610c70e0bcb8f3e4b0d80a5d2611c539408c
+"es-module-lexer@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "es-module-lexer@npm:1.6.0"
+  checksum: 10c0/667309454411c0b95c476025929881e71400d74a746ffa1ff4cb450bd87f8e33e8eef7854d68e401895039ac0bac64e7809acbebb6253e055dd49ea9e3ea9212
   languageName: node
   linkType: hard
 
@@ -3206,7 +3206,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-tsconfig@npm:^4.7.2, get-tsconfig@npm:^4.8.1":
+"get-tsconfig@npm:^4.10.0, get-tsconfig@npm:^4.8.1":
   version: 4.10.0
   resolution: "get-tsconfig@npm:4.10.0"
   dependencies:
@@ -4798,7 +4798,7 @@ __metadata:
     "@pob/commitlint-config": "npm:9.1.1"
     "@pob/eslint-config": "npm:59.7.0"
     "@pob/eslint-config-typescript": "npm:59.7.0"
-    "@pob/rollup-esbuild": "npm:6.2.0"
+    "@pob/rollup-esbuild": "npm:6.3.0"
     "@pob/root": "npm:16.6.0"
     "@types/node": "npm:22.13.5"
     check-package-dependencies: "npm:10.0.0"
@@ -5034,6 +5034,13 @@ __metadata:
     lru-cache: "npm:^11.0.0"
     minipass: "npm:^7.1.2"
   checksum: 10c0/3da4adedaa8e7ef8d6dc4f35a0ff8f05a9b4d8365f2b28047752b62d4c1ad73eec21e37b1579ef2d075920157856a3b52ae8309c480a6f1a8bbe06ff8e52b33c
+  languageName: node
+  linkType: hard
+
+"pathe@npm:^2.0.2":
+  version: 2.0.3
+  resolution: "pathe@npm:2.0.3"
+  checksum: 10c0/c118dc5a8b5c4166011b2b70608762e260085180bb9e33e80a50dcdb1e78c010b1624f4280c492c92b05fc276715a4c357d1f9edc570f8f1b3d90b6839ebaca1
   languageName: node
   linkType: hard
 
@@ -5398,18 +5405,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-esbuild@npm:6.1.1":
-  version: 6.1.1
-  resolution: "rollup-plugin-esbuild@npm:6.1.1"
+"rollup-plugin-esbuild@npm:6.2.0":
+  version: 6.2.0
+  resolution: "rollup-plugin-esbuild@npm:6.2.0"
   dependencies:
-    "@rollup/pluginutils": "npm:^5.0.5"
-    debug: "npm:^4.3.4"
-    es-module-lexer: "npm:^1.3.1"
-    get-tsconfig: "npm:^4.7.2"
+    debug: "npm:^4.4.0"
+    es-module-lexer: "npm:^1.6.0"
+    get-tsconfig: "npm:^4.10.0"
+    unplugin-utils: "npm:^0.2.3"
   peerDependencies:
     esbuild: ">=0.18.0"
     rollup: ^1.20.0 || ^2.0.0 || ^3.0.0 || ^4.0.0
-  checksum: 10c0/1d5610a54ea4ffc4721d4f6beed8931cb2188313ab464480605b8bc7eb24be63eadf5eb706c8af2ed930f93c210b66190f482311642f5f3c5ad801c63d80f755
+  checksum: 10c0/4d74f7de837ddf06b711361bfc7b5bcd532c7abc17df4016b8d08ed4cc0589ec8566ee62564e4b16b7c667b5117a88edafb622616d3c403e0a60816cd6a77133
   languageName: node
   linkType: hard
 
@@ -6191,6 +6198,16 @@ __metadata:
   version: 7.0.2
   resolution: "universal-user-agent@npm:7.0.2"
   checksum: 10c0/e60517ee929813e6b3ac0ceb3c66deccafadc71341edca160279ff046319c684fd7090a60d63aa61cd34a06c2d2acebeb8c2f8d364244ae7bf8ab788e20cd8c8
+  languageName: node
+  linkType: hard
+
+"unplugin-utils@npm:^0.2.3":
+  version: 0.2.4
+  resolution: "unplugin-utils@npm:0.2.4"
+  dependencies:
+    pathe: "npm:^2.0.2"
+    picomatch: "npm:^4.0.2"
+  checksum: 10c0/b5ab2db37823f5b4c8ee8719caa4b5a50b2da33c74c8110d46deb7a2399dfa15cbcaa0cff62aa6400c76e778e42becd9195c09b6502c0c007d03610f432c875f
   languageName: node
   linkType: hard
 
