@@ -87,7 +87,7 @@
     "@pob/eslint-config-typescript": "59.8.1",
     "@pob/rollup-esbuild": "6.4.0",
     "@pob/root": "16.9.0",
-    "@types/node": "22.13.17",
+    "@types/node": "22.14.0",
     "check-package-dependencies": "10.1.0",
     "eslint": "9.23.0",
     "ts-node": "npm:ts-node-lite@11.0.0-beta.1",
