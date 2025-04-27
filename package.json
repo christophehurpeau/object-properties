@@ -51,7 +51,9 @@
     "lint:eslint": "eslint --quiet .",
     "lint:prettier": "pob-root-prettier --check .",
     "lint:prettier:fix": "pob-root-prettier --write .",
-    "postinstallDev": "pob-root-postinstall",
+    "postinstall": "pob-root-postinstall",
+    "postpack": "pinst --enable",
+    "prepack": "pinst --disable",
     "test": "TS_NODE_PROJECT=tsconfig.test.json node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
     "test:coverage": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --all --src ./src node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
     "test:coverage:json": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --reporter=json --all --src ./src node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
@@ -90,6 +92,7 @@
     "@types/node": "22.15.2",
     "check-package-dependencies": "10.1.0",
     "eslint": "9.25.1",
+    "pinst": "3.0.0",
     "ts-node": "npm:ts-node-lite@11.0.0-beta.1",
     "typedoc": "0.28.3",
     "typescript": "5.8.3"
