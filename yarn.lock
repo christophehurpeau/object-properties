@@ -1352,12 +1352,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:22.15.22, @types/node@npm:>=18.0.0":
-  version: 22.15.22
-  resolution: "@types/node@npm:22.15.22"
+"@types/node@npm:*, @types/node@npm:22.15.23, @types/node@npm:>=18.0.0":
+  version: 22.15.23
+  resolution: "@types/node@npm:22.15.23"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/b160a348a02a5564887fa75be4278bb8a6d13477f6715677793fd911e5ceae08f84622fd18d246f1edb0d39bf70bbdfb41c8e59169d4e933a517a01fa2516e7c
+  checksum: 10c0/e3ae0629dfb4357dad2a7838c481656abf089d852d83f0d0f14368f03ad21ce276cbecfdf62be2276ef39920db6b114e5bc8d87c37714bbab9aefb0ce1eb1473
   languageName: node
   linkType: hard
 
@@ -4880,7 +4880,7 @@ __metadata:
     "@pob/eslint-config-typescript": "npm:59.8.1"
     "@pob/rollup-esbuild": "npm:6.5.0"
     "@pob/root": "npm:16.9.0"
-    "@types/node": "npm:22.15.22"
+    "@types/node": "npm:22.15.23"
     check-package-dependencies: "npm:10.2.0"
     eslint: "npm:9.27.0"
     ts-node: "npm:ts-node-lite@11.0.0-beta.1"
