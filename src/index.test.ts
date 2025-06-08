@@ -17,7 +17,7 @@ import {
   definePrototypeProperty,
   definePrototypeSetter,
   defineSetter,
-} from "./index";
+} from "./index.ts";
 
 test("defineProperty should work", () => {
   const o: any = {};
