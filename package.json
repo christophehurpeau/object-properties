@@ -85,7 +85,7 @@
     "@pob/commitlint-config": "9.2.0",
     "@pob/eslint-config": "60.1.0",
     "@pob/eslint-config-typescript": "60.1.0",
-    "@pob/rollup-esbuild": "6.5.1",
+    "@pob/rollup-esbuild": "7.2.0",
     "@pob/root": "16.9.0",
     "@types/node": "22.18.12",
     "check-package-dependencies": "10.4.1",
