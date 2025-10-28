@@ -16,7 +16,7 @@
   "type": "module",
   "packageManager": "yarn@4.10.3",
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=22.18.0"
   },
   "sideEffects": false,
   "main": "./dist/index-node20.mjs",
@@ -51,17 +51,27 @@
     "lint:eslint": "eslint --quiet .",
     "lint:prettier": "pob-root-prettier --check .",
     "lint:prettier:fix": "pob-root-prettier --write .",
-    "postinstallDev": "pob-root-postinstall",
-    "test": "TS_NODE_PROJECT=tsconfig.test.json node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
-    "test:coverage": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --all --src ./src node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
-    "test:coverage:json": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --reporter=json --all --src ./src node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
-    "test:coverage:lcov": "TS_NODE_PROJECT=tsconfig.test.json npx c8 --reporter=lcov --src ./src node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
-    "test:watch": "TS_NODE_PROJECT=tsconfig.test.json node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/**/*.test.ts",
+    "postinstall": "pob-root-postinstall",
+    "postpack": "pinst --enable",
+    "prepack": "pinst --disable",
+    "test": "TZ=UTC node  --test src/**/*.test.ts",
+    "test:coverage": "TZ=UTC npx c8 --all --src ./src node  --test src/**/*.test.ts",
+    "test:coverage:json": "TZ=UTC npx c8 --reporter=json --all --src ./src node  --test src/**/*.test.ts",
+    "test:watch": "TZ=UTC node  --test src/**/*.test.ts",
     "watch": "yarn clean:build && rollup --config rollup.config.mjs --watch"
+  },
+  "browserslist": {
+    "production": [
+      "defaults",
+      "> 0.2%",
+      "not ie < 12",
+      "not safari < 10",
+      "not ios_saf < 10"
+    ]
   },
   "commitlint": {
     "extends": [
-      "@pob/commitlint-config"
+      "@pob/root/commitlint-config"
     ]
   },
   "pob": {
@@ -72,7 +82,7 @@
     "envs": [
       {
         "target": "node",
-        "version": "20"
+        "version": "22"
       },
       {
         "target": "browser"
@@ -82,15 +92,14 @@
   },
   "prettier": "@pob/root/prettier-config",
   "devDependencies": {
-    "@pob/commitlint-config": "11.0.0",
-    "@pob/eslint-config": "60.1.0",
-    "@pob/eslint-config-typescript": "60.1.0",
-    "@pob/rollup-esbuild": "6.5.1",
-    "@pob/root": "16.9.0",
+    "@pob/eslint-config": "62.0.0",
+    "@pob/eslint-config-typescript": "62.0.0",
+    "@pob/rollup-esbuild": "7.3.0",
+    "@pob/root": "19.5.0",
     "@types/node": "22.18.12",
     "check-package-dependencies": "10.5.0",
     "eslint": "9.38.0",
-    "ts-node": "npm:ts-node-lite@11.0.0-beta.1",
+    "pinst": "3.0.0",
     "typedoc": "0.28.14",
     "typescript": "5.9.3"
   }

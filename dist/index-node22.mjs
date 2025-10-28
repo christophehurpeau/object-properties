@@ -110,4 +110,4 @@ function defineConstants(target, properties, options) {
 }
 
 export { defineConstant, defineConstants, defineGetter, defineLazyConstant, defineLazyProperty, defineProperties, defineProperty, definePrototypeConstant, definePrototypeGetter, definePrototypeLazyConstant, definePrototypeLazyProperty, definePrototypeProperty, definePrototypeSetter, defineSetter };
-//# sourceMappingURL=index-node20.mjs.map
+//# sourceMappingURL=index-node22.mjs.map

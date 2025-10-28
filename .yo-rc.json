@@ -7,14 +7,14 @@
       "documentation": true,
       "testing": {
         "codecov": true,
-        "ci": true,
         "runner": "node"
       }
     },
     "project": {
       "type": "lib",
       "yarnNodeLinker": "node-modules",
-      "packageManager": "yarn"
+      "packageManager": "yarn",
+      "ci": true
     }
   }
 }
