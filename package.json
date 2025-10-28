@@ -96,7 +96,7 @@
     "@pob/eslint-config-typescript": "62.0.0",
     "@pob/rollup-esbuild": "7.3.0",
     "@pob/root": "19.5.0",
-    "@types/node": "22.18.12",
+    "@types/node": "22.18.13",
     "check-package-dependencies": "10.5.0",
     "eslint": "9.38.0",
     "pinst": "3.0.0",
