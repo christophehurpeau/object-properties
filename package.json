@@ -94,7 +94,7 @@
   "devDependencies": {
     "@pob/eslint-config": "62.0.0",
     "@pob/eslint-config-typescript": "62.0.0",
-    "@pob/rollup-esbuild": "7.3.2",
+    "@pob/rollup-esbuild": "7.4.0",
     "@pob/root": "19.5.0",
     "@types/node": "22.19.1",
     "check-package-dependencies": "10.5.0",
