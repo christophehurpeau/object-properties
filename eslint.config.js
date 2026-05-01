@@ -1,3 +1,3 @@
-import pobTypescriptConfig from "@pob/eslint-config-typescript";
+import pobTypescriptConfig from "@pob/eslint-config";
 
-export default [...pobTypescriptConfig(import.meta.url).configs.base];
+export default [...pobTypescriptConfig(import.meta.url).configs.baseModule];
