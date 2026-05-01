@@ -546,9 +546,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/eslint-config@npm:65.4.2":
-  version: 65.4.2
-  resolution: "@pob/eslint-config@npm:65.4.2"
+"@pob/eslint-config@npm:65.4.3":
+  version: 65.4.3
+  resolution: "@pob/eslint-config@npm:65.4.3"
   dependencies:
     "@eslint/js": "npm:^10.0.1"
     "@eslint/json": "npm:^1.2.0"
@@ -567,7 +567,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/b3ca75dedf2b6d97323ef1bc756a357cb09d8397e8d7ed036e9acaa1b69efef4f5a829e4205e7df7bb21d2b98fed61c9f6eee46ca9b1775c7f4730836377c176
+  checksum: 10c0/76c601403f507a1f4f64ee1c85911aa9b14ba3bd01e88be9cc924c0de81cf3df6137b409f9e1cfb4bf1068abd653e52b1ef2fa2b6743daa4f56287a1834a3ca6
   languageName: node
   linkType: hard
 
@@ -3967,7 +3967,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "object-properties@workspace:."
   dependencies:
-    "@pob/eslint-config": "npm:65.4.2"
+    "@pob/eslint-config": "npm:65.4.3"
     "@pob/rollup-esbuild": "npm:8.3.0"
     "@pob/root": "npm:23.2.0"
     "@types/node": "npm:22.19.1"
