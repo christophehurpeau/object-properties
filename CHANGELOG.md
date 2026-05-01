@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.0.0](https://github.com/christophehurpeau/object-properties/compare/v9.0.1...v10.0.0) (2026-05-01)
+
+### ⚠ BREAKING CHANGES
+
+* update dependencies and require node 22
+* drop node 20
+
+### Features
+
+* update dependencies
+
+### Miscellaneous Chores
+
+* update dependencies and require node 22
+
 ## [9.0.1](https://github.com/christophehurpeau/object-properties/compare/v9.0.0...v9.0.1) (2025-02-17)
 
 Note: no notable changes
