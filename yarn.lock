@@ -1691,9 +1691,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"check-package-dependencies@npm:11.0.0":
-  version: 11.0.0
-  resolution: "check-package-dependencies@npm:11.0.0"
+"check-package-dependencies@npm:11.1.0":
+  version: 11.1.0
+  resolution: "check-package-dependencies@npm:11.1.0"
   dependencies:
     "@eslint/plugin-kit": "npm:^0.7.1"
     jsonc-parser: "npm:^3.3.1"
@@ -1707,7 +1707,7 @@ __metadata:
       optional: true
   bin:
     check-package-dependencies: ./bin/check-package-dependencies.mjs
-  checksum: 10c0/9121eb0af83648c5e02d6ec8ee609b0c122dd422a7ab448440dc12d45e4cc5ae359d31d031ce6fb669537c559295af15fb3cb85311b2bb33d73efddcc13d9d84
+  checksum: 10c0/4097bac79e63196571cfa42d1af7ef9fe5a0a0c63f66820f37883ee74ca8807e566abf7024f4f5ef0752eb2c87287afe43eb6a30b07a528ca9c4061ce5dbd787
   languageName: node
   linkType: hard
 
@@ -3971,7 +3971,7 @@ __metadata:
     "@pob/rollup-esbuild": "npm:8.3.0"
     "@pob/root": "npm:23.2.0"
     "@types/node": "npm:22.19.1"
-    check-package-dependencies: "npm:11.0.0"
+    check-package-dependencies: "npm:11.1.0"
     eslint: "npm:10.2.1"
     pinst: "npm:3.0.0"
     typedoc: "npm:0.28.19"
