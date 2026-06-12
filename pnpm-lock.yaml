@@ -15,8 +15,8 @@ importers:
         specifier: 9.1.0
         version: 9.1.0(rollup@4.60.4)(typescript@6.0.3)
       '@pob/root':
-        specifier: 24.2.0
-        version: 24.2.0
+        specifier: 24.3.0
+        version: 24.3.0
       '@types/node':
         specifier: 22.19.1
         version: 22.19.1
@@ -47,24 +47,24 @@ packages:
     resolution: {integrity: sha512-ksmG2+cHGtuDPQQbhBbC4unwm444+6TiPw0d1bKf67hntgZqZ8E0g1MuYKUuyT5IH4IMmXZhKq22/Z3jBvtQIw==}
     engines: {node: '>=22.12.0'}
 
-  '@commitlint/is-ignored@21.0.1':
-    resolution: {integrity: sha512-iNDP8SFdw8JEkM0CHZ2XFnhTN4Zg5jKUY2d8kBOSFrI2aA+3YJI7fcqVpfgbpJ9xtxFVYpi+DBATU5AvhoTq8g==}
+  '@commitlint/is-ignored@21.0.2':
+    resolution: {integrity: sha512-H5z4t8PC9tUsmZ/o+EptM3Nq8sTFtskAShdcqxCoyzklW5eaVT5xbrDAET2uypzir9Vsj4ZZmBtyKjYe2XqgeQ==}
     engines: {node: '>=22.12.0'}
 
-  '@commitlint/lint@21.0.1':
-    resolution: {integrity: sha512-gF+iYtUw1gBG3HUH9z3VxwUjGg2R2G5j+nmvPs8aIeYkiB7TtneBu3wO85I0bUl93bYNsvsCNI9Nte2fmDUMww==}
+  '@commitlint/lint@21.0.2':
+    resolution: {integrity: sha512-PnUmLYGeGLfW8oVatR9KpNxSHYAnJOEWlMZzfdeFOUq6WUrFx1fGQaWCWJqMoIll/xPM+GdfJV+tKHZVHhl0Fg==}
     engines: {node: '>=22.12.0'}
 
-  '@commitlint/message@21.0.1':
-    resolution: {integrity: sha512-R3dVQeJQ0B6yqrZEjkUHD4r7UJYLV9Lvk2xs3PTOmtWk2G3mI6Xgc+YdRxL1PwcDfBiUjv2SkIkW4AUc976w1w==}
+  '@commitlint/message@21.0.2':
+    resolution: {integrity: sha512-5n4aqHGD/FNnom/D5L8i7cYtV+xjuXcBL832C3w9VglEsZzIsoHpJsvxzJ7cgiOsOdc/2jU4t5+7qMHh7GBX3g==}
     engines: {node: '>=22.12.0'}
 
-  '@commitlint/parse@21.0.1':
-    resolution: {integrity: sha512-oh/nCSOqdoeQNA1tO8aAmxkq5EBo8/NzcFQRvv66AWc9HpED28sL2iSicCKU6hPintWuscL6BJEWi77Wq1LPMQ==}
+  '@commitlint/parse@21.0.2':
+    resolution: {integrity: sha512-QVZJhGHTm+oiuWyEKOCTQ0ZM3mfJ0eGWFeHuj7WzSKEth+UukcCHac9GD8pgdFlg/qGkFWOtyaNd1T8REgagaw==}
     engines: {node: '>=22.12.0'}
 
-  '@commitlint/rules@21.0.1':
-    resolution: {integrity: sha512-VMooYpz4nJg7xlaUso6CCOWEz8D/ChkvsvZUMARcoJ1ZpfKPyFCGrHNha2tbsETNAb6ErgiRuCr2DvghrvPDYQ==}
+  '@commitlint/rules@21.0.2':
+    resolution: {integrity: sha512-k6tQ69Td7t2qUSIbik8D3TL1q3ZJpkEbV+yLogDzCRAdOxJm4ndhtBNREsLA1/puRfWvzS9eioF2w43WT+hHgQ==}
     engines: {node: '>=22.12.0'}
 
   '@commitlint/to-lines@21.0.1':
@@ -472,11 +472,6 @@ packages:
       typescript:
         optional: true
 
-  '@pob/pretty-pkg@14.1.0':
-    resolution: {integrity: sha512-7Snbu/Nmr5odYV5/oaiy+8TZrN/YyQpRn0uuTh2cLb7A/6k08/yVKbZL/qERjTjWU4wWoE+Xpv4V7IOEfrr5cQ==}
-    engines: {node: '>=22.18.0'}
-    hasBin: true
-
   '@pob/rollup-esbuild@9.1.0':
     resolution: {integrity: sha512-vs3v1ZyBZDXwZzDa/mR2WV+rUxWVpkAAJd53o3gv2INJTOgP/eok5IUTwIFY2mzCrU5tJLqtfcyABEnG6eVVnQ==}
     engines: {node: '>=22.18.0'}
@@ -493,13 +488,13 @@ packages:
     engines: {node: '>=22.18.0'}
     hasBin: true
 
-  '@pob/root@24.2.0':
-    resolution: {integrity: sha512-GKkLRRLuZPBNmQl+Uz1S0zX9tCYJb+OjQdfUSv6SUbhPjKWp2HIzWDiLfs+zK+d36M9puvY+yipPKSaZJvnlzw==}
+  '@pob/root@24.3.0':
+    resolution: {integrity: sha512-prS1p32icRMPUnnpjtcIvIUO+CtSzowm/hAF/zJ31px3qVQX3+sNkVXsq+iKVBynkj6YH9cIQVsZohbBrFnzbQ==}
     engines: {node: '>=22.18.0'}
     hasBin: true
 
-  '@pob/version@4.1.0':
-    resolution: {integrity: sha512-FlJR/k4f9/7FXsEzdw7ELcHkPvqaorjl4V7GZA860aQ0Dr1yu9zDOj3o5RZSjKOF7tEYEQgkWbfM91xJjqSyKQ==}
+  '@pob/version@4.1.1':
+    resolution: {integrity: sha512-KKK7oWYWDpe4ShdYF1+Pj60EdwMvoG/RmWbV1YxbeDApVsPxvYd9X1nUUQSOtE2WV/yhTIgCDCsW+8BkIHKozw==}
     engines: {node: '>=24.14.1'}
     hasBin: true
 
@@ -1675,8 +1670,8 @@ packages:
   linkify-it@5.0.0:
     resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
 
-  lint-staged@17.0.5:
-    resolution: {integrity: sha512-d12yC+/e8RhBjZtaxZn71FyrgU/P5e+uAPifhCLwdosQZP/zamSdKRWDC30ocVIbzDKiFG1McHc/LUgB92GIPw==}
+  lint-staged@17.0.7:
+    resolution: {integrity: sha512-JrSobt+tW3rH8IOMi8tDZd3foorM5yPEkLD/V2NxobgHrFfHWGee4MOLVuZeScgxftEwbHrPHIFA/ZL+nUJeuA==}
     engines: {node: '>=22.22.1'}
     hasBin: true
 
@@ -1852,8 +1847,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pob-dependencies@24.1.0:
-    resolution: {integrity: sha512-XxWd1CVXBoJn+M9GTVVs4bdR1FOVsEOEVPbBqYgeu8X8mVEiY08TtsFhd8DXruA1CjhefWPc/OPDV4y9vSYPaA==}
+  pob-dependencies@24.1.1:
+    resolution: {integrity: sha512-dIzEis0b2eAVf2uaaEB5d79Fchn8dKJqaIbSqVS319UEQ2GTxfbJSB006fk8A8Yc+aIp4m1ipbkV1i5APJHrhQ==}
     engines: {node: '>=22.18.0'}
 
   possible-typed-array-names@1.1.0:
@@ -1963,6 +1958,11 @@ packages:
 
   semver@7.8.0:
     resolution: {integrity: sha512-AcM7dV/5ul4EekoQ29Agm5vri8JNqRyj39o0qpX6vDF2GZrtutZl5RwgD1XnZjiTAfncsJhMI48QQH3sN87YNA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  semver@7.8.1:
+    resolution: {integrity: sha512-rkVq3IXh+4FDGch+KwzX3aV9W3kO54GyEgpvBzSyctDA6Xtd7RJQV1xmXbeQp5v7+VzLOfVqiutSE6GICgPFvg==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -2077,8 +2077,8 @@ packages:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
 
-  tinyexec@1.1.2:
-    resolution: {integrity: sha512-dAqSqE/RabpBKI8+h26GfLq6Vb3JVXs30XYQjdMjaj/c2tS8IYYMbIzP599KtRj7c57/wYApb3QjgRgXmrCukA==}
+  tinyexec@1.2.4:
+    resolution: {integrity: sha512-SHf/r48b7vOrjve9PxJo3MN5v5yuyjHvdUcrQffT3WXMUfnGmHDVbC4k3sHJaJTgZCwpUplIaAo5ANtMyp3YHg==}
     engines: {node: '>=18'}
 
   tinyglobby@0.2.16:
@@ -2236,30 +2236,30 @@ snapshots:
       '@commitlint/types': 21.0.1
       picocolors: 1.1.1
 
-  '@commitlint/is-ignored@21.0.1':
+  '@commitlint/is-ignored@21.0.2':
     dependencies:
       '@commitlint/types': 21.0.1
       semver: 7.8.0
 
-  '@commitlint/lint@21.0.1':
+  '@commitlint/lint@21.0.2':
     dependencies:
-      '@commitlint/is-ignored': 21.0.1
-      '@commitlint/parse': 21.0.1
-      '@commitlint/rules': 21.0.1
+      '@commitlint/is-ignored': 21.0.2
+      '@commitlint/parse': 21.0.2
+      '@commitlint/rules': 21.0.2
       '@commitlint/types': 21.0.1
 
-  '@commitlint/message@21.0.1': {}
+  '@commitlint/message@21.0.2': {}
 
-  '@commitlint/parse@21.0.1':
+  '@commitlint/parse@21.0.2':
     dependencies:
       '@commitlint/types': 21.0.1
       conventional-changelog-angular: 8.3.1
       conventional-commits-parser: 6.4.0
 
-  '@commitlint/rules@21.0.1':
+  '@commitlint/rules@21.0.2':
     dependencies:
       '@commitlint/ensure': 21.0.1
-      '@commitlint/message': 21.0.1
+      '@commitlint/message': 21.0.2
       '@commitlint/to-lines': 21.0.1
       '@commitlint/types': 21.0.1
 
@@ -2540,12 +2540,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@pob/pretty-pkg@14.1.0':
-    dependencies:
-      oxfmt: 0.51.0
-    transitivePeerDependencies:
-      - svelte
-
   '@pob/rollup-esbuild@9.1.0(rollup@4.60.4)(typescript@6.0.3)':
     dependencies:
       '@pob/rollup': 8.1.0
@@ -2565,25 +2559,24 @@ snapshots:
     dependencies:
       rollup: 4.60.4
 
-  '@pob/root@24.2.0':
+  '@pob/root@24.3.0':
     dependencies:
       '@commitlint/format': 21.0.1
-      '@commitlint/lint': 21.0.1
+      '@commitlint/lint': 21.0.2
       '@commitlint/types': 21.0.1
-      '@pob/pretty-pkg': 14.1.0
-      '@pob/version': 4.1.0
+      '@pob/version': 4.1.1
       conventional-changelog-conventionalcommits: 9.3.1
       conventional-changelog-writer: 8.4.0
       conventional-commits-parser: 6.4.0
       json5: 2.2.3
-      lint-staged: 17.0.5
+      lint-staged: 17.0.7
       oxfmt: 0.51.0
-      pob-dependencies: 24.1.0
+      pob-dependencies: 24.1.1
       semver: 7.8.0
     transitivePeerDependencies:
       - svelte
 
-  '@pob/version@4.1.0':
+  '@pob/version@4.1.1':
     dependencies:
       commander: 14.0.3
       conventional-changelog-conventionalcommits: 9.3.1
@@ -2591,7 +2584,7 @@ snapshots:
       conventional-changelog-writer: 8.4.0
       conventional-commits-parser: 6.4.0
       nightingale: 18.1.0
-      semver: 7.8.0
+      semver: 7.8.1
 
   '@rollup/plugin-node-resolve@16.0.3(rollup@4.60.4)':
     dependencies:
@@ -3854,12 +3847,12 @@ snapshots:
     dependencies:
       uc.micro: 2.1.0
 
-  lint-staged@17.0.5:
+  lint-staged@17.0.7:
     dependencies:
       listr2: 10.2.1
       picomatch: 4.0.4
       string-argv: 0.3.2
-      tinyexec: 1.1.2
+      tinyexec: 1.2.4
     optionalDependencies:
       yaml: 2.9.0
 
@@ -4058,7 +4051,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pob-dependencies@24.1.0: {}
+  pob-dependencies@24.1.1: {}
 
   possible-typed-array-names@1.1.0: {}
 
@@ -4211,6 +4204,8 @@ snapshots:
 
   semver@7.8.0: {}
 
+  semver@7.8.1: {}
+
   set-function-length@1.2.2:
     dependencies:
       define-data-property: 1.1.4
@@ -4357,7 +4352,7 @@ snapshots:
 
   tapable@2.3.3: {}
 
-  tinyexec@1.1.2: {}
+  tinyexec@1.2.4: {}
 
   tinyglobby@0.2.16:
     dependencies:
