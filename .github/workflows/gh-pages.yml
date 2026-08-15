@@ -8,14 +8,14 @@ jobs:
   create-documentation-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Install pnpm
         uses: pnpm/action-setup@v6
         with:
           version: 11
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
 
@@ -27,9 +27,6 @@ jobs:
 
       - name: Generate Typedoc
         run: pnpm typedoc --tsconfig tsconfig.doc.json
-
-      - name: Generate Coverage
-        run: NODE_V8_COVERAGE=./docs/coverage pnpm run test:coverage
 
       - name: Create nojekyll
         run: touch docs/.nojekyll
