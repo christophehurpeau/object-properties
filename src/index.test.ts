@@ -223,3 +223,227 @@ test("defineConstants should work", () => {
     "Cannot redefine property: a",
   );
 });
+
+test("defineProperty should handle options", () => {
+  const o: any = {};
+  defineProperty(o, "a", 1, {
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "a"), {
+    value: 1,
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+
+  defineProperty(o, "b", 2, {});
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "b"), {
+    value: 2,
+    writable: true,
+    configurable: true,
+    enumerable: false,
+  });
+});
+
+test("defineConstant should handle options", () => {
+  const o = {};
+  defineConstant(o, "a", 1, { enumerable: true });
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "a"), {
+    value: 1,
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+  assert.deepStrictEqual(Object.keys(o), ["a"]);
+});
+
+test("defineGetter should handle options", () => {
+  const o: any = {};
+  const getter = (): number => 1;
+  defineGetter(o, "a", getter, { configurable: false, enumerable: true });
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "a"), {
+    get: getter,
+    set: undefined,
+    configurable: false,
+    enumerable: true,
+  });
+  assert.strictEqual(o.a, 1);
+});
+
+test("defineSetter should handle options", () => {
+  const o: any = {};
+  const setter = (): void => undefined;
+  defineSetter(o, "a", setter, { configurable: false, enumerable: true });
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "a"), {
+    get: undefined,
+    set: setter,
+    configurable: false,
+    enumerable: true,
+  });
+});
+
+test("defineLazyProperty should handle options", () => {
+  const o: any = {};
+  defineLazyProperty(o, "a", () => 1, {
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "a"), {
+    get: Object.getOwnPropertyDescriptor(o, "a")?.get,
+    set: undefined,
+    configurable: true,
+    enumerable: true,
+  });
+
+  assert.strictEqual(o.a, 1);
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "a"), {
+    value: 1,
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+});
+
+test("defineLazyConstant should handle options", () => {
+  const o: any = {};
+  defineLazyConstant(o, "a", () => 1, { enumerable: true });
+  assert.strictEqual(o.a, 1);
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "a"), {
+    value: 1,
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+});
+
+test("defineProperties should handle options", () => {
+  const o = {};
+  defineProperties(
+    o,
+    { a: 1, b: 2 },
+    { writable: false, configurable: false, enumerable: true },
+  );
+  assert.deepStrictEqual(Object.keys(o), ["a", "b"]);
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "a"), {
+    value: 1,
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "b"), {
+    value: 2,
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+
+  const o2: any = {};
+  defineProperties(o2, { a: 1 }, {});
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o2, "a"), {
+    value: 1,
+    writable: true,
+    configurable: true,
+    enumerable: false,
+  });
+});
+
+test("defineConstants should handle options", () => {
+  const o: any = {};
+  defineConstants(o, { a: 1 }, { enumerable: true });
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "a"), {
+    value: 1,
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+});
+
+test("definePrototypeProperty should handle options", () => {
+  class O {}
+  definePrototypeProperty(O, "a", 1, {
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(O.prototype, "a"), {
+    value: 1,
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+});
+
+test("definePrototypeConstant should handle options", () => {
+  class O {}
+  definePrototypeConstant(O, "a", 1, { enumerable: true });
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(O.prototype, "a"), {
+    value: 1,
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+});
+
+test("definePrototypeGetter should handle options", () => {
+  class O {}
+  const getter = (): number => 1;
+  definePrototypeGetter(O, "a", getter, {
+    configurable: false,
+    enumerable: true,
+  });
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(O.prototype, "a"), {
+    get: getter,
+    set: undefined,
+    configurable: false,
+    enumerable: true,
+  });
+});
+
+test("definePrototypeSetter should handle options", () => {
+  class O {}
+  const setter = (): void => undefined;
+  definePrototypeSetter(O, "a", setter, {
+    configurable: false,
+    enumerable: true,
+  });
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(O.prototype, "a"), {
+    get: undefined,
+    set: setter,
+    configurable: false,
+    enumerable: true,
+  });
+});
+
+test("definePrototypeLazyProperty should handle options", () => {
+  class O {}
+  definePrototypeLazyProperty(O, "a", () => 1, {
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+  const o: any = new O();
+  assert.strictEqual(Object.getOwnPropertyDescriptor(o, "a"), undefined);
+  assert.strictEqual(o.a, 1);
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "a"), {
+    value: 1,
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+});
+
+test("definePrototypeLazyConstant should handle options", () => {
+  class O {}
+  definePrototypeLazyConstant(O, "a", () => 1, { enumerable: true });
+  const o: any = new O();
+  assert.strictEqual(o.a, 1);
+  assert.deepStrictEqual(Object.getOwnPropertyDescriptor(o, "a"), {
+    value: 1,
+    writable: false,
+    configurable: false,
+    enumerable: true,
+  });
+});
