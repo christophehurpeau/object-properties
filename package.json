@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@pob/eslint-config": "67.4.0",
-    "@pob/rollup-esbuild": "10.0.0",
+    "@pob/rollup-esbuild": "10.0.1",
     "@pob/root": "27.5.0",
     "@types/node": "22.19.1",
     "@typescript/native": "npm:typescript@7.0.2",
