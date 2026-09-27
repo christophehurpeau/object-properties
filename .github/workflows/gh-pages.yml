@@ -22,6 +22,9 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build
+        run: pnpm run build
+
       - name: Run tsc for tsc cache
         run: pnpm tsc
 

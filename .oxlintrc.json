@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "./node_modules/@pob/eslint-config/oxlint/base.json",
+    "./node_modules/@pob/eslint-config/oxlint/typescript.json"
+  ],
+  "ignorePatterns": [
+    ".yarn",
+    "**/dist/",
+    "**/build/",
+    "**/coverage/",
+    "**/.next/",
+    "**/.tamagui/",
+    "**/*.d.ts",
+    "/dist"
+  ]
+}

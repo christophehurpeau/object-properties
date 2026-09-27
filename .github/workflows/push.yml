@@ -30,7 +30,6 @@ jobs:
 
       - name: Build
         run: pnpm run build
-        if: startsWith(matrix.node-version, '24.')
 
       - name: Format
         run: pnpm run format:check
@@ -38,6 +37,10 @@ jobs:
 
       - name: Typescript
         run: pnpm run tsc
+        if: startsWith(matrix.node-version, '24.')
+
+      - name: Oxlint
+        run: pnpm run lint:oxlint
         if: startsWith(matrix.node-version, '24.')
 
       - name: Eslint

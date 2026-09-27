@@ -43,8 +43,9 @@
     "format": "oxfmt",
     "format:check": "oxfmt --check .",
     "generate:api": "typedoc --tsconfig tsconfig.doc.json",
-    "lint": "pnpm run format && tsc && pnpm run lint:eslint",
+    "lint": "pnpm run format && pnpm run lint:oxlint && tsc && pnpm run lint:eslint",
     "lint:eslint": "eslint --quiet .",
+    "lint:oxlint": "oxlint --quiet",
     "prepare": "pob-root-postinstall",
     "test": "TZ=UTC node --test 'src/**/*.test.ts'",
     "test:coverage": "TZ=UTC node --test --experimental-test-coverage --test-coverage-include=\"src/**/*.ts\" 'src/**/*.test.ts'",
@@ -54,9 +55,9 @@
     "watch": "yarn clean:build && rollup --config rollup.config.mjs --watch"
   },
   "devDependencies": {
-    "@pob/eslint-config": "67.4.0",
-    "@pob/rollup-esbuild": "10.0.0",
-    "@pob/root": "27.5.0",
+    "@pob/eslint-config": "67.6.0",
+    "@pob/rollup-esbuild": "10.1.0",
+    "@pob/root": "27.7.0",
     "@types/node": "22.19.1",
     "@typescript/native": "npm:typescript@7.0.2",
     "eslint": "10.8.1",
