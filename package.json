@@ -55,9 +55,9 @@
     "watch": "yarn clean:build && rollup --config rollup.config.mjs --watch"
   },
   "devDependencies": {
-    "@pob/eslint-config": "67.6.0",
+    "@pob/eslint-config": "67.8.0",
     "@pob/rollup-esbuild": "10.1.0",
-    "@pob/root": "27.7.0",
+    "@pob/root": "27.9.0",
     "@types/node": "22.19.1",
     "@typescript/native": "npm:typescript@7.0.2",
     "eslint": "10.8.1",

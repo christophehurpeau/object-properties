@@ -9,14 +9,14 @@ importers:
   .:
     devDependencies:
       '@pob/eslint-config':
-        specifier: 67.6.0
-        version: 67.6.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
+        specifier: 67.8.0
+        version: 67.8.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       '@pob/rollup-esbuild':
         specifier: 10.1.0
         version: 10.1.0(@typescript/typescript6@6.0.2)(rollup@4.60.4)
       '@pob/root':
-        specifier: 27.7.0
-        version: 27.7.0
+        specifier: 27.9.0
+        version: 27.9.0
       '@types/node':
         specifier: 22.19.1
         version: 22.19.1
@@ -597,8 +597,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@pob/eslint-config@67.6.0':
-    resolution: {integrity: sha512-Dp6P/7n8t9zQnLaA5wDCxgh8n7dyH8Y6cWnbthcO64lB57Bme0Nyqpuj2DrZm39ArJsQ8rc9NqbKHqGYWA4mfQ==}
+  '@pob/eslint-config@67.8.0':
+    resolution: {integrity: sha512-LsCtNb5HTMm4ueTs/r21kVqwLabyq3tk2ksvhbl8igtX95txHdd5dpUgQxD9+suSNoAq/UbcknzOA0ddq+P3eg==}
     engines: {node: '>=22.18.0'}
     peerDependencies:
       eslint: ^10.8.0
@@ -607,8 +607,8 @@ packages:
       typescript:
         optional: true
 
-  '@pob/eslint-plugin@66.3.0':
-    resolution: {integrity: sha512-Xy/MHtgaMAz1SuqohLQlwJoMwRPlCNkpbi6SIM1RxNxZu+kPwyaYloC3kHnKWWcMaaCoBXN69yOEhf8jBtHJng==}
+  '@pob/eslint-plugin@66.4.0':
+    resolution: {integrity: sha512-gjwyobDJhvcRcJCOB3stxdfaJ9SMiBOo7ox2BMeIbL9/yTeeMEXprkZVNhgcWOOgBvvFIsbHyaVH7lFMme2nZg==}
     engines: {node: '>=22.18.0'}
     peerDependencies:
       eslint: ^10.0.2
@@ -633,13 +633,13 @@ packages:
     engines: {node: '>=22.18.0'}
     hasBin: true
 
-  '@pob/root@27.7.0':
-    resolution: {integrity: sha512-LB6fyCJIlY99VmRhUkFs23lcImP+jf/ax0udc9Y30PhGbRFc6qTel4P43osUnS0Cvk3kM+vXYvaFb2+7LQiC1A==}
+  '@pob/root@27.9.0':
+    resolution: {integrity: sha512-Vjeqq9FdULkKDDLZrknuTA+a7R9bES3VIpIzOnQbp+mmqgAnby8HQ8kTdY4l96aiL+PunXvb46idMbNn3an4yQ==}
     engines: {node: '>=22.18.0'}
     hasBin: true
 
-  '@pob/version@6.2.0':
-    resolution: {integrity: sha512-0p1Gvxm1xOSjFFUmpfRkf4P7Zhh/5gPh1AayuMlu7qX8t/RWLH0BrMN4NEHNau/lxzkgM9aY527xFSczPZgKQA==}
+  '@pob/version@6.3.0':
+    resolution: {integrity: sha512-Y3cVTxrOD49/0mPyVSX6w72pW5NCVWkSLQojbX2SUKLGTEmwBkWL93lPUu9a/nUxeBv1VEZQc7sScTDwSXn+4Q==}
     engines: {node: '>=24.14.1'}
     hasBin: true
 
@@ -2108,8 +2108,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pob-dependencies@27.6.0:
-    resolution: {integrity: sha512-WTBDtiqhIUc71lpmKjmMjVngPHREg+1p2qpZoU2BNsaFIQZfLpmZ1MTP1OeGy2Hn0cJvyou/6o8zIzI3Z6XUEQ==}
+  pob-dependencies@27.8.0:
+    resolution: {integrity: sha512-P9YXjodw/jvZua69SwuhVs9/hBCF86WPRdgSAs0fqmJucX9Ml8EWFh2uyRCwObx3KhRToXy07Xstw/zwyXq5Iw==}
     engines: {node: '>=22.18.0'}
 
   possible-typed-array-names@1.1.0:
@@ -2799,11 +2799,11 @@ snapshots:
   '@oxlint/binding-win32-x64-msvc@1.85.0':
     optional: true
 
-  '@pob/eslint-config@67.6.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
+  '@pob/eslint-config@67.8.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.8.1)
       '@eslint/json': 1.2.0
-      '@pob/eslint-plugin': 66.3.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
+      '@pob/eslint-plugin': 66.4.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       '@typescript-eslint/eslint-plugin': 8.63.0(@typescript-eslint/parser@8.63.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       '@typescript-eslint/parser': 8.63.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       check-package-dependencies: 13.2.0(eslint@10.8.1)
@@ -2821,7 +2821,7 @@ snapshots:
       - eslint-import-resolver-node
       - supports-color
 
-  '@pob/eslint-plugin@66.3.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
+  '@pob/eslint-plugin@66.4.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
     dependencies:
       '@typescript-eslint/utils': 8.63.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       eslint: 10.8.1
@@ -2850,12 +2850,12 @@ snapshots:
     dependencies:
       rollup: 4.60.4
 
-  '@pob/root@27.7.0':
+  '@pob/root@27.9.0':
     dependencies:
       '@commitlint/format': 21.0.1
       '@commitlint/lint': 21.0.2
       '@commitlint/types': 21.0.1
-      '@pob/version': 6.2.0
+      '@pob/version': 6.3.0
       conventional-changelog-conventionalcommits: 9.3.1
       conventional-changelog-writer: 8.4.0
       conventional-commits-parser: 6.4.0
@@ -2865,13 +2865,13 @@ snapshots:
       oxlint: 1.85.0(oxlint-tsgolint@7.0.2002)
       oxlint-tsgolint: 7.0.2002
       picomatch: 4.0.7
-      pob-dependencies: 27.6.0
+      pob-dependencies: 27.8.0
       semver: 7.8.5
     transitivePeerDependencies:
       - svelte
       - vite-plus
 
-  '@pob/version@6.2.0':
+  '@pob/version@6.3.0':
     dependencies:
       commander: 14.0.3
       conventional-changelog-conventionalcommits: 9.3.1
@@ -4431,7 +4431,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pob-dependencies@27.6.0: {}
+  pob-dependencies@27.8.0: {}
 
   possible-typed-array-names@1.1.0: {}
 
