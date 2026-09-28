@@ -9,14 +9,14 @@ importers:
   .:
     devDependencies:
       '@pob/eslint-config':
-        specifier: 67.8.0
-        version: 67.8.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
+        specifier: 67.10.0
+        version: 67.10.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       '@pob/rollup-esbuild':
         specifier: 10.1.0
         version: 10.1.0(@typescript/typescript6@6.0.2)(rollup@4.60.4)
       '@pob/root':
-        specifier: 27.9.0
-        version: 27.9.0
+        specifier: 27.11.0
+        version: 27.11.0
       '@types/node':
         specifier: 22.19.1
         version: 22.19.1
@@ -597,8 +597,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@pob/eslint-config@67.8.0':
-    resolution: {integrity: sha512-LsCtNb5HTMm4ueTs/r21kVqwLabyq3tk2ksvhbl8igtX95txHdd5dpUgQxD9+suSNoAq/UbcknzOA0ddq+P3eg==}
+  '@pob/eslint-config@67.10.0':
+    resolution: {integrity: sha512-+erZmfRPg29UrbBO2dsa+eq73X5znlCK+V7nChdx3exgoTD5Oywt3/SsPbtBNZs2wFOJh4AX/DPhomdLOPw1OA==}
     engines: {node: '>=22.18.0'}
     peerDependencies:
       eslint: ^10.8.0
@@ -633,13 +633,13 @@ packages:
     engines: {node: '>=22.18.0'}
     hasBin: true
 
-  '@pob/root@27.9.0':
-    resolution: {integrity: sha512-Vjeqq9FdULkKDDLZrknuTA+a7R9bES3VIpIzOnQbp+mmqgAnby8HQ8kTdY4l96aiL+PunXvb46idMbNn3an4yQ==}
+  '@pob/root@27.11.0':
+    resolution: {integrity: sha512-eQQlgVtDZr29G8qa3sYgpo5eF9za2VEw/6fGWK+a+qGJ0mtpvZ4C9E3aW4DrgyzdWsRFF7dA+dibeUlwJaqTSA==}
     engines: {node: '>=22.18.0'}
     hasBin: true
 
-  '@pob/version@6.3.0':
-    resolution: {integrity: sha512-Y3cVTxrOD49/0mPyVSX6w72pW5NCVWkSLQojbX2SUKLGTEmwBkWL93lPUu9a/nUxeBv1VEZQc7sScTDwSXn+4Q==}
+  '@pob/version@6.4.0':
+    resolution: {integrity: sha512-Z5MKanOHrCAAI8u8nKT89V9WbkfURxxV7GJb68L4UlSW8pvMrjSCugbnOWlnVPWpGueUR4UxFEX8Gff3fNCfHg==}
     engines: {node: '>=24.14.1'}
     hasBin: true
 
@@ -2108,8 +2108,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pob-dependencies@27.8.0:
-    resolution: {integrity: sha512-P9YXjodw/jvZua69SwuhVs9/hBCF86WPRdgSAs0fqmJucX9Ml8EWFh2uyRCwObx3KhRToXy07Xstw/zwyXq5Iw==}
+  pob-dependencies@27.10.0:
+    resolution: {integrity: sha512-0KyS0kc2OEVQpy3BFL5yNnaZr50zYMW+sJvwTt73JNEYIVKO2KMUw5qNaHYP5SilkyqILieNalo0YXwI/LSERQ==}
     engines: {node: '>=22.18.0'}
 
   possible-typed-array-names@1.1.0:
@@ -2799,7 +2799,7 @@ snapshots:
   '@oxlint/binding-win32-x64-msvc@1.85.0':
     optional: true
 
-  '@pob/eslint-config@67.8.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
+  '@pob/eslint-config@67.10.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.8.1)
       '@eslint/json': 1.2.0
@@ -2850,12 +2850,12 @@ snapshots:
     dependencies:
       rollup: 4.60.4
 
-  '@pob/root@27.9.0':
+  '@pob/root@27.11.0':
     dependencies:
       '@commitlint/format': 21.0.1
       '@commitlint/lint': 21.0.2
       '@commitlint/types': 21.0.1
-      '@pob/version': 6.3.0
+      '@pob/version': 6.4.0
       conventional-changelog-conventionalcommits: 9.3.1
       conventional-changelog-writer: 8.4.0
       conventional-commits-parser: 6.4.0
@@ -2865,13 +2865,13 @@ snapshots:
       oxlint: 1.85.0(oxlint-tsgolint@7.0.2002)
       oxlint-tsgolint: 7.0.2002
       picomatch: 4.0.7
-      pob-dependencies: 27.8.0
+      pob-dependencies: 27.10.0
       semver: 7.8.5
     transitivePeerDependencies:
       - svelte
       - vite-plus
 
-  '@pob/version@6.3.0':
+  '@pob/version@6.4.0':
     dependencies:
       commander: 14.0.3
       conventional-changelog-conventionalcommits: 9.3.1
@@ -4431,7 +4431,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pob-dependencies@27.8.0: {}
+  pob-dependencies@27.10.0: {}
 
   possible-typed-array-names@1.1.0: {}
 
