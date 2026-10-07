@@ -12,8 +12,8 @@ importers:
         specifier: 67.10.0
         version: 67.10.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       '@pob/rollup-esbuild':
-        specifier: 10.1.0
-        version: 10.1.0(@typescript/typescript6@6.0.2)(rollup@4.60.4)
+        specifier: 10.2.0
+        version: 10.2.0(@typescript/typescript6@6.0.2)
       '@pob/root':
         specifier: 27.11.0
         version: 27.11.0
@@ -617,19 +617,15 @@ packages:
       typescript:
         optional: true
 
-  '@pob/rollup-esbuild@10.1.0':
-    resolution: {integrity: sha512-iGOv/L1hndrxKYdrPCtFKYKXGzz66jFWpwafm8RpumqVNAJN0yN0r4LkrnzI8KWyd+PKtocO8uyo0w4gfHr0fA==}
+  '@pob/rollup-esbuild@10.2.0':
+    resolution: {integrity: sha512-W3GGrdQVO/TGMuw7wAuvK/8+03BtfrzhSFg7/JaEIfC/ipvkpNotLQycFdFjqkoHNldhuywuE/73783KXR3wsQ==}
     engines: {node: '>=22.18.0'}
     hasBin: true
     peerDependencies:
-      rollup: 4.60.4
       typescript: ^4.0.3 || ^5.0.0 || ^6.0.0 || ^7.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
 
-  '@pob/rollup@8.2.0':
-    resolution: {integrity: sha512-NHT9xbiTNFhgOvs0iDL5gykTvmkmjOoxU9QT31mJQNvahg1A+083SNc4FbGe0doluPTRUibCO+81waXUr40TAQ==}
+  '@pob/rollup@8.3.0':
+    resolution: {integrity: sha512-EkIcxwnlrsYgDIJnDN8rW3m8Mp+oPaXCky+dNy/n0TP2rbVy37E5PP7FMh15/t3nSwQDpVn3EQev9k+vdUMGmw==}
     engines: {node: '>=22.18.0'}
     hasBin: true
 
@@ -2831,22 +2827,21 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@pob/rollup-esbuild@10.1.0(@typescript/typescript6@6.0.2)(rollup@4.60.4)':
+  '@pob/rollup-esbuild@10.2.0(@typescript/typescript6@6.0.2)':
     dependencies:
-      '@pob/rollup': 8.2.0
+      '@pob/rollup': 8.3.0
       '@rollup/plugin-node-resolve': 16.0.3(rollup@4.60.4)
       '@rollup/plugin-replace': 6.0.3(rollup@4.60.4)
       '@rollup/plugin-run': 3.1.0(rollup@4.60.4)
       esbuild: 0.28.2
+      rollup: 4.60.4
       rollup-config-external-dependencies: 3.0.1
       rollup-plugin-esbuild: 6.2.1(esbuild@0.28.2)(rollup@4.60.4)
       typescript: '@typescript/typescript6@6.0.2'
-    optionalDependencies:
-      rollup: 4.60.4
     transitivePeerDependencies:
       - supports-color
 
-  '@pob/rollup@8.2.0':
+  '@pob/rollup@8.3.0':
     dependencies:
       rollup: 4.60.4
 
@@ -3094,8 +3089,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.63.0(@typescript/typescript6@6.0.2)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.67.0(@typescript/typescript6@6.0.2)
-      '@typescript-eslint/types': 8.67.0
+      '@typescript-eslint/tsconfig-utils': 8.63.0(@typescript/typescript6@6.0.2)
+      '@typescript-eslint/types': 8.63.0
       debug: 4.4.3
       typescript: '@typescript/typescript6@6.0.2'
     transitivePeerDependencies:
