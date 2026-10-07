@@ -9,11 +9,11 @@ importers:
   .:
     devDependencies:
       '@pob/eslint-config':
-        specifier: 67.10.0
-        version: 67.10.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
+        specifier: 67.11.0
+        version: 67.11.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       '@pob/rollup-esbuild':
-        specifier: 10.1.0
-        version: 10.1.0(@typescript/typescript6@6.0.2)
+        specifier: 10.2.0
+        version: 10.2.0(@typescript/typescript6@6.0.2)
       '@pob/root':
         specifier: 27.12.0
         version: 27.12.0
@@ -597,8 +597,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@pob/eslint-config@67.10.0':
-    resolution: {integrity: sha512-+erZmfRPg29UrbBO2dsa+eq73X5znlCK+V7nChdx3exgoTD5Oywt3/SsPbtBNZs2wFOJh4AX/DPhomdLOPw1OA==}
+  '@pob/eslint-config@67.11.0':
+    resolution: {integrity: sha512-xSxmufk3Fcov0MISZ4EN23n/4LkuWIBDSwsdkZCZiBwLwXQr2zuis0R+wu0q6060MJhtoOY4KmwywEH8an0Dgw==}
     engines: {node: '>=22.18.0'}
     peerDependencies:
       eslint: ^10.8.0
@@ -607,8 +607,8 @@ packages:
       typescript:
         optional: true
 
-  '@pob/eslint-plugin@66.4.0':
-    resolution: {integrity: sha512-gjwyobDJhvcRcJCOB3stxdfaJ9SMiBOo7ox2BMeIbL9/yTeeMEXprkZVNhgcWOOgBvvFIsbHyaVH7lFMme2nZg==}
+  '@pob/eslint-plugin@66.5.0':
+    resolution: {integrity: sha512-D7YketV0Sr28vd9FpoTtLQX/u+rIBvkOETiz6sO/vDbNw1yjsht4LqkuxrRpquVQ+3AxshUbEQocz4jLUia/Vg==}
     engines: {node: '>=22.18.0'}
     peerDependencies:
       eslint: ^10.0.2
@@ -617,15 +617,15 @@ packages:
       typescript:
         optional: true
 
-  '@pob/rollup-esbuild@10.1.0':
-    resolution: {integrity: sha512-iGOv/L1hndrxKYdrPCtFKYKXGzz66jFWpwafm8RpumqVNAJN0yN0r4LkrnzI8KWyd+PKtocO8uyo0w4gfHr0fA==}
+  '@pob/rollup-esbuild@10.2.0':
+    resolution: {integrity: sha512-W3GGrdQVO/TGMuw7wAuvK/8+03BtfrzhSFg7/JaEIfC/ipvkpNotLQycFdFjqkoHNldhuywuE/73783KXR3wsQ==}
     engines: {node: '>=22.18.0'}
     hasBin: true
     peerDependencies:
       typescript: ^4.0.3 || ^5.0.0 || ^6.0.0 || ^7.0.0
 
-  '@pob/rollup@8.2.0':
-    resolution: {integrity: sha512-NHT9xbiTNFhgOvs0iDL5gykTvmkmjOoxU9QT31mJQNvahg1A+083SNc4FbGe0doluPTRUibCO+81waXUr40TAQ==}
+  '@pob/rollup@8.3.0':
+    resolution: {integrity: sha512-EkIcxwnlrsYgDIJnDN8rW3m8Mp+oPaXCky+dNy/n0TP2rbVy37E5PP7FMh15/t3nSwQDpVn3EQev9k+vdUMGmw==}
     engines: {node: '>=22.18.0'}
     hasBin: true
 
@@ -2795,11 +2795,11 @@ snapshots:
   '@oxlint/binding-win32-x64-msvc@1.85.0':
     optional: true
 
-  '@pob/eslint-config@67.10.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
+  '@pob/eslint-config@67.11.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.8.1)
       '@eslint/json': 1.2.0
-      '@pob/eslint-plugin': 66.4.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
+      '@pob/eslint-plugin': 66.5.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       '@typescript-eslint/eslint-plugin': 8.63.0(@typescript-eslint/parser@8.63.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       '@typescript-eslint/parser': 8.63.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       check-package-dependencies: 13.2.0(eslint@10.8.1)
@@ -2817,7 +2817,7 @@ snapshots:
       - eslint-import-resolver-node
       - supports-color
 
-  '@pob/eslint-plugin@66.4.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
+  '@pob/eslint-plugin@66.5.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)':
     dependencies:
       '@typescript-eslint/utils': 8.63.0(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       eslint: 10.8.1
@@ -2827,9 +2827,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@pob/rollup-esbuild@10.1.0(@typescript/typescript6@6.0.2)':
+  '@pob/rollup-esbuild@10.2.0(@typescript/typescript6@6.0.2)':
     dependencies:
-      '@pob/rollup': 8.2.0
+      '@pob/rollup': 8.3.0
       '@rollup/plugin-node-resolve': 16.0.3(rollup@4.60.4)
       '@rollup/plugin-replace': 6.0.3(rollup@4.60.4)
       '@rollup/plugin-run': 3.1.0(rollup@4.60.4)
@@ -2841,7 +2841,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@pob/rollup@8.2.0':
+  '@pob/rollup@8.3.0':
     dependencies:
       rollup: 4.60.4
 
