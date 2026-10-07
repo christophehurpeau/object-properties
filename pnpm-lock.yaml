@@ -13,10 +13,10 @@ importers:
         version: 67.10.0(@typescript-eslint/utils@8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1))(@typescript/typescript6@6.0.2)(eslint@10.8.1)
       '@pob/rollup-esbuild':
         specifier: 10.1.0
-        version: 10.1.0(@typescript/typescript6@6.0.2)(rollup@4.60.4)
+        version: 10.1.0(@typescript/typescript6@6.0.2)
       '@pob/root':
-        specifier: 27.11.0
-        version: 27.11.0
+        specifier: 27.12.0
+        version: 27.12.0
       '@types/node':
         specifier: 22.19.1
         version: 22.19.1
@@ -622,24 +622,20 @@ packages:
     engines: {node: '>=22.18.0'}
     hasBin: true
     peerDependencies:
-      rollup: 4.60.4
       typescript: ^4.0.3 || ^5.0.0 || ^6.0.0 || ^7.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
 
   '@pob/rollup@8.2.0':
     resolution: {integrity: sha512-NHT9xbiTNFhgOvs0iDL5gykTvmkmjOoxU9QT31mJQNvahg1A+083SNc4FbGe0doluPTRUibCO+81waXUr40TAQ==}
     engines: {node: '>=22.18.0'}
     hasBin: true
 
-  '@pob/root@27.11.0':
-    resolution: {integrity: sha512-eQQlgVtDZr29G8qa3sYgpo5eF9za2VEw/6fGWK+a+qGJ0mtpvZ4C9E3aW4DrgyzdWsRFF7dA+dibeUlwJaqTSA==}
+  '@pob/root@27.12.0':
+    resolution: {integrity: sha512-BbXf0kVo2HQ4ZwghFcWvROdTe9grdPkr1CAbN0dv+m1vJrPKJXi8WtVg6EG/zsOf9n4aEF+x9oYBIlsEDiT52Q==}
     engines: {node: '>=22.18.0'}
     hasBin: true
 
-  '@pob/version@6.4.0':
-    resolution: {integrity: sha512-Z5MKanOHrCAAI8u8nKT89V9WbkfURxxV7GJb68L4UlSW8pvMrjSCugbnOWlnVPWpGueUR4UxFEX8Gff3fNCfHg==}
+  '@pob/version@6.5.0':
+    resolution: {integrity: sha512-CKW/4dyCMs6onpC6ajpghQ6/ytvFEv9eHePmO9XMXXhbgPejpn+2p0QDiLBv0OvPNFD/AMWdXJKWE7MfNq808A==}
     engines: {node: '>=24.14.1'}
     hasBin: true
 
@@ -2108,8 +2104,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pob-dependencies@27.10.0:
-    resolution: {integrity: sha512-0KyS0kc2OEVQpy3BFL5yNnaZr50zYMW+sJvwTt73JNEYIVKO2KMUw5qNaHYP5SilkyqILieNalo0YXwI/LSERQ==}
+  pob-dependencies@27.11.0:
+    resolution: {integrity: sha512-XcoM88YjlizR0VxzbLfBr8J9mbEz8SZpMdGY3q5mNzc8ivzYTXSXg897HHHvNU7mo++9vvEHallMfi3r8yIaqA==}
     engines: {node: '>=22.18.0'}
 
   possible-typed-array-names@1.1.0:
@@ -2831,18 +2827,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@pob/rollup-esbuild@10.1.0(@typescript/typescript6@6.0.2)(rollup@4.60.4)':
+  '@pob/rollup-esbuild@10.1.0(@typescript/typescript6@6.0.2)':
     dependencies:
       '@pob/rollup': 8.2.0
       '@rollup/plugin-node-resolve': 16.0.3(rollup@4.60.4)
       '@rollup/plugin-replace': 6.0.3(rollup@4.60.4)
       '@rollup/plugin-run': 3.1.0(rollup@4.60.4)
       esbuild: 0.28.2
+      rollup: 4.60.4
       rollup-config-external-dependencies: 3.0.1
       rollup-plugin-esbuild: 6.2.1(esbuild@0.28.2)(rollup@4.60.4)
       typescript: '@typescript/typescript6@6.0.2'
-    optionalDependencies:
-      rollup: 4.60.4
     transitivePeerDependencies:
       - supports-color
 
@@ -2850,12 +2845,12 @@ snapshots:
     dependencies:
       rollup: 4.60.4
 
-  '@pob/root@27.11.0':
+  '@pob/root@27.12.0':
     dependencies:
       '@commitlint/format': 21.0.1
       '@commitlint/lint': 21.0.2
       '@commitlint/types': 21.0.1
-      '@pob/version': 6.4.0
+      '@pob/version': 6.5.0
       conventional-changelog-conventionalcommits: 9.3.1
       conventional-changelog-writer: 8.4.0
       conventional-commits-parser: 6.4.0
@@ -2865,13 +2860,13 @@ snapshots:
       oxlint: 1.85.0(oxlint-tsgolint@7.0.2002)
       oxlint-tsgolint: 7.0.2002
       picomatch: 4.0.7
-      pob-dependencies: 27.10.0
+      pob-dependencies: 27.11.0
       semver: 7.8.5
     transitivePeerDependencies:
       - svelte
       - vite-plus
 
-  '@pob/version@6.4.0':
+  '@pob/version@6.5.0':
     dependencies:
       commander: 14.0.3
       conventional-changelog-conventionalcommits: 9.3.1
@@ -3094,8 +3089,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.63.0(@typescript/typescript6@6.0.2)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.67.0(@typescript/typescript6@6.0.2)
-      '@typescript-eslint/types': 8.67.0
+      '@typescript-eslint/tsconfig-utils': 8.63.0(@typescript/typescript6@6.0.2)
+      '@typescript-eslint/types': 8.63.0
       debug: 4.4.3
       typescript: '@typescript/typescript6@6.0.2'
     transitivePeerDependencies:
@@ -4431,7 +4426,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pob-dependencies@27.10.0: {}
+  pob-dependencies@27.11.0: {}
 
   possible-typed-array-names@1.1.0: {}
 
