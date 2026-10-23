@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* oxlint-disable typescript/no-unsafe-assignment */
 
 import assert from "node:assert";
 import { test } from "node:test";
