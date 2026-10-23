@@ -537,7 +537,7 @@ export function defineConstants<T, P extends Record<string, any>>(
   properties?: P,
   options?: EnumerableOptions,
 ): Readonly<P> & T {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+  // oxlint-disable-next-line typescript/no-unsafe-return
   return defineProperties(target, properties, {
     writable: false,
     configurable: false,
