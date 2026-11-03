@@ -58,7 +58,7 @@
   "devDependencies": {
     "@pob/eslint-config": "68.3.0",
     "@pob/rollup-esbuild": "11.3.0",
-    "@pob/root": "28.2.2",
+    "@pob/root": "28.6.0",
     "@types/node": "22.19.1",
     "@typescript/native": "npm:typescript@7.0.2",
     "eslint": "10.14.0",
@@ -88,7 +88,7 @@
     }
   },
   "engines": {
-    "node": ">=22.18.0"
+    "node": "^22.18.0 || >=24.14.1"
   },
   "pob": {
     "bundler": "rollup-esbuild",
